@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\services\\emailconfigurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:services\\emailconfigurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\services\\authmasterserices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:services\\authmasterserices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\controllers\\authmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:controllers\\authmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\models\\ticketmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:models\\ticketmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|d:\\projects\\iteos\\ticketing-tool\\api\\ticketing_api\\dbcontexts\\ticketcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|Ticketing_API.csproj|solutionrelative:dbcontexts\\ticketcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthMasterSerices.cs",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Services\\AuthMasterSerices.cs",
+              "RelativeDocumentMoniker": "Services\\AuthMasterSerices.cs",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Services\\AuthMasterSerices.cs",
+              "RelativeToolTip": "Services\\AuthMasterSerices.cs",
+              "ViewState": "AQIAABMAAACwMTMzM9M4wBkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T07:07:58.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthMasterController.cs",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Controllers\\AuthMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthMasterController.cs",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Controllers\\AuthMasterController.cs",
+              "RelativeToolTip": "Controllers\\AuthMasterController.cs",
+              "ViewState": "AQIAAFEBAAAAAAAAAAAMwFgBAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T07:06:32.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AQIAAKgAAAAAMjMzM7MewCAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T06:23:12.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAIAAAAAy8zMzMwXwEQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T06:21:27.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T05:46:41.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-26T07:36:40.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Services\\EmailService.cs",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Services\\EmailService.cs",
+              "RelativeToolTip": "Services\\EmailService.cs",
+              "ViewState": "AQIAAKUAAADA//////8dwKoAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T07:11:58.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailConfigurationService.cs",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Services\\EmailConfigurationService.cs",
+              "RelativeDocumentMoniker": "Services\\EmailConfigurationService.cs",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Services\\EmailConfigurationService.cs",
+              "RelativeToolTip": "Services\\EmailConfigurationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T07:15:55.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TicketMaster.cs",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Models\\TicketMaster.cs",
+              "RelativeDocumentMoniker": "Models\\TicketMaster.cs",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\Models\\TicketMaster.cs",
+              "RelativeToolTip": "Models\\TicketMaster.cs",
+              "ViewState": "AQIAACQBAAAAMTMzM/MtwLQBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T06:13:50.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TicketContext.cs",
+              "DocumentMoniker": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\DbContexts\\TicketContext.cs",
+              "RelativeDocumentMoniker": "DbContexts\\TicketContext.cs",
+              "ToolTip": "D:\\Projects\\ITeos\\Ticketing-Tool\\API\\Ticketing_API\\DbContexts\\TicketContext.cs",
+              "RelativeToolTip": "DbContexts\\TicketContext.cs",
+              "ViewState": "AQIAAAsAAACAMjMzMzM2wA8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T05:43:30.557Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
