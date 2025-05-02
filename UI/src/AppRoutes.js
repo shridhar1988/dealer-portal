@@ -10,6 +10,7 @@ const Dashboard = lazy(() => import('./components/Dashboard/Dashboard.js'));
 const Master = lazy(() => import('./components/Masters/Masters.js'));
 const Profile = lazy(() => import('./components/profile/profile.js'));
 const UserManagement = lazy(() => import('./components/user-creation/UserCreation.js'));
+const Createscheme = lazy(() => import('./components/Masters/CreateScheme.js'));
 const AppRoutes = () => {
     return (
         <Suspense fallback={<Spinner />}>
@@ -18,7 +19,7 @@ const AppRoutes = () => {
                 <Route path="/Login" element={<Login />} />
                 <Route path="/resetPassword" element={<ResetPassword />} />
                 <Route path="/sendResetLink" element={<ForgotPassword />} />
- 
+                <Route path="/create-scheme" element={<Createscheme />} />
                
                 {/* Admin routes */}
                 <Route element={<ProtectedRoute requiredRole="Admin" />}>
@@ -26,9 +27,10 @@ const AppRoutes = () => {
                   
                     <Route path="/user-management" element={<UserManagement />} />
                   
-                    <Route path="/schemes" element={<Master />} />
-                    <Route path="/profile" element={<Master />} />
-                   
+                    <Route path="/scheme" element={<Master />} />
+                
+                    <Route path="/add-stock" element={<Master />} />
+                    <Route path="/profile" element={<Profile />} />
                 </Route>
  
                 {/* Employee routes */}

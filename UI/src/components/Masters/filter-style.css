@@ -1,0 +1,64 @@
+
+
+  .filter-bar {
+    width: 100%;
+    max-width: 560px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .no-border-input:focus {
+    box-shadow: none;
+    outline: none;
+  }.no-border-input {
+    background-color: transparent;
+  }.filter-bar {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+   
+  .filter-icon {
+    background-color: #f8f9fa;
+    border-right: 1px solid #ced4da;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+   
+  .filter-label {
+    background-color: #fff;
+    border-right: 1px solid #ced4da;
+  }
+   
+  .filter-dropdown {
+    background-color: #fff;
+    border-right: 1px solid #ced4da;
+  }
+   
+  .filter-reset {
+    background-color: #f8f9fa;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+   
+  /* Apply gray background to header and bottom border */
+.thead-grey th {
+  background-color: #e0e0e0;
+  color: #000;
+  border-bottom: 2px solid #ccc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+/* White background for table cells with bottom border */
+.thead-white td {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+  

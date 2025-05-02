@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\api\\controllers\\authmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\authmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\api\\services\\authmasterserices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\api\\models\\authmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:models\\authmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,15 +54,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Controllers\\AuthMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthMasterController.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Controllers\\AuthMasterController.cs",
+              "RelativeToolTip": "Controllers\\AuthMasterController.cs",
+              "ViewState": "AgIAAM4BAAAAAAAAAAAYwOABAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T04:42:53.227Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -68,9 +77,10 @@
               "RelativeDocumentMoniker": "Models\\AuthMaster.cs",
               "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Models\\AuthMaster.cs",
               "RelativeToolTip": "Models\\AuthMaster.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA3wC0AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAA2wDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T11:28:44.467Z"
+              "WhenOpened": "2025-04-28T11:28:44.467Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -80,14 +90,14 @@
               "RelativeDocumentMoniker": "Services\\AuthMasterSerices.cs",
               "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Services\\AuthMasterSerices.cs",
               "RelativeToolTip": "Services\\AuthMasterSerices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADkFAAAAAAAAAAAYwEUFAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T11:23:39.901Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -99,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -111,20 +121,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwD4AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwDQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T05:55:37.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T05:55:37.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DealerPortalContext.cs",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\DbContexts\\DealerPortalContext.cs",
               "RelativeDocumentMoniker": "DbContexts\\DealerPortalContext.cs",
@@ -136,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
@@ -148,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "WriteLog.cs",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Helpers\\WriteLog.cs",
               "RelativeDocumentMoniker": "Helpers\\WriteLog.cs",
@@ -160,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Log.cs",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\Services\\Log.cs",
               "RelativeDocumentMoniker": "Services\\Log.cs",
@@ -172,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "DealerPortal_API.http",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\API\\DealerPortal_API.http",
               "RelativeDocumentMoniker": "DealerPortal_API.http",

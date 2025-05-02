@@ -1,7 +1,9 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
+import config from "../config/config.json";
+import { toast } from "react-toastify";
 const Menu = () => {
   const personalInfo = useSelector((state) => state.personalInformationReducer);
   console.log("personalInfo", personalInfo);
@@ -28,12 +30,19 @@ const Menu = () => {
   const location = useLocation();
 
   const routeIcons = {
-    "/home": <i className="fas fa-user" />,
+    "/Home": <i className="fas fa-home" />,
+    "/user-management": <i className="fas fa-cog" />,
+   "/scheme": <i className="fas fa-th" />,
+  "/add-stock": <i className="fas fa-th-large"></i>,
+
+
+"/profile": <i className="fas fa-user" />,
+
     "/employee-dashboard": <i className="fas fa-qrcode" />,
     "/manage-attendance": <i className="fas fa-calendar-alt" />,
     "/manage-leave": <i className="fas fa-binoculars" />,
     "/employee-leave": <i className="fas fa-walking" />,
-    "/profile": <i className="fas fa-user" />,
+    
     "/employee-profile": <i className="fas fa-user" />,
     "/manage-users": <i className="fas fa-user-plus" />,
     "/manage-payroll-template": <i className="fas fa-envelope-open-text" />,
@@ -240,23 +249,48 @@ const Menu = () => {
   };
 
   const handleNaviagte = () => {
-    if (personalInfo.userRole == "Administrator" || personalInfo.userRole == "HR" || personalInfo.userRole == "Manager") {
+    if (personalInfo.userRole === "Admin" || personalInfo.userRole == "HR" || personalInfo.userRole == "Manager") {
       navigate("/profile");
-    } else if (personalInfo.userRole == "Employee") {
+    } else if (personalInfo.userRole === "Employee") {
       navigate("/employee-profile");
     } else {
       navigate("/");
     }
   }
+  const handleLogout = async () => {
+   try {
+      
+        const response = await axios.post(`${config.API_URL}AuthMaster/SignOut?userID=${localStorage.getItem("loggedUserId")}`, {
+      
+       
+        }, {
+          
+        });
+        if (response?.data?.success === "success"){
+         
+          toast.success("Logout successfully!");
+          console.log("Logout successful:", response.data);
+        }
+      }
+     catch (error) {
+      console.error("Error during authentication:", error);
+    } finally {
+     // setIsLoaderActive(false);
+    }
 
+    localStorage.clear();
+    
+    navigate("/Login");
+  };
+  
   return (
     <>
       <aside className="main-sidebar sidebar-light-maroon elevation-4 d-flex flex-column">
         <div className="header">
           <img
             id=""
-            src={require("../assets/images/companyLogo.c6e381ec0a4e6ded55fd.png")}
-            className="img-fluid w-75 largeSidebarIcon"
+            src={require("../assets/images/Hlogo.png")}
+            className="img-fluid w-50 largeSidebarIcon ml-4"
           />
 
           <a
@@ -329,19 +363,30 @@ const Menu = () => {
           </nav>
         </div>
         <div
-          className="user-panel row"
-          style={{
-            position: "absolute",
-            bottom: 0,
-            left: 7,
-            right: 0,
-            background: "#fff",
-            width: "100%",
-            borderTop: "1px solid rgba(0, 0, 0, .125)",
-          }}
-        >
+  className="user-panel row justify-content-start"
+  style={{
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    background: "#fff",
+    width: "100%",
+    padding: "10px 0",
+  }}
+>
+  <button
+    className="btn  btn-sm"
+    style={{ marginRight: "100px", width: "80%" }}
+    onClick={handleLogout}
+  >
+    <i className="fas fa-power-off mr-3"></i> Logout
+  </button>
 
-          <div className="col-md-12 d-flex align-items-center px-3 py-2" onClick={handleNaviagte} >
+
+         
+
+
+          {/* <div className="col-md-12 d-flex align-items-center px-3 py-2" onClick={handleNaviagte} >
 
             <div className="largeSidebarIcon">
               <div className="Userimage" style={{ display: 'inline-grid' }}>
@@ -381,10 +426,10 @@ const Menu = () => {
               </span>
             </div>
 
-          </div>
+          </div> */}
 
 
-          <div
+          {/* <div
             className="col-md-12 py-2 d-flex align-items-center justify-content-center"
             style={{
               background:
@@ -403,7 +448,7 @@ const Menu = () => {
             >
               HRP
             </span>
-          </div>
+          </div> */}
         </div>
       </aside>
     </>

@@ -79,7 +79,7 @@ function EmployeeLogin() {
       return;
     }
 
-    // If "Remember Me" is checked, store credentials in localStorage
+ 
     if (rememberMe) {
       localStorage.setItem("rememberedEmail", email);
       localStorage.setItem("rememberedPassword", password);
@@ -97,7 +97,7 @@ function EmployeeLogin() {
   const AuthenticateUser = async (UserName, Password) => {
     setIsLoaderActive(true);
     try {
-      console.log('log called');
+     
       const response = await axios.post(`${config.API_URL}Auth/Login`, {
         userName: UserName,
         password: Password
@@ -144,18 +144,18 @@ function EmployeeLogin() {
               navigate("/home", { replace: true });
               window.location.reload();
               break;
-            case "HR":
-              navigate("/employee-dashboard", { replace: true });
-              window.location.reload();
-              break;
-            case "Manager":
-              navigate("/employee-dashboard", { replace: true });
-              window.location.reload();
-              break;
-            case "Employee":
-              navigate("/employee-dashboard", { replace: true });
-              window.location.reload();
-              break;
+            // case "HR":
+            //   navigate("/employee-dashboard", { replace: true });
+            //   window.location.reload();
+            //   break;
+            // case "Manager":
+            //   navigate("/employee-dashboard", { replace: true });
+            //   window.location.reload();
+            //   break;
+            // case "Employee":
+            //   navigate("/employee-dashboard", { replace: true });
+            //   window.location.reload();
+            //   break;
 
             default:
               navigate("/Login", { replace: true });

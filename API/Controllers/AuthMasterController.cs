@@ -4,6 +4,7 @@ using static Ticketing_API.Models.AuthMaster;
 using Ticketing_API.Helpers;
 using Ticketing_API.DbContexts;
 using Ticketing_API.Services;
+using DealerPortal_API.Services;
 
 namespace Ticketing_API.Controllers
 {
@@ -481,8 +482,8 @@ namespace Ticketing_API.Controllers
             try
             {
                 var result = await _authMasterService.SignOut(userID);
-                //return Ok(result);
-                return Ok(new { success = "success", message = "You have successfully get user data", data = result });
+                Log.DataLog(userID, $"User Id {userID} Successfully loggedout from the app", "LoginLog");
+                return Ok(new { success = "success", message = "You have successfully loggedout", data = result });
             }
             catch (Exception ex)
             {
