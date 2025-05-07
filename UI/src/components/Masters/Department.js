@@ -60,7 +60,7 @@ const Department = () => {
             setRoles(appsArray);
         } catch(error) {
             console.error('Error fetching departments:', error);
-            toast.error('Error fetching departments');
+            // toast.error('Error fetching departments');
         } finally {
             setIsLoaderActive(false);
         }

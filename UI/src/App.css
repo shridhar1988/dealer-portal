@@ -38,3 +38,25 @@
     transform: rotate(360deg);
   }
 }
+
+/* full screen  { */
+.fullscreen-table {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 9999;
+  overflow: auto;
+  padding: 2rem;
+}
+
+.fullscreen-table .table-responsive {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+
+.fullscreen-table .btn {
+  z-index: 10000;
+}

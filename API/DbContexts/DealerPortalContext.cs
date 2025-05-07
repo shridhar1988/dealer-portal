@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using static Ticketing_API.Models.AuthMaster;
 using Ticketing_API.Models;
+using DealerPortal_API.Models;
 
 namespace Ticketing_API.DbContexts
 {
@@ -22,6 +23,13 @@ namespace Ticketing_API.DbContexts
         public DbSet<EmpInfo> EmpInfos { get; set; }
         public DbSet<MailBodyConfiguration> MailBodyConfigurations { get; set; }
 
+        //02/05/2025
+        public DbSet<Scheme> Scheme { get; set; }
+        public DbSet<DocumentMaster> DocumentMaster { get; set; }
+        //05/05/2025
+        public DbSet<Company> Company { get; set; }
+        public DbSet<CompanyPlantMapping> CompanyPlantMapping { get; set; }
+        public DbSet<Plant> Plant { get; set; }
         public DbSet<ManagerUserMap> ManagerUserMaps { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

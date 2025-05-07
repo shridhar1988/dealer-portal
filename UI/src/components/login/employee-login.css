@@ -330,3 +330,9 @@ body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav)
 }
 
 
+.is-invalid{
+  border-color: #dc3545 !important;
+  /* background-color: #fff !important;
+  color: #dc3545 !important; */
+
+}

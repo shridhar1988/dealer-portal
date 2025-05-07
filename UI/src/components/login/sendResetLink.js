@@ -40,7 +40,7 @@ function Login() {
         setIsLoaderActive(true);
         try {
             const response = await axios.post(
-                `${config.apiEndPoint}/AuthMaster/SendResetLinkToMail`, { emailAddress: UserName });
+                `${config.API_URL}AuthMaster/SendResetLinkToMail`, { emailAddress: UserName });
 
             if (response.data.success === "success") {
                 toast.success(response.data.message, { toastId: "login-success" });
@@ -105,7 +105,7 @@ function Login() {
                             <div className="text-center welcome-slogan">
                                 <img src={ilogo} className="img-fluid ilogo" alt="logo" />
 
-                                <h5>Hi, Welcome To Dealer Portal</h5>
+                                <h5 className="text-center">Hi, Welcome To Dealer Portal</h5>
                                 <p className="pt-2">Forgot Password?<br /> Enter your email to get a reset link</p>
                             </div>
 

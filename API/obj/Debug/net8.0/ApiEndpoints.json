@@ -756,5 +756,381 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyMasterController",
+    "Method": "addCompany",
+    "RelativePath": "api/CompanyMaster/addCompany",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyDtos",
+        "Type": "CompanyDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyMasterController",
+    "Method": "deleteCompany",
+    "RelativePath": "api/CompanyMaster/deleteCompany",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "modifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyMasterController",
+    "Method": "GetAllCompany",
+    "RelativePath": "api/CompanyMaster/GetAllCompany",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyMasterController",
+    "Method": "getCompanyById",
+    "RelativePath": "api/CompanyMaster/getCompanyById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyMasterController",
+    "Method": "updateCompany",
+    "RelativePath": "api/CompanyMaster/updateCompany",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "companyDtos",
+        "Type": "CompanyDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyPlantMappingMasterController",
+    "Method": "addCompanyPlantMapping",
+    "RelativePath": "api/CompanyPlantMappingMaster/addCompanyPlantMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyDtos",
+        "Type": "CompanyPlantMappingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyPlantMappingMasterController",
+    "Method": "deleteCompanyPlantMapping",
+    "RelativePath": "api/CompanyPlantMappingMaster/deleteCompanyPlantMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "modifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyPlantMappingMasterController",
+    "Method": "GetAllCompanyPlantMappings",
+    "RelativePath": "api/CompanyPlantMappingMaster/GetAllCompanyPlantMappings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyPlantMappingMasterController",
+    "Method": "GetAllCompanyPlantMappingsBasedOnCompanyId",
+    "RelativePath": "api/CompanyPlantMappingMaster/GetAllCompanyPlantMappingsBasedOnCompanyId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyPlantMappingMasterController",
+    "Method": "getCompanyPlantMapping",
+    "RelativePath": "api/CompanyPlantMappingMaster/getCompanyPlantMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.CompanyPlantMappingMasterController",
+    "Method": "updateCompanyPlantMapping",
+    "RelativePath": "api/CompanyPlantMappingMaster/updateCompanyPlantMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "companyDtos",
+        "Type": "CompanyPlantMappingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.PlantMasterController",
+    "Method": "addPlant",
+    "RelativePath": "api/PlantMaster/addPlant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "plantDto",
+        "Type": "PlantDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.PlantMasterController",
+    "Method": "deletePlant",
+    "RelativePath": "api/PlantMaster/deletePlant",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "modifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.PlantMasterController",
+    "Method": "GetAllPlants",
+    "RelativePath": "api/PlantMaster/GetAllPlants",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.PlantMasterController",
+    "Method": "getPlant",
+    "RelativePath": "api/PlantMaster/getPlant",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.PlantMasterController",
+    "Method": "updatePlant",
+    "RelativePath": "api/PlantMaster/updatePlant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "plantDto",
+        "Type": "PlantDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.SchemeController",
+    "Method": "CreateScheme",
+    "RelativePath": "api/Scheme/CreateScheme",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReferenceId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ValidFrom",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedUser",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ValidTo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreationDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Active",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Documents",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.SchemeController",
+    "Method": "DeleteSchemeById",
+    "RelativePath": "api/Scheme/DeleteSchemeById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.SchemeController",
+    "Method": "GetAllSchemes",
+    "RelativePath": "api/Scheme/GetAllSchemes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DealerPortal_API.Controllers.SchemeController",
+    "Method": "GetAllSchemes",
+    "RelativePath": "api/Scheme/GetAllSchemesById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

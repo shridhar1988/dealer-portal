@@ -52,6 +52,19 @@ const Menu = () => {
     "/manage-email-config": <i className="fas fa-envelope" />,
     "/form-builder": <i className="fas fa-edit" />,
     "/privacy-policy": <i className="fas fa-scroll" />,
+
+    // dealer
+    "/stock-availability": <i className="fas fa-boxes" />,
+  "/place-order": <i className="fas fa-cart-plus" />,
+  "/return-order": <i className="fas fa-undo-alt" />,
+  "/order-status": <i className="fas fa-info-circle" />,
+  "/delivery-tracking": <i className="fas fa-truck" />,
+  "/order-history": <i className="fas fa-history" />,
+  "/requisition": <i className="fas fa-file-alt" />,
+  "/support": <i className="fas fa-headset" />,
+  "/rewards": <i className="fas fa-gift" />,
+  "/reports": <i className="fas fa-chart-line" />,
+    
     "/manage-attendace-regularization": (
       <i className="fas fa-calendar-check"></i>
     ),

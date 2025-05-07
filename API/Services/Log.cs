@@ -5,7 +5,7 @@
 
 
 
-        public static void Error(Guid? userId, string? message, string FolderName)
+        public static void Error(string? userId, string? message, string FolderName)
 
         {
             string logEntry = "{" + $"Date: {DateTime.Now:yyyy-MM-dd HH:mm:ss} ~|~  User Id: {userId}  ~|~ Message: {message}" + "},";
@@ -42,7 +42,7 @@
             }
 
         }
-        public static void DataLog(Guid? userId, string? message, string? FolderName)
+        public static void DataLog(string? userId, string? message, string? FolderName)
 
         {
             string logEntry = "{" + $"Date: {DateTime.Now:yyyy-MM-dd HH:mm:ss} ~|~  User Id: {userId}  ~|~ Message: {message}" + "},";

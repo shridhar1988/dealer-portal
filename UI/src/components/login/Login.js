@@ -60,11 +60,14 @@ function EmployeeLogin() {
     const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
 
     if (!email) {
+     
       toast.error("Username or email is required.", { toastId: "email-error" });
       emailRef.current.focus();
       emailRef.current.classList.add("is-invalid");
       return;
     } 
+ 
+   
     // else if (!emailRegex.test(email) && !usernameRegex.test(email)) {
     //   toast.error("Enter a valid email or username.", {
     //     toastId: "email-invalid",
@@ -142,12 +145,12 @@ function EmployeeLogin() {
 
             case "Admin":
               navigate("/home", { replace: true });
-              window.location.reload();
+              
               break;
-            // case "HR":
-            //   navigate("/employee-dashboard", { replace: true });
-            //   window.location.reload();
-            //   break;
+            case "Dealer":
+              navigate("/home", { replace: true });
+              
+              break;
             // case "Manager":
             //   navigate("/employee-dashboard", { replace: true });
             //   window.location.reload();

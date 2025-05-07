@@ -66,7 +66,7 @@ namespace Ticketing_API.Controllers
 
                     // Return token
                     authenticationResult.Token = new JwtSecurityTokenHandler().WriteToken(token);
-                    Log.DataLog(authenticationResult.UserID, $"User Id {authenticationResult.UserID} Logged in Successfully", "LoginLog");
+                    Log.DataLog(authenticationResult.UserID.ToString(), $"User Id {authenticationResult.UserID} Logged in Successfully", "LoginLog");
                     //return authenticationResult;
                     return Ok(new { success = "success", message = "You have successfully logged in", data = authenticationResult });
                 }

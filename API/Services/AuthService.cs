@@ -99,6 +99,7 @@ namespace Ticketing_API.Services
                                     .Join(_dbContext.RoleAppMaps, app => app.AppID, map => map.AppID, (app, map) => new { app, map })
                                     .Where(j => j.map.RoleID == userRole.RoleID && j.app.IsActive && j.map.IsActive)
                                     .Select(j => j.app)
+                                    //.OrderBy(j=>j.AppID)
                                     .ToList();
                             }
 

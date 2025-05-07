@@ -1,3 +1,4 @@
+using DealerPortal_API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -17,7 +18,11 @@ var configuration = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddScoped<EmailService>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<AuthMasterSerices>();
+builder.Services.AddScoped<DocumentService>();
 builder.Services.AddScoped<EmailConfigurationService>();
+builder.Services.AddScoped<ICompanyPlantMappingMasterServices, CompanyPlantMappingMasterServices>();
+builder.Services.AddScoped<ICompanyMasterServices, CompanyMasterServices>();
+builder.Services.AddScoped<IPlantMasterServices, PlantMasterServices>();
 builder.Services.AddHttpClient();
 builder.Services.AddDbContext<DealerPortalContext>(item => item.UseSqlServer(configuration.GetConnectionString("myconn")));
 var key = Encoding.ASCII.GetBytes(configuration["Jwt:Key"]);

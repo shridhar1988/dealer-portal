@@ -482,7 +482,7 @@ namespace Ticketing_API.Controllers
             try
             {
                 var result = await _authMasterService.SignOut(userID);
-                Log.DataLog(userID, $"User Id {userID} Successfully loggedout from the app", "LoginLog");
+                Log.DataLog(userID.ToString(), $"User Id {userID} Successfully loggedout from the app", "LoginLog");
                 return Ok(new { success = "success", message = "You have successfully loggedout", data = result });
             }
             catch (Exception ex)
@@ -518,6 +518,7 @@ namespace Ticketing_API.Controllers
             try
             {
                 var result = await _authMasterService.SendResetLinkToMail(emailModel);
+                Log.DataLog($"{emailModel.EmailAddress}", $"Password reset link has been sent to the user Email {emailModel.EmailAddress}", "Password Reset Link Log");
                 //return Ok(result);
                 return Ok(new { success = "success", message = "You have successfully Sent Mail", data = result });
 
@@ -535,6 +536,8 @@ namespace Ticketing_API.Controllers
             try
             {
                 var result = await _authMasterService.ForgotPassword(forgotPassword);
+                Log.DataLog($"{forgotPassword.UserID}", $"Password Has been changed successfully  for the userId : {forgotPassword.UserID}", "Password Change Log");
+                
                 //return Ok();
                 return Ok(new { success = "success", message = "You have successfully Reseted password", data = result });
 

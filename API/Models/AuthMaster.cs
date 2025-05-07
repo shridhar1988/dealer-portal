@@ -277,13 +277,13 @@ namespace Ticketing_API.Models
         public class EmailModel
         {
             public string EmailAddress { get; set; }
-            public string siteURL { get; set; }
+            public string? siteURL { get; set; }
         }
 
         public class ForgotPassword
         {
             public Guid UserID { get; set; }
-            public string EmailAddress { get; set; }
+            public string? EmailAddress { get; set; }
             public string NewPassword { get; set; }
             public string Token { get; set; }
         }

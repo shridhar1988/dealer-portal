@@ -118,7 +118,7 @@ namespace Ticketing_API.Services
             try
             {
                 var ec = _dbContext.EmailConfiguration.FirstOrDefault(k => k.IsActive && !k.IsSSL && k.ID == 1);
-
+                var FPURL = _configuration["ForgotpasswordURL"];
                 if (ec != null)
                 {
 
@@ -127,7 +127,7 @@ namespace Ticketing_API.Services
                     StringBuilder sb = new StringBuilder();
                     UserName = string.IsNullOrEmpty(UserName) ? toEmail.Split('@')[0] : UserName;
 
-                    sb.Append(@"<html><head></head><body> <div style='border:1px solid #dbdbdb;'> <div style='padding: 20px 20px; background-color: #fff06769;text-align: center;font-family: Segoe UI;'> <p> <h2>Auth Application</h2> </p> </div> <div style='background-color: #f8f7f7;padding: 20px 20px;font-family: Segoe UI'> <div style='padding: 20px 20px;border:1px solid white;background-color: white !important'> <p>Dear concern,</p> <p>We have received a request to reset your password, you can reset it now by clicking reset button</p> <div style='text-align: end;'>" + "<a href=\"" + siteURL + "?token=" + code + "&Id=" + userID + "\"" + "><button style='width: 90px;height: 28px; background-color: #039be5;color: white'>Reset</button></a></div> <p>Regards,</p> <p>Admin</p> </div> </div> </div></body></html>");
+                    sb.Append(@"<html><head></head><body> <div style='border:1px solid #dbdbdb;'> <div style='padding: 20px 20px; background-color: #fff06769;text-align: center;font-family: Segoe UI;'> <p> <h2>Auth Application</h2> </p> </div> <div style='background-color: #f8f7f7;padding: 20px 20px;font-family: Segoe UI'> <div style='padding: 20px 20px;border:1px solid white;background-color: white !important'> <p>Dear concern,</p> <p>We have received a request to reset your password, you can reset it now by clicking reset button</p> <div style='text-align: end;'>" + "<a href=\"" + FPURL + "?token=" + code + "&Id=" + userID + "\"" + "><button style='width: 90px;height: 28px; background-color: #039be5;color: white'>Reset</button></a></div> <p>Regards,</p> <p>Admin</p> </div> </div> </div></body></html>");
 
 
                     SmtpClient client = new SmtpClient(ec.ServerAddress);

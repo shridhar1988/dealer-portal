@@ -76,7 +76,7 @@ function ForgotPassword() {
         setIsLoaderActive(true);
         try {
             const response = await axios.post(
-                `${config.apiEndPoint}/AuthMaster/ForgotPassword`, {
+                `${config.API_URL}AuthMaster/ForgotPassword`, {
                 userID: Id, newPassword: token, token: confirmPassword
             });
 
@@ -146,7 +146,7 @@ function ForgotPassword() {
                             <div className="text-center welcome-slogan">
                                 <img src={ilogo} className="img-fluid ilogo" alt="logo" />
 
-                                <h5>Hi, Welcome To Dealer Portal</h5>
+                                <h5 className="text-center">Hi, Welcome To Dealer Portal</h5>
                                 <p>Forgot Password? That's okay! Lets change it...<br /> Please enter the new password and confirm password</p>
                             </div>
 

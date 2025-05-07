@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import "./filter-style.css";
-
-
-
+import "../../App.css";
 function Masters() {
   const navigate = useNavigate();
-  
-const handleCreateClick = () => {
-console.log("Create button clicked");
-  navigate('/create-scheme');
-};
+
+  const handleCreateClick = () => {
+    console.log("Create button clicked");
+    navigate("/create-scheme");
+  };
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullscreen = () => {
+    setIsFullscreen(!isFullscreen);
+  };
+
   return (
     // <div>
     //   <div className="content-header">
@@ -137,143 +141,151 @@ console.log("Create button clicked");
         </div>
       </div>
 
-      {/* Main Section */}
       <section className="content">
         <div className="container-fluid">
           <div className="row">{/* Your content goes here */}</div>
         </div>
       </section>
+      <div className="fileterdiv">
+        <div className="ml-2 p-4">
+          <div className="filter-bar d-flex align-items-center">
+            <div className="filter-dropdown   px-3 py-2">
+              <i className="fa fa-filter" aria-hidden="true"></i>
+            </div>
 
-      {/* Filter Row */}
-      <div className="filter-container   ml-4 p-4">
-        <div className="filter-bar d-flex align-items-center">
-          {/* Filter Icon */}
-          <div className="filter-icon d-flex align-items-center px-3 py-2">
-            <i className="fa fa-filter" aria-hidden="true"></i>
-          </div>
+            <div className="filter-label d-flex align-items-center px-3 py-2 font-weight-bold">
+              Filter By
+            </div>
 
-          {/* Filter By */}
-          <div className="filter-label d-flex align-items-center px-3 py-2 font-weight-bold">
-            Filter By
-          </div>
+            {/* Reference ID Dropdown */}
+            <div className="filter-dropdown d-flex align-items-center px-3 py-2">
+              <select className="form-select border-0 p-0 no-border-input font-weight-bold">
+                <option>Reference ID</option>
+                <option>REF001</option>
+                <option>REF002</option>
+              </select>
+            </div>
 
-          {/* Reference ID Dropdown */}
-          <div className="filter-dropdown d-flex align-items-center px-3 py-2">
-            <select className="form-select border-0 p-0 no-border-input font-weight-bold">
-              <option>Reference ID</option>
-              <option>REF001</option>
-              <option>REF002</option>
-            </select>
-          </div>
+            {/* Creation Date Dropdown */}
+            <div className="filter-dropdown d-flex align-items-center px-3 py-2">
+              <select className="form-select border-0 p-0 no-border-input font-weight-bold">
+                <option>Creation Date</option>
+                <option>Today</option>
+                <option>Last 7 Days</option>
+              </select>
+            </div>
 
-          {/* Creation Date Dropdown */}
-          <div className="filter-dropdown d-flex align-items-center px-3 py-2">
-            <select className="form-select border-0 p-0 no-border-input font-weight-bold">
-              <option>Creation Date</option>
-              <option>Today</option>
-              <option>Last 7 Days</option>
-            </select>
-          </div>
-
-          {/* Reset Filter */}
-          <div className="filter-reset d-flex align-items-center px-3 py-2 text-danger font-weight-bold">
-            <i className="fas fa-redo mr-2"></i> Reset Filter
+            {/* Reset Filter */}
+            <div className="filter-reset d-flex align-items-center px-3 py-2 text-danger font-weight-bold">
+              <i className="fas fa-redo mr-2"></i> Reset Filter
+            </div>
           </div>
         </div>
       </div>
+      <div className={`fileterdiv1 ${isFullscreen ? "fullscreen-table" : ""}`}>
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <h5 className="ml-3 mb-0">Scheme (3)</h5>
 
-      <div className="d-flex justify-content-between align-items-center mb-3">
-  <h5 className="ml-3 mb-0">Scheme (3)</h5>
+          <div className="d-flex align-items-center gap-2 mt-2 mr-2">
+            <button
+              className="btn btn-primary mr-2"
+              onClick={handleCreateClick}
+            >
+              Create
+            </button>
+            <button className="btn btn-outline-secondary" title="Settings">
+              <i className="fas fa-cog"></i>
+            </button>
 
-  <div className="d-flex align-items-center gap-2">
-    <button className="btn btn-primary mr-2" onClick={handleCreateClick}>Create</button>
-    <button className="btn btn-outline-secondary" title="Settings">
-      <i className="fas fa-cog"></i>
-    </button>
-    <button className="btn btn-outline-secondary" title="Expand">
-      <i className="fas fa-expand-arrows-alt"></i>
-    </button>
-  </div>
-</div>
+            <button
+              className="btn btn-outline-secondary"
+              title="Expand"
+              onClick={toggleFullscreen}
+            >
+              <i className="fas fa-expand-arrows-alt"></i>
+            </button>
+          </div>
+        </div>
 
-      <div className="table-responsive mt-4 ml-4">
-        <table className="table table-bordered table-striped text-center">
-          <thead className="thead-grey">
-            <tr>
-              <th>Reference ID</th>
-              <th>Valid From</th>
-              <th>Valid To</th>
-              <th>Creation Date</th>
-              <th>Type</th>
-              <th>Created By</th>
-              <th>File</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody className="thead-white">
-            <tr>
-              <td>REF12345</td>
-              <td>2025-01-01</td>
-              <td>2025-12-31</td>
-              <td>2025-04-20</td>
-              <td>Standard</td>
-              <td>Admin</td>
-              <td>
-                <button class="btn btn-light p-1">
-                  <a href="#" class="text-primary">
-                    <i class="fas fa-file-alt"></i>
-                  </a>
-                </button>
-              </td>
+        <div className="table-responsive mt-4 px-4 ">
+          <table className="table table-border table-striped text-center px-6 border">
+            <thead className="thead-light">
+              <tr>
+                <th>Reference ID</th>
+                <th>Valid From</th>
+                <th>Valid To</th>
+                <th>Creation Date</th>
+                <th>Type</th>
+                <th>Created By</th>
+                <th>File</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody className="thead-white">
+              <tr>
+                <td>REF12345</td>
+                <td>2025-01-01</td>
+                <td>2025-12-31</td>
+                <td>2025-04-20</td>
+                <td>Standard</td>
+                <td>Admin</td>
+                <td>
+                  <button class="btn btn-light p-1">
+                    <a href="#" class="text-primary">
+                      <i class="fas fa-file-alt"></i>
+                    </a>
+                  </button>
+                </td>
 
-              <td>
-                <button class="btn btn-light p-1">
-                  <i class="fas fa-ellipsis-v"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>REF67890</td>
-              <td>2025-02-01</td>
-              <td>2025-11-30</td>
-              <td>2025-04-22</td>
-              <td>Custom</td>
-              <td>Manager</td>
-              <td>
-                <button class="btn btn-light p-1">
-                  <a href="#" class="text-primary">
-                    <i class="fas fa-file-alt"></i>
-                  </a>
-                </button>
-              </td>
-              <td>
-                <button class="btn btn-light p-1">
-                  <i class="fas fa-ellipsis-v"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>REF24680</td>
-              <td>2025-03-15</td>
-              <td>2025-10-15</td>
-              <td>2025-04-25</td>
-              <td>Premium</td>
-              <td>User1</td>
-              <td>
-                <button class="btn btn-light p-1">
-                  <a href="#" class="text-primary">
-                    <i class="fas fa-file-alt"></i>
-                  </a>
-                </button>
-              </td>
-              <td>
-                <button class="btn btn-light p-1">
-                  <i class="fas fa-ellipsis-v"></i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                <td>
+                  <button class="btn btn-light p-1">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>REF67890</td>
+                <td>2025-02-01</td>
+                <td>2025-11-30</td>
+                <td>2025-04-22</td>
+                <td>Custom</td>
+                <td>Manager</td>
+                <td>
+                  <button class="btn btn-light p-1">
+                    <a href="#" class="text-primary">
+                      <i class="fas fa-file-alt"></i>
+                    </a>
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-light p-1">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>REF24680</td>
+                <td>2025-03-15</td>
+                <td>2025-10-15</td>
+                <td>2025-04-25</td>
+                <td>Premium</td>
+                <td>User1</td>
+                <td>
+                  <button class="btn btn-light p-1">
+                    <a href="#" class="text-primary">
+                      <i class="fas fa-file-alt"></i>
+                    </a>
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-light p-1">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
