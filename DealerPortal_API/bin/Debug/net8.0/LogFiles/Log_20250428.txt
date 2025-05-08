@@ -1,0 +1,36 @@
+28-04-2025 15:49:06 : Auth/GetToken:- Get Token Called
+28-04-2025 15:51:44 : Auth/GetToken:- Get Token Called
+28-04-2025 15:52:25 : Auth/GetToken:- Get Token Called
+28-04-2025 15:54:18 : Auth/GetToken:- Get Token Called
+28-04-2025 15:56:19 : Auth/GetToken:- Get Token Called
+28-04-2025 15:58:21 : Auth/GetToken:- Get Token Called
+28-04-2025 17:10:06 : Auth/GetToken:- Get Token Called
+28-04-2025 17:10:13 : AuthorizationServerProvider/GrantResourceOwnerCredentials :-  :- Invalid column name 'Company'.
+Invalid column name 'ConfirmPassword'.
+Invalid column name 'FirstName'.
+Invalid column name 'LastName'.
+Invalid column name 'Plant'.
+Invalid column name 'Role'.
+28-04-2025 17:10:13 : Auth/GetToken :- Invalid column name 'Company'.
+Invalid column name 'ConfirmPassword'.
+Invalid column name 'FirstName'.
+Invalid column name 'LastName'.
+Invalid column name 'Plant'.
+Invalid column name 'Role'.
+28-04-2025 17:29:45 : Auth/GetToken:- Get Token Called
+28-04-2025 17:29:45 : AuthorizationServerProvider/GrantResourceOwnerCredentials :-  :- Invalid column name 'Company'.
+Invalid column name 'ConfirmPassword'.
+Invalid column name 'FirstName'.
+Invalid column name 'LastName'.
+Invalid column name 'Plant'.
+Invalid column name 'Role'.
+28-04-2025 17:29:45 : Auth/GetToken :- Invalid column name 'Company'.
+Invalid column name 'ConfirmPassword'.
+Invalid column name 'FirstName'.
+Invalid column name 'LastName'.
+Invalid column name 'Plant'.
+Invalid column name 'Role'.
+28-04-2025 18:04:14 : Auth/GetToken:- Get Token Called
+28-04-2025 18:04:45 : Auth/GetToken:- Get Token Called
+28-04-2025 18:05:02 : Auth/GetToken:- Get Token Called
+28-04-2025 18:09:55 : Auth/GetToken:- Get Token Called

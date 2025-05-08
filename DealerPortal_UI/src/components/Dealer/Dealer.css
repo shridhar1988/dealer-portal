@@ -1,0 +1,69 @@
+
+
+
+/* Target both buttons and label‑buttons in your header */
+.content-header .btn {
+  display: inline-flex;       /* use flex so icon+text align consistently */
+  align-items: center;        /* vertically center icon and text */
+  justify-content: center;    /* horizontal center (optional) */
+  line-height: 1.2;           /* ensure consistent line‑height */
+  padding-top: 0.35rem;       /* match Bootstrap btn‑sm vertical padding */
+  padding-bottom: 0.35rem;    /* match Bootstrap btn‑sm vertical padding */
+}
+
+/* ensure icon never shifts baseline */
+.content-header .btn i {
+  vertical-align: middle;
+}
+.filter-box  {
+  border: 1px solid #dee2e6;    /* light gray border */
+  border-radius: 4px;           /* rounded corners */
+  padding: 0.25rem 0.5rem;      /* space inside */
+  background-color: #fafafa;    /* optional: subtle background */
+}
+.filter-box .input-group {
+  margin-left: 0.5rem;          /* space between label and dropdown */
+}
+.filter-box .btn {
+  margin-left: 0.5rem;          /* space before Clear button */
+}
+/* Remove the select’s border and focus outline */
+.filter-box .form-control {
+  border: none !important;
+  box-shadow: none !important;
+  
+}
+.Orders
+{
+  overflow-y: auto;
+  min-height: 400px;
+}
+.fileterdiv
+{
+  background-color: white;
+  border-radius: 9px;
+  margin-left: 13px;
+  margin-right: 10px;
+}
+.Exposure
+{
+  color: #9236b9;
+}.Utilization
+{
+  color: #e45430;
+}
+.Creditxposure
+{
+  color: #2a25b8;
+}.salesorder{color: #8c8c8f;}
+
+.button{
+  margin-left: 530px;
+}
+.place{
+  padding: 0.5rem;
+}
+.Search{
+  border-radius: 10px;
+}
+.requisition{border-radius: 8px;}

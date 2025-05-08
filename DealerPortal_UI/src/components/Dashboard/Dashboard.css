@@ -1,0 +1,141 @@
+.leady {
+    position: relative;
+    height: auto;
+}
+ 
+/* .laudi {
+    position: absolute;
+    top: -86px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 276%;
+    z-index: 999;
+} */
+
+/* Default for large screens (1920px and above) */
+.laudi {
+    position: absolute;
+    top: -86px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 276%;
+    z-index: 999;
+  }
+   
+  /* Extra large laptops / desktops (1600px - 1919px) */
+  @media screen and (max-width: 1919px) {
+    .laudi {
+      top: -70px;
+      height: 250%;
+    }
+  }
+   
+  /* Laptops / smaller desktops (1280px - 1599px) */
+  @media screen and (max-width: 1599px) {
+    .laudi {
+      top: -67px;
+      height: 220%;
+    }
+  }
+   
+  /* Tablets and smaller laptops (1024px - 1279px) */
+  @media screen and (max-width: 1279px) {
+    .laudi {
+      top: -50px;
+      height: 190%;
+    }
+  }
+   
+  /* Large mobile devices / tablets (769px - 1023px) */
+  @media screen and (max-width: 1023px) {
+    .laudi {
+      top: -40px;
+      height: 160%;
+    }
+  }
+   
+  /* Mobile phones (481px - 768px) */
+  @media screen and (max-width: 768px) {
+    .laudi {
+      top: -30px;
+      height: 130%;
+    }
+  }
+   
+  /* Extra small mobile devices (up to 480px) */
+  @media screen and (max-width: 480px) {
+    .laudi {
+      top: -20px;
+      height: 110%;
+    }
+  
+  }
+
+  /* dealer by shafi  */
+  .updates-tile {
+    background-color: #1d4ed8; /* blue background */
+    color: white;
+    position: relative;
+  }
+  .updates-label {
+    background-color: white;
+    color: #1d4ed8;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 0.75rem;
+  }
+  .tile-header {
+    margin-top: 60px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 20px;
+  }
+  
+  .tile-text {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }.bar
+  {
+    background-color: white;
+
+  }
+  .tile {
+   
+    border-radius: 12px; /* or any value you prefer */
+    overflow: hidden;
+  }
+  
+  /* .percentage {
+    position: absolute !important;
+    top: 50px !important;
+    left: 62px !important;
+}
+         */
+         .percentage {
+          position: absolute !important;
+          top: 27% !important;
+          left: 50% !important;
+          transform: translate(-50%, -50%) !important;
+      }
+
+/* Tablet screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* .percentage {
+      top: 40px !important;
+      left: 50px !important;
+  } */
+}
+
+/* Mobile screens (below 768px) */
+@media (max-width: 767px) {
+  /* .percentage {
+      top: 30px !important;
+      left: 38px !important;
+  } */
+
+ 
+}
