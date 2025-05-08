@@ -107,7 +107,7 @@ function Masters() {
         <div className="container-fluid">
           <div className="row mb-2 align-items-center">
             <div className="col-sm-6">
-              <h1 className="m-0">Scheme Creation</h1>
+              <h1 className="m-0"><strong>Scheme Creation</strong></h1>
             </div>
             <div className="col-sm-6 d-flex justify-content-end">
               <div className="dropdown">
@@ -183,8 +183,8 @@ function Masters() {
         </div>
       </div>
       <div className={`fileterdiv1 ${isFullscreen ? "fullscreen-table" : ""}`}>
-        <div className="d-flex justify-content-between align-items-center mb-3">
-          <h5 className="ml-3 mb-0">Scheme (3)</h5>
+        <div className="d-flex justify-content-between align-items-center mb-3 ">
+          <h5 className="ml-3 mb-0"><strong>Scheme (3)</strong></h5>
 
           <div className="d-flex align-items-center gap-2 mt-2 mr-2">
             <button

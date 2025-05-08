@@ -109,4 +109,33 @@
     overflow: hidden;
   }
   
-  
+  /* .percentage {
+    position: absolute !important;
+    top: 50px !important;
+    left: 62px !important;
+}
+         */
+         .percentage {
+          position: absolute !important;
+          top: 27% !important;
+          left: 50% !important;
+          transform: translate(-50%, -50%) !important;
+      }
+
+/* Tablet screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* .percentage {
+      top: 40px !important;
+      left: 50px !important;
+  } */
+}
+
+/* Mobile screens (below 768px) */
+@media (max-width: 767px) {
+  /* .percentage {
+      top: 30px !important;
+      left: 38px !important;
+  } */
+
+ 
+}

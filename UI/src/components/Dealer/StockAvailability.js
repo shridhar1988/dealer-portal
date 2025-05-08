@@ -14,7 +14,7 @@ const Header = () => (
     <div className="container-fluid">
       <div className="row mb-2 align-items-center">
         <div className="col-sm-6  ">
-          <h1 className="m-0">Stock Availability</h1>
+          <h1 className="m-0"><strong>Stock Availability</strong></h1>
         </div>
         <div className="col-sm-6 d-flex justify-content-end">
           <div className="d-flex align-items-center">
@@ -157,29 +157,9 @@ const StockAvailability = () => {
     <div className="col-12 mb-4 ml-2 ">
       <Header />
       <div className="card ">
-        {/* <div className="card-header border-0 d-flex justify-content-between align-items-center">
-          <h6 className="mb-0">Warehouse Stock of Material</h6>
-
-          <div className="col-sm-6 d-flex justify-content-end">
-          <div className="d-flex align-items-center ">
-            <span className="mr-2">Filter:</span>
-            <div
-              className="input-group input-group-sm"
-              style={{ width: "150px" }}
-            >
-              <select className="form-control">
-                <option>ALL</option>
-              </select>
-              <div className="input-group-append">
-                <button className="btn btn-outline-secondary" type="button">
-                  <i className="fas fa-times"></i> Clear
-                </button>
-              </div>
-            </div>
-          </div></div>
-        </div> */}
+        
         <div className="d-flex justify-content-between align-items-center mb-3">
-          <h5 className="ml-3 mb-0">Warehouse Stock of Material</h5>
+          <h5 className="ml-3 mb-0"><strong>Warehouse Stock of Material</strong></h5>
 
           <div className="d-flex align-items-center gap-2 mt-2 mr-2">
             <button className="btn mt-1" type="button">

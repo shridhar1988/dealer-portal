@@ -45,3 +45,25 @@
   margin-left: 13px;
   margin-right: 10px;
 }
+.Exposure
+{
+  color: #9236b9;
+}.Utilization
+{
+  color: #e45430;
+}
+.Creditxposure
+{
+  color: #2a25b8;
+}.salesorder{color: #8c8c8f;}
+
+.button{
+  margin-left: 530px;
+}
+.place{
+  padding: 0.5rem;
+}
+.Search{
+  border-radius: 10px;
+}
+.requisition{border-radius: 8px;}

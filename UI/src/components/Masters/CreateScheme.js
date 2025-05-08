@@ -235,7 +235,7 @@ const CreateScheme = () => {
   };
 
   return (
-    <>
+    <><section className="content">
       <main id="main" className="addAssignee">
         <div className="content-header">
           <div className="container-fluid">
@@ -268,8 +268,6 @@ const CreateScheme = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="card card-outline card-primary">
-              
-
                 <div className="card-body text-sm">
                   <div className="container mt-0">
                     <form className="row g-3">
@@ -340,22 +338,20 @@ const CreateScheme = () => {
                       </div>
 
                       <div className="col-md-6 d-flex align-items-center p-2">
-  <label
-     htmlFor="fileUpload"
-    className="me-2 fw-bold mb-0"
-    style={{ width: "200px" }}
-  >
-    File:
-  </label>
-  <input
-    type="file"
-    id="fileUpload"
-    className="form-control"
-    onChange={handleFileChange}  /* your change‑handler */
-  />
-</div>
-
-                    
+                        <label
+                          htmlFor="fileUpload"
+                          className="me-2 fw-bold mb-0"
+                          style={{ width: "200px" }}
+                        >
+                          File:
+                        </label>
+                        <input
+                          type="file"
+                          id="fileUpload"
+                          className="form-control"
+                          onChange={handleFileChange} /* your change‑handler */
+                        />
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -386,19 +382,12 @@ const CreateScheme = () => {
 
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-12">
-              
-
-             
-
-             
-            </div>
+            <div className="col-md-12"></div>
           </div>
         </div>
-
-        
       </main>
       <ToastContainer position="top-center" />
+      </section>
     </>
   );
 };

@@ -8,7 +8,8 @@ const ForgotPassword = lazy(() =>
 );
 const ResetPassword = lazy(() => import("./components/login/resetPassword.js"));
 const ProtectedRoute = lazy(() => import("./protectedRoute/ProtectedRoute"));
-const Dashboard = lazy(() => import("./components/Dashboard/Dashboard.js"));
+const DealerDashboard = lazy(() => import("./components/Dashboard/DealerDashboard.js"));
+const AdminDashboard = lazy(() => import("./components/Dashboard/AdminDashboard.js"));
 const Master = lazy(() => import("./components/Masters/Masters.js"));
 const Addstock = lazy(() => import("./components/Masters/AddStock.js"));
 const Profile = lazy(() => import("./components/profile/profile.js"));
@@ -42,14 +43,14 @@ const AppRoutes = () => {
         <Route path="/sendResetLink" element={<ForgotPassword />} />
         <Route element={<ProtectedRoute allowedRoles={["Admin","Dealer"]} />}>
 
-        <Route path="/home" element={<Dashboard />} />
+       
         <Route path="/scheme" element={<Master />} />
         </Route>
 
         {/* Admin routes */}
         <Route element={<ProtectedRoute allowedRoles="Admin" />}>
       
-
+        <Route path="/Admin-home" element={<AdminDashboard />} />
           <Route path="/user-management" element={<UserManagement />} />
 
          
@@ -64,7 +65,7 @@ const AppRoutes = () => {
 
         {/* Employee routes */}
         <Route element={<ProtectedRoute allowedRoles="Dealer" />}>
-  
+        <Route path="/home" element={<DealerDashboard />} />
           <Route path="/stock-availability" element={<StockAvailability />} />
           <Route path="/place-order" element={<PlaceOrder />} />
           <Route path="/return-order" element={<ReturnOrder />} />

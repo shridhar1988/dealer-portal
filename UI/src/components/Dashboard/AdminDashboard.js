@@ -186,7 +186,7 @@ const OrderTrends = () => {
   );
 };
 
-const Dashboard = () => (
+const DealerDashboard = () => (
   <section className="content">
     <div className="container-fluid">
       <div className="row">
@@ -205,4 +205,4 @@ const Dashboard = () => (
   </section>
 );
 
-export default Dashboard;
+export default DealerDashboard;
