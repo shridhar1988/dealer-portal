@@ -1,7 +1,7 @@
 import React from "react";
 import * as XLSX from "xlsx";
 import "./Dealer.css"; // Custom CSS for this component
-import { IoIosCloseCircleOutline } from "react-icons/io";
+// import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const Rewards = () => {
     const orderItems = [

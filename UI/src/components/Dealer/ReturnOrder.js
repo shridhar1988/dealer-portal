@@ -1,5 +1,5 @@
 import React from "react";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+// import { IoIosCloseCircleOutline } from "react-icons/io";
 import "./Dealer.css"; // Assuming the same CSS file as PlaceOrder for consistent styling
 
 const ReturnOrder = () => {
@@ -109,7 +109,7 @@ const ReturnOrder = () => {
 
                   <div className="d-flex align-items-center gap-2 mt-2 mr-2">
                     <button className="btn mt-1" type="button">
-                      <IoIosCloseCircleOutline className="mr-1" />
+                      {/* <IoIosCloseCircleOutline className="mr-1" /> */}
                       Clear
                     </button>
 

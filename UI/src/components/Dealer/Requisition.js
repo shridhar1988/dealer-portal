@@ -1,7 +1,7 @@
 import React from "react";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+// import { IoIosCloseCircleOutline } from "react-icons/io";
 import "./Dealer.css"; // Assuming the same CSS file as PlaceOrder for consistent styling
-
+import * as XLSX from "xlsx";
 const PaymentDetails = () => {
   // Sample data based on the image
   const payments = [
@@ -78,7 +78,11 @@ const PaymentDetails = () => {
         ExpectedBy : "28.12.2024",
     },
   ];
-
+const downloadExcel = () => {
+  const table = document.querySelector("table"); // or use a ref for more control
+  const workbook = XLSX.utils.table_to_book(table, { sheet: "Stock Data" });
+  XLSX.writeFile(workbook, "Stock.xlsx");
+};
   const handleDownload = (sno) => {
     alert(`Download action for payment #${sno}`);
   };
@@ -98,8 +102,8 @@ const PaymentDetails = () => {
               <div className="col-sm-6 d-flex justify-content-end">
                 <div className="d-flex align-items-center">
                   <button
-                    className="btn btn-sm btn-outline-primary mr-2"
-                    // onClick={downloadExcel}
+                     className="custom-btn custom-download-btn"
+                     onClick={downloadExcel}
                   >
                     <i className="fas fa-download mr-1"></i> DOWNLOAD
                   </button>
@@ -114,7 +118,7 @@ const PaymentDetails = () => {
                   {/* Label styled as button */}
                   <label
                     htmlFor="fileUpload"
-                    className="btn btn-sm btn-outline-primary mr-2"
+                    className="custom-btn custom-upload-btn mr-2"
                   >
                     <i className="fas fa-upload mr-1"></i> UPLOAD
                   </label>

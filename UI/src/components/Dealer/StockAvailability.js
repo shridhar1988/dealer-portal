@@ -1,7 +1,7 @@
 import React from "react";
 import * as XLSX from "xlsx";
 import "./Dealer.css"; // Assuming you have a CSS file for styling
-import { IoIosCloseCircleOutline } from "react-icons/io";
+// import { IoIosCloseCircleOutline } from "react-icons/io";
 const handleFileSelected = (e) => {
   const file = e.target.files[0];
   if (file) {
@@ -17,30 +17,32 @@ const Header = () => (
           <h1 className="m-0"><strong>Stock Availability</strong></h1>
         </div>
         <div className="col-sm-6 d-flex justify-content-end">
-          <div className="d-flex align-items-center">
-            <button
-              className="btn btn-sm btn-outline-primary mr-2"
-              onClick={downloadExcel}
-            >
-              <i className="fas fa-download mr-1"></i> DOWNLOAD
-            </button>
-            {/* Hidden file input */}
-            <input
-              type="file"
-              id="fileUpload"
-              className="d-none"
-              onChange={handleFileSelected} // your handler
-            />
+      <div className="d-flex align-items-center">
+        {/* Download Button */}
+        <button
+          className="custom-btn custom-download-btn"
+          onClick={downloadExcel}
+        >
+          <i className="fas fa-download"></i> DOWNLOAD
+        </button>
 
-            {/* Label styled as button */}
-            <label
-              htmlFor="fileUpload"
-              className="btn btn-sm btn-outline-primary mr-2"
-            >
-              <i className="fas fa-upload mr-1"></i> UPLOAD
-            </label>
-          </div>
-        </div>
+        {/* Hidden file input */}
+        <input
+          type="file"
+          id="fileUpload"
+          className="d-none"
+          onChange={handleFileSelected}
+        />
+
+        {/* Upload Button (Label styled as button) */}
+        <label
+          htmlFor="fileUpload"
+          className="custom-btn custom-upload-btn"
+        >
+          <i className="fas fa-upload"></i> UPLOAD
+        </label>
+      </div>
+    </div>
       </div>
     </div>
   </div>
@@ -154,6 +156,7 @@ const StockAvailability = () => {
   ];
 
   return (
+    <section className="content">
     <div className="col-12 mb-4 ml-2 ">
       <Header />
       <div className="card ">
@@ -163,7 +166,7 @@ const StockAvailability = () => {
 
           <div className="d-flex align-items-center gap-2 mt-2 mr-2">
             <button className="btn mt-1" type="button">
-            <IoIosCloseCircleOutline className="mr-1"/>
+            {/* <IoIosCloseCircleOutline className="mr-1"/> */}
               Clear
             </button>
 
@@ -214,6 +217,7 @@ const StockAvailability = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

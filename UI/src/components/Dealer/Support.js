@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { IoIosSend } from "react-icons/io";
-import { FaArrowLeft } from "react-icons/fa";
+// import { IoIosSend } from "react-icons/io";
+// import { FaArrowLeft } from "react-icons/fa";
 import "./Chat.css"; // Custom CSS for additional styling
-import { registerLocale } from "react-datepicker";
+// import { registerLocale } from "react-datepicker";
 
 const Chat = () => {
   const voice =(e) => {
@@ -212,11 +212,11 @@ const Chat = () => {
           <div className="col-md-8 col-lg-9">
             <div className="card">
               <div className="card-header border-0 d-flex  align-items-left pl-2">
-                <FaArrowLeft
+                {/* <FaArrowLeft
                   className="mt-1 cursor-pointer"
                   style={{ cursor: "pointer" }}
                   onClick={chatback}
-                />
+                /> */}
 
                 <h6 className="card-title pl-2">{selectedContact.name}</h6>
                 <div>

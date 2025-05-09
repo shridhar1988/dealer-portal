@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as XLSX from "xlsx";
 import "./Dealer.css"; // Assuming you have a CSS file for styling
-import { IoIosCloseCircleOutline } from "react-icons/io";
+// import { IoIosCloseCircleOutline } from "react-icons/io";
 
 
 
@@ -39,6 +39,11 @@ const PlaceOrder = () => {
       amount: "331.27",
     },
   ];
+  const downloadExcel = () => {
+    const table = document.querySelector("table"); // or use a ref for more control
+    const workbook = XLSX.utils.table_to_book(table, { sheet: "Stock Data" });
+    XLSX.writeFile(workbook, "Stock.xlsx");
+  };
   const handleReviewClick = () => {
     setShowModal(true);
 };
@@ -131,8 +136,8 @@ const handleConfirmOrder = () => {
                 <div className="button d-flex justify-content-end">
                   <div className="d-flex align-items-center ml-4">
                     <button
-                      className="btn btn-sm btn-outline-primary mr-2"
-                      // onClick={downloadExcel}
+                      className="custom-btn custom-download-btn mr-2"
+                       onClick={downloadExcel}
                     >
                       <i className="fas fa-download "></i> DOWNLOAD
                     </button>
@@ -147,11 +152,11 @@ const handleConfirmOrder = () => {
                  
                     <label
                       htmlFor="fileUpload"
-                      className="btn btn-sm btn-outline-primary mr-2"
+                     className="custom-btn custom-upload-btn mr-2"
                     >
                       <i className="fas fa-upload mr-1"></i> UPLOAD
                     </label>
-                    <button className="btn btn-sm btn-outline-primary">
+                    <button className="btn btn-sm btn-outline-primary" style={{border:"1px solid blue"}}>
                       Reset
                     </button>
                   </div>
@@ -242,7 +247,7 @@ const handleConfirmOrder = () => {
                 {/* Table */}
                 <div className="table-responsive border">
                   <table className="table">
-                    <thead className="thead-light">
+                    <thead className="thead-light" style={{textwrap:"nowrap"}}>
                       <tr>
                         <th>Material Code</th>
                         <th>Material Description</th>
