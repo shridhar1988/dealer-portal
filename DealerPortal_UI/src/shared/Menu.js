@@ -28,7 +28,8 @@ const Menu = () => {
   const location = useLocation();
 
   const routeIcons = {
-    "/home": <i className="fas fa-user" />,
+    "/home": <i className="fas fa-home" />,
+    "/Home": <i className="fas fa-home" />,
     "/employee-dashboard": <i className="fas fa-qrcode" />,
     "/manage-attendance": <i className="fas fa-calendar-alt" />,
     "/manage-leave": <i className="fas fa-binoculars" />,

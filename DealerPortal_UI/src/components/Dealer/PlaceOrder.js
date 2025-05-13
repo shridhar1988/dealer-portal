@@ -39,6 +39,11 @@ const PlaceOrder = () => {
       amount: "331.27",
     },
   ];
+  const downloadExcel = () => {
+    const table = document.querySelector("table"); // or use a ref for more control
+    const workbook = XLSX.utils.table_to_book(table, { sheet: "Stock Data" });
+    XLSX.writeFile(workbook, "Stock.xlsx");
+  };
   const handleReviewClick = () => {
     setShowModal(true);
 };
@@ -61,9 +66,16 @@ const handleConfirmOrder = () => {
     <section className="content">
       <div className="container-fluid">
         <div className="col-sm-6  mb-3">
-          <h5 className="m-0 pt-3">
+          {/* <h5 className="m-0 pt-3">
             <strong>Place Order</strong>
-          </h5>
+          </h5> */}
+            <h5 className="m-0 pt-3">
+            Place Order
+                </h5>
+          
+                {showConfirmModal && (<h5 className="m-0 pt-3">
+                  New Sales order
+                </h5>)}
         </div>
 
         {/* Sales Order Creation Section */}
@@ -72,7 +84,7 @@ const handleConfirmOrder = () => {
             <div className="card">
               <div className="card-header border-0">
                 <h5>
-                  <strong>Sales Order Creation</strong>
+                Sales Order Creation
                 </h5>
               </div>
               <div className="card-body py-1">
@@ -123,16 +135,16 @@ const handleConfirmOrder = () => {
         <div className="row mb-4">
           <div className="col-12">
             <div className="card ">
-              <div className="card-header border-0 d-flex justify-content-between align-items-center">
-                <h6 className="card-title ">
-                  <strong>Order Details</strong>
+              <div className="card-header border-0" style={{marginTop:"-12px"}}>
+             <div className=" d-flex justify-content-between align-items-center">   <h6 className="card-title ">
+                  <strong style={{textWrap:"nowrap"}}>Order Details</strong>
                 </h6>
                
-                <div className="button d-flex justify-content-end">
-                  <div className="d-flex align-items-center ml-4">
+                <div className="d-flex align-items-center ">
+                  <div className="d-flex align-items-center">
                     <button
-                      className="btn btn-sm btn-outline-primary mr-2"
-                      // onClick={downloadExcel}
+                      className="custom-btn custom-download-btn "
+                       onClick={downloadExcel}
                     >
                       <i className="fas fa-download "></i> DOWNLOAD
                     </button>
@@ -147,28 +159,28 @@ const handleConfirmOrder = () => {
                  
                     <label
                       htmlFor="fileUpload"
-                      className="btn btn-sm btn-outline-primary mr-2"
+                     className="custom-btn custom-upload-btn mr-2"
                     >
                       <i className="fas fa-upload mr-1"></i> UPLOAD
                     </label>
-                    <button className="btn btn-sm btn-outline-primary">
+                    <button className="btn btn-sm btn-outline-primary mt-2" style={{border:"1px solid blue",borderRadius:"2.2rem",height:"31px"}}>
                       Reset
                     </button>
                   </div>
-                </div>
+                </div></div>
               </div>
               <div className="card-body">
                 {/* Form Fields */}
-                <div className="place card-body text-sm">
+                <div className="place card-body text-sm ">
                   <div className="container">
                     <form className="row">
                       {/* Reference ID - Mandatory */}
                       <div className="col-md-6 d-flex align-items-center">
                         <label
                           className="me-2 fw-bold"
-                          style={{ width: "200px" }}
+                          style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}
                         >
-                          Order Reference :{" "}
+                          <strong>Order Reference :</strong>{" "}
                           <span className="text-danger">*</span>
                         </label>
                         <input type="text" className="form-control" required />
@@ -178,9 +190,9 @@ const handleConfirmOrder = () => {
                       <div className="col-md-6 d-flex align-items-center">
                         <label
                           className="me-2 fw-bold"
-                          style={{ width: "200px" }}
+                          style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}
                         >
-                          Request Date :
+                          <strong>Request Date :</strong>
                         </label>
                         <input type="date" className="form-control" />
                       </div>
@@ -189,9 +201,9 @@ const handleConfirmOrder = () => {
                       <div className="col-md-6 d-flex align-items-center p-2">
                         <label
                           className="me-2 fw-bold"
-                          style={{ width: "200px" }}
+                          style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}
                         >
-                          Ship From :
+                        <strong>  Ship From :</strong>
                         </label>
                         <input type="text" className="form-control" />
                       </div>
@@ -200,9 +212,9 @@ const handleConfirmOrder = () => {
                       <div className="col-md-6 d-flex align-items-center">
                         <label
                           className="me-2 fw-bold"
-                          style={{ width: "200px" }}
+                          style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}
                         >
-                          Ship To :
+                         <strong> Ship To :</strong>
                         </label>
                         <input type="text" className="form-control" />
                       </div>
@@ -211,9 +223,9 @@ const handleConfirmOrder = () => {
                       <div className="col-md-6 d-flex align-items-center p-2">
                         <label
                           className="me-2 fw-bold"
-                          style={{ width: "200px" }}
+                          style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}
                         >
-                          Order Type : <span className="text-danger">*</span>
+                          <strong>Order Type : </strong><span className="text-danger">*</span>
                         </label>
                         <input type="text" className="form-control" />
                       </div>
@@ -222,9 +234,9 @@ const handleConfirmOrder = () => {
                       <div className="col-md-6 d-flex align-items-center">
                         <label
                           className="me-2 fw-bold"
-                          style={{ width: "200px" }}
+                          style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}
                         >
-                          Product: <span className="text-danger">*</span>
+                          <strong>Product:</strong> <span className="text-danger">*</span>
                         </label>
                         <div className="input-group">
                           <input type="text" className="form-control" />
@@ -240,22 +252,26 @@ const handleConfirmOrder = () => {
                 </div>
 
                 {/* Table */}
-                <div className="table-responsive border">
-                  <table className="table">
-                    <thead className="thead-light">
-                      <tr>
-                        <th>Material Code</th>
-                        <th>Material Description</th>
-                        <th>HSN Code</th>
-                        <th>Qty</th>
-                        <th>UOM</th>
-                        <th>MRP(₹)</th>
-                        <th>NIR(₹)</th>
-                        <th>REQ.Rate(₹)</th>
-                        <th>CGST(%)</th>
-                        <th>SGST(%)</th>
-                        <th>IGST(%)</th>
-                        <th>Amount</th>
+                {/* <div className="table-responsive border"> */}
+                  {/* <table className="table">
+                    <thead className="thead-light" style={{textwrap:"nowrap"}}>
+                      <tr> */}
+                      <div className="">
+                       <table  class="table table-sm" style={{border: '1px solid lightgray',borderTopRightRadius: '5px 5px',borderCollapse: 'separate',maxHeight:"400px",overflowY : "auton"}} id="listOfProjectsTable">
+                    <thead>
+                      <tr style={{ backgroundColor: '#f2f2f2' }}>
+                         <th style={{ fontWeight: '500' }}>Material Code</th>
+                         <th style={{ fontWeight: '500' }}>Material Description</th>
+                         <th style={{ fontWeight: '500' }}>HSN Code</th>
+                         <th style={{ fontWeight: '500' }}>Qty</th>
+                         <th style={{ fontWeight: '500' }}>UOM</th>
+                         <th style={{ fontWeight: '500' }}>MRP(₹)</th>
+                         <th style={{ fontWeight: '500' }}>NIR(₹)</th>
+                         <th style={{ fontWeight: '500' }}>REQ.Rate(₹)</th>
+                         <th style={{ fontWeight: '500' }}>CGST(%)</th>
+                         <th style={{ fontWeight: '500' }}>SGST(%)</th>
+                         <th style={{ fontWeight: '500' }}>IGST(%)</th>
+                         <th style={{ fontWeight: '500' }}>Amount</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -280,12 +296,12 @@ const handleConfirmOrder = () => {
                 </div>
 
                 {/* Remark Section */}
-                <div className="mt-3">
+                <div className=" mt-4">
                   <h6>Remark</h6>
                   <textarea className="form-control" rows="3"></textarea>
                 </div>
                 <div className="fileterdiv1">
-                  <div className="d-flex justify-content-between align-items-center mb-3">
+                  <div className="d-flex justify-content-between align-items-center">
                     <h5 className="ml-3 mb-0">
                       <strong></strong>
                     </h5>
@@ -359,13 +375,13 @@ const handleConfirmOrder = () => {
                             <table className="table ">
                                 <thead className="thead-light">
                                     <tr>
-                                    <th></th>  
-                                        <th>Products (0)</th>                                        
-                                        <th>HSN Code</th>
-                                        <th>Qty</th>
-                                        <th>UOM</th>
-                                        <th>MRP (₹)</th>
-                                        <th>Amt (₹)</th>
+                                     <th style={{ fontWeight: '500' }}></th>  
+                                         <th style={{ fontWeight: '500' }}>Products (0)</th>                                        
+                                         <th style={{ fontWeight: '500' }}>HSN Code</th>
+                                         <th style={{ fontWeight: '500' }}>Qty</th>
+                                         <th style={{ fontWeight: '500' }}>UOM</th>
+                                         <th style={{ fontWeight: '500' }}>MRP (₹)</th>
+                                         <th style={{ fontWeight: '500' }}>Amt (₹)</th>
                                  
                                     </tr>
                                 </thead>
@@ -420,7 +436,7 @@ const handleConfirmOrder = () => {
                             </div>
                             <div className="modal-footer justify-content-center" style={{border:"none"}}>
                                 <button type="button" className="btn btn-primary" onClick={handleCloseConfirmModal}>
-                                    OK
+                                    Close
                                 </button>
                             </div>
                         </div>

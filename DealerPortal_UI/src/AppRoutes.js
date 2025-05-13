@@ -34,43 +34,126 @@ const OrderStatus = lazy(() => import("./components/Dealer/OrderStatus.js"));
 const OrderHistory = lazy(() => import("./components/Dealer/OrderHistory.js"));
 const Requisition = lazy(() => import("./components/Dealer/Requisition.js"));
 const Support = lazy(() => import("./components/Dealer/Support.js"));
+const DealerScheme = lazy(() => import("./components/Dealer/Scheme.js"));
 const Rewards = lazy(() => import("./components/Dealer/Rewards.js"));
 
 const AppRoutes = () => {
     return (
+        // <Suspense fallback={<Spinner />}>
+        //     <Routes>
+        //         <Route exact path="/" element={<Navigate to="/Login" />} />
+        //         <Route path="/Login" element={<Login />} />
+        //         <Route path="/resetPassword" element={<ResetPassword />} />
+        //         <Route path="/sendResetLink" element={<ForgotPassword />} />
+        //         <Route path="/create-scheme" element={<Createscheme />} />
+        //         <Route path="/Add-New-Sock" element={<AddNewStock />} />
+        //         <Route path="/sales-order-approval" element={<SalesOrderApprovalList />} />
+        //         <Route path="/sales-order-details" element={<SalesOrderDetails />} />
+        //         <Route path="/delivery-tracking" element={<DeliveryTracking />} />
+        //         <Route path="/tracking-reports" element={<TrackingReport />} />
+        //         <Route path="/dealer-reports" element={<DealerReport />} />
+        //         <Route path="/scheme" element={<DealerScheme />} />
+        //         {/* <Route path="/scheme" element={<SchemeList />} /> */}
+        //         <Route path="/Admin-scheme" element={<SchemeList />} />
+
+        //         {/* Admin & HR routes */}
+        //         <Route element={<ProtectedRoute requiredRoles={['Administrator', 'HR']} />}>
+        //             {/* <Route path="/manage-employee" element={<ManageEmployee />} />
+        //             <Route path="/employee-details" element={<EmployeeDetails />} />
+        //             <Route path="/profile" element={<Profile />} />
+        //             <Route path="/manage-holiday" element={<ManageHoliday />} /> */}
+        //         </Route>
+
+        //         {/* HR & Manager routes */}
+        //         <Route element={<ProtectedRoute requiredRoles={['Manager', 'HR']} />}>
+        //             {/* <Route path="/manage-leave" element={<ManageEmployeeLeave />} />
+        //             <Route path="/leave-masters" element={<LeaveMasters />} /> */}
+        //         </Route>
+
+
+        //         {/* Admin routes */}
+        //         <Route element={<ProtectedRoute requiredRole="Admin" />}>
+        //             <Route path="/Masters" element={<Master />} />
+        //             <Route path="/AppMaster" element={<AppMaster />} />
+        //             <Route path="/RoleswithApps" element={<RolesWithApps />} />
+        //             <Route path="/Company" element={<Company />} />
+        //             <Route path="/Plant" element={<Plant />} />
+        //             <Route path="/user-management" element={<UserCreation />} />
+        //             <Route path="/manage-email-config" element={<EmailConfig />} />
+        //             {/* <Route path="/profile" element={<Profile />} /> */}
+        //             <Route path="/CompanyPlantMapping" element={<CompanyPlantMapping />} />
+        //             <Route path="/add-stock" element={<Addstock />} />
+        //             <Route path="/sales-order-approval" element={<SalesOrderApprovalList />} />
+        //             <Route path="/sales-order-details" element={<SalesOrderDetails />} />
+        //             <Route path="/delivery-tracking" element={<DeliveryTracking />} />
+        //             <Route path="/tracking-reports" element={<TrackingReport />} />
+        //             <Route path="/dealer-reports" element={<DealerReport />} />
+        //             <Route path="/scheme" element={<SchemeList />} />
+        //             {/* <Route path="/dashboard" element={<Dashboard />} />
+        //             <Route path="/form-builder" element={<FormBuilder />} /> 
+                  
+        //             <Route path="/location-master" element={<LocationMaster />} />
+        //             <Route path="/manage-users" element={<UserCreation />} />*/}
+        //             {/* <Route path="/AppMaster" element={<AppMaster />} />
+        //             <Route path="/org-chart" element={<Organization />} /> 
+        //             <Route path="/RoleswithApps" element={<RolesWithApps />} />
+        //             <Route path="/manage-leaveTypes" element={<LeaveType />} />
+        //             <Route path="/manage-designations" element={<Designation />} />
+        //             <Route path="/manage-departments" element={<Department />} />
+        //             */}
+        //         </Route>
+
+        //         {/* Employee routes */}
+        //         <Route element={<ProtectedRoute requiredRole="Dealer" />}>
+        //             <Route path="/home" element={<DealerDashboard />} />
+        //             <Route path="/add-stock" element={<Addstock />} />
+        //             <Route path="/stock-availability" element={<StockAvailability />} />
+        //             <Route path="/place-order" element={<PlaceOrder />} />
+        //             <Route path="/return-order" element={<ReturnOrder />} />
+        //             <Route path="/order-status" element={<OrderStatus />} />
+        //             <Route path="/delivery-tracking" element={<DeliveryTracking />} />
+        //             <Route path="/order-history" element={<OrderHistory />} />
+                    
+        //             <Route path="/scheme" element={<DealerScheme />} />
+        //             <Route path="/requisition" element={<Requisition />} />
+        //             <Route path="/support" element={<Support />} />
+        //             <Route path="/rewards" element={<Rewards />} />                   
+        //             {/* <Route path="/sales-order-approval" element={<SalesOrderApprovalList />} /> */}
+        //             <Route path="/dealer-reports" element={<DealerReport />} />
+        //         </Route>
+
+        //         <Route element={<ProtectedRoute requiredRole="Approver" />}>
+        //             <Route path="/sales-order-approval" element={<SalesOrderApprovalList />} />
+        //             <Route path="/add-stock" element={<Addstock />} />
+        //             <Route path="/sales-order-details" element={<SalesOrderDetails />} />
+        //             <Route path="/delivery-tracking" element={<DeliveryTracking />} />
+        //             <Route path="/tracking-reports" element={<TrackingReport />} />
+        //             {/* <Route path="/dealer-reports" element={<DealerReport />} /> */}
+        //             <Route path="/scheme" element={<SchemeList />} />
+        //         </Route>
+
+
+
+        //         {/* Add a fallback for unauthorized access */}
+        //         <Route path="/Login" element={<h1>Unauthorized Access</h1>} />
+        //     </Routes>
+        // </Suspense>
         <Suspense fallback={<Spinner />}>
-            <Routes>
-                <Route exact path="/" element={<Navigate to="/Login" />} />
-                <Route path="/Login" element={<Login />} />
-                <Route path="/resetPassword" element={<ResetPassword />} />
-                <Route path="/sendResetLink" element={<ForgotPassword />} />
-                <Route path="/create-scheme" element={<Createscheme />} />
-                <Route path="/Add-New-Sock" element={<AddNewStock />} />
-                <Route path="/sales-order-approval" element={<SalesOrderApprovalList />} />
-                <Route path="/sales-order-details" element={<SalesOrderDetails />} />
-                <Route path="/delivery-tracking" element={<DeliveryTracking />} />
-                <Route path="/tracking-reports" element={<TrackingReport />} />
-                <Route path="/dealer-reports" element={<DealerReport />} />
-                <Route path="/scheme" element={<SchemeList />} />
-
-                {/* Admin & HR routes */}
-                <Route element={<ProtectedRoute requiredRoles={['Administrator', 'HR']} />}>
-                    {/* <Route path="/manage-employee" element={<ManageEmployee />} />
-                    <Route path="/employee-details" element={<EmployeeDetails />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/manage-holiday" element={<ManageHoliday />} /> */}
-                </Route>
-
-                {/* HR & Manager routes */}
-                <Route element={<ProtectedRoute requiredRoles={['Manager', 'HR']} />}>
-                    {/* <Route path="/manage-leave" element={<ManageEmployeeLeave />} />
-                    <Route path="/leave-masters" element={<LeaveMasters />} /> */}
-                </Route>
-
-
-                {/* Admin routes */}
-                <Route element={<ProtectedRoute requiredRole="Admin" />}>
-                    <Route path="/Masters" element={<Master />} />
+        <Routes>
+          <Route exact path="/" element={<Navigate to="/Login" />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/resetPassword" element={<ResetPassword />} />
+          <Route path="/sendResetLink" element={<ForgotPassword />} />
+          <Route element={<ProtectedRoute allowedRoles={["Admin","Dealer"]} />}>
+  
+         
+          {/* <Route path="/scheme" element={<Master />} /> */}
+          </Route>
+  
+          {/* Admin routes */}
+          <Route element={<ProtectedRoute allowedRoles="Admin" />}>
+        
+          <Route path="/Masters" element={<Master />} />
                     <Route path="/AppMaster" element={<AppMaster />} />
                     <Route path="/RoleswithApps" element={<RolesWithApps />} />
                     <Route path="/Company" element={<Company />} />
@@ -85,7 +168,7 @@ const AppRoutes = () => {
                     <Route path="/delivery-tracking" element={<DeliveryTracking />} />
                     <Route path="/tracking-reports" element={<TrackingReport />} />
                     <Route path="/dealer-reports" element={<DealerReport />} />
-                    <Route path="/scheme" element={<SchemeList />} />
+                    <Route path="/Admin-scheme" element={<SchemeList />} />
                     {/* <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/form-builder" element={<FormBuilder />} /> 
                   
@@ -98,11 +181,11 @@ const AppRoutes = () => {
                     <Route path="/manage-designations" element={<Designation />} />
                     <Route path="/manage-departments" element={<Department />} />
                     */}
-                </Route>
-
-                {/* Employee routes */}
-                <Route element={<ProtectedRoute requiredRole="Dealer" />}>
-                    <Route path="/home" element={<DealerDashboard />} />
+          </Route>
+  
+          {/* Employee routes */}
+          <Route element={<ProtectedRoute allowedRoles="Dealer" />}>
+          <Route path="/home" element={<DealerDashboard />} />
                     <Route path="/add-stock" element={<Addstock />} />
                     <Route path="/stock-availability" element={<StockAvailability />} />
                     <Route path="/place-order" element={<PlaceOrder />} />
@@ -110,31 +193,27 @@ const AppRoutes = () => {
                     <Route path="/order-status" element={<OrderStatus />} />
                     <Route path="/delivery-tracking" element={<DeliveryTracking />} />
                     <Route path="/order-history" element={<OrderHistory />} />
-
-                    <Route path="/scheme" element={<Master />} />
+                    
+                    <Route path="/scheme" element={<DealerScheme />} />
                     <Route path="/requisition" element={<Requisition />} />
                     <Route path="/support" element={<Support />} />
                     <Route path="/rewards" element={<Rewards />} />                   
                     {/* <Route path="/sales-order-approval" element={<SalesOrderApprovalList />} /> */}
                     <Route path="/dealer-reports" element={<DealerReport />} />
-                </Route>
-
-                <Route element={<ProtectedRoute requiredRole="Approver" />}>
-                    <Route path="/sales-order-approval" element={<SalesOrderApprovalList />} />
-                    <Route path="/add-stock" element={<Addstock />} />
-                    <Route path="/sales-order-details" element={<SalesOrderDetails />} />
-                    <Route path="/delivery-tracking" element={<DeliveryTracking />} />
-                    <Route path="/tracking-reports" element={<TrackingReport />} />
-                    {/* <Route path="/dealer-reports" element={<DealerReport />} /> */}
-                    <Route path="/scheme" element={<SchemeList />} />
-                </Route>
-
-
-
-                {/* Add a fallback for unauthorized access */}
-                <Route path="/Login" element={<h1>Unauthorized Access</h1>} />
-            </Routes>
-        </Suspense>
+          </Route>
+  
+          {/* HR routes */}
+          <Route element={<ProtectedRoute allowedRoles="HR" />}></Route>
+  
+          {/* Manager routes */}
+          <Route element={<ProtectedRoute allowedRoles="Manager" />}>
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+  
+          {/* Add a fallback for unauthorized access */}
+          <Route path="/Login" element={<h1>Unauthorized Access</h1>} />
+        </Routes>
+      </Suspense>
     );
 }
 

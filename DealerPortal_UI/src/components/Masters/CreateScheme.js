@@ -443,50 +443,50 @@ const CreateScheme = () => {
                       </form> */}
                       <div className='row'>
                         <div className="form-group  col-md-6 d-flex align-items-center p-2">
-                          <label for="referanceId" style={{ color: "#000", width: "200px" }}>Reference ID:<sup style={{ color: "red" }}>*</sup></label>
+                          <label for="referanceId"  style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}><strong>Reference ID:</strong><sup style={{ color: "red" }}>*</sup></label>
                           <input type="text" className="form-control form-control-sm" id="referanceId" ref={inputReferanceIdReference} value={referanceId} onChange={(e) => {
                             setReferanceId(e.target.value);
                             inputReferanceIdReference.current.classList.remove('is-invalid');
                           }} placeholder="Enter Referance Id" />
                         </div>
                         <div className="form-group  col-md-6 d-flex align-items-center p-2">
-                          <label for="validFrom" style={{ color: "#000", width: "200px" }}>Valid From:</label>
+                          <label for="validFrom" style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}><strong>Valid From:</strong></label>
                           <input type="text" className="form-control form-control-sm" id="validFrom" ref={inputValidFromReference} value={validFrom} onChange={(e) => {
                             setValidFrom(e.target.value);
                             inputValidFromReference.current.classList.remove('is-invalid');
                           }} placeholder="Enter Valid From" />
                         </div>
                         <div className="form-group  col-md-6 d-flex align-items-center p-2">
-                          <label for="validTo" style={{ color: "#000", width: "200px" }}>Valid To:</label>
+                          <label for="validTo" style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}><strong>Valid To:</strong></label>
                           <input type="text" className="form-control form-control-sm" id="validTo" ref={inputValidToReference} value={validTo} onChange={(e) => {
                             setValidTo(e.target.value);
                             inputValidToReference.current.classList.remove('is-invalid');
                           }} placeholder="Enter Valid To" />
                         </div>
                         <div className="form-group  col-md-6 d-flex align-items-center p-2">
-                          <label for="creationDate" style={{ color: "#000", width: "200px" }}>Creation Date:</label>
+                          <label for="creationDate" style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}><strong>Creation Date:</strong></label>
                           <input type="date" className="form-control form-control-sm" id="creationDate" ref={inputCreationDateReference} value={creationDate} onChange={(e) => {
                             setCreationDate(e.target.value);
                             inputCreationDateReference.current.classList.remove('is-invalid');
                           }} placeholder="Enter Valid To" />
                         </div>
                         <div className="form-group  col-md-6 d-flex align-items-center p-2">
-                          <label for="schemeType" style={{ color: "#000", width: "200px" }}>Type:</label>
+                          <label for="schemeType" style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}><strong>Type:</strong></label>
                           <input type="text" className="form-control form-control-sm" id="schemeType" ref={inputSchemeTypeReference} value={schemeType} onChange={(e) => {
                             setschemeType(e.target.value);
                             inputSchemeTypeReference.current.classList.remove('is-invalid');
                           }} placeholder="Enter Type" />
                         </div>
                         <div className="form-group  col-md-6 d-flex align-items-center p-2">
-                          <label for="createdBy" style={{ color: "#000", width: "200px" }}>Created By:</label>
+                          <label for="createdBy" style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}><strong>Created By:</strong></label>
                           <input type="text" className="form-control form-control-sm" id="createdBy" ref={inputCreatedByReference} value={createdBy} onChange={(e) => {
                             setCreatedBy(e.target.value);
                             inputCreatedByReference.current.classList.remove('is-invalid');
                           }} placeholder="Enter Created by" />
                         </div>
-                        <div className="form-group  col-md-6 d-flex align-items-center p-2">
-                          <label htmlFor="fileUpload" className="me-2 fw-bold mb-0" style={{ width: "200px" }}>
-                            File:
+                        <div className="form-group  col-md-6 d-flex align-items-center p-2" >
+                          <label htmlFor="fileUpload" className="me-2 fw-bold mb-0" style={{ color: "rgb(137 132 132)", width: "200px",fontWeight:"400" }}>
+                           <strong> File:</strong>
                           </label>
 
                           <div className="upload-box position-relative" style={{ width: '100%' }}>
@@ -538,7 +538,7 @@ const CreateScheme = () => {
                     ) : (
                       <button
                         type="submit"
-                        className="btn btn-primary float-right btn-l ml-2 w-10"
+                        className="btn btn-primary float-right btn-l ml-3 mr-4" style={{width:"160px"}}
                         onClick={handleSubmit}
                       >
                         Create
@@ -546,7 +546,7 @@ const CreateScheme = () => {
                     )}
                     <button
                       type="submit"
-                      className="btn btn-default float-right btn-l w-10"
+                      className="btn btn-default float-right btn-l w-10" style={{width:"160px",border:"1px solid blue",color :"blue"}}
                       onClick={handleCancel}
                     >
                       Cancel

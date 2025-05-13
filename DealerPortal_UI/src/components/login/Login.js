@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./employee-login.css";
 import { ToastContainer, toast } from "react-toastify";
-import ilogo from "../../assets/images/DealerPortal Login logo.svg";
+import ilogo1 from "../../assets/images/DealerPortal Login logo.svg";
+import ilogo from "../../assets/images/dealerlogo.png";
 // import fImageFirst from "../../assets/images/eLoginImageFisrt.svg";
 // import fImageSecond from "../../assets/images/eLoginImageSecond.svg";
 // import fImageThird from "../../assets/images/eLoginImageThird.svg";
@@ -208,10 +209,10 @@ function EmployeeLogin() {
   <div className="row">
     <div className="left col-lg-6 col-md-12 col-sm-12">
       <div className="login-form">
-        <div className="inside mt-4">
+        <div className="inside ">
           <div className="text-center welcome-slogan">
             <h5>Sign in</h5>
-            <p className="pt-1 custom-text">Please login to continue to your account</p>
+            <p className="mt-1 custom-text">Please login to continue to your account</p>
           </div>
 
           <form onSubmit={handleSubmit}>
@@ -248,7 +249,7 @@ function EmployeeLogin() {
                     style={{
                       position: "absolute",
                       right: "0",
-                      bottom: "20px",
+                   
                       height: "69.5%",
                     }}
                   >
@@ -272,7 +273,7 @@ function EmployeeLogin() {
               </div>
             </div>
 
-            <div className="from-check float-left mt-5">
+            <div className="from-check float-left mt-3">
               <input
                 type="checkbox"
                 className="checkb"
@@ -282,9 +283,9 @@ function EmployeeLogin() {
               <span>Keep me logged in</span>
             </div>
             {isLoaderActive ? (
-              <PleaseWaitButton className="mt-4 btn-sm font-weight-medium auth-form-btn" />
+              <PleaseWaitButton className="mt-3 btn-sm font-weight-medium auth-form-btn" />
             ) : (
-              <button type="submit" className="mt-4">
+              <button type="submit" className="mt-3">
                 Sign in
               </button>
             )}
@@ -293,9 +294,19 @@ function EmployeeLogin() {
       </div>
     </div>
 
-    <div className="right col-lg-6 col-md-12 col-sm-12">
-      <div className="carousel slide">
-        <div className="carousel-inner p-2">
+    <div className="pl-0 mt-4">
+      <div className="carousel slide" >
+        <div className="page1 carousel-inner px-1 py-2 "
+        // style={{border:"5px solid blue",borderRadius:"5px",height:"470px" }}
+        style={{
+          borderTop: "5px solid red",         // Top border color
+          borderBottom: "5px solid green",    // Bottom border color
+          borderLeft: "5px solid blue",       // Optional: Left border
+          borderRight: "5px solid blue",      // Optional: Right border
+          borderRadius: "5px",
+          height: "470px"
+        }} 
+        >
           {images.map((image, index) => (
             <div
               key={index}
@@ -305,24 +316,26 @@ function EmployeeLogin() {
               {/* Text Over Image - Top Side */}
               <div style={{
                 position: "absolute",
-                top: "20px",
+                top: "10px",
                 left: "50%",
                 transform: "translateX(-50%)",
                 color: "blue",
                 textAlign: "center",
-                zIndex: 2
+                zIndex: 2,
+               
               }}>
                 <h2 style={{ fontWeight: "bold" }}>Dealnex</h2>
-                <p style={{ marginTop: "5px", color: "black" }}>Next-gen Dealer Experience</p>
+                <p style={{ marginTop: "5px", color: "black", }}>Next-gen Dealer Experience</p>
               </div>
 
               {/* Image */}
               <img
                 src={image.src}
-                className="eLoginImage img-fluid"
+                // className="img-fluid"
                 alt={`slide-${index}`}
+                style={{height:"300px",marginTop:"90px"}}
               />
-              <div className="carousel-caption-below text-center mt-2">
+              <div className="carousel-caption-below text-center mt-0">
                 <h5 style={{ fontSize: "21px" }}>{image.label}</h5>
                 <p style={{ fontSize: "15px" }}>{image.description}</p>
               </div>

@@ -151,15 +151,15 @@
 //           <table className="table table-bordered table-striped text-center px-6 border">
 //             <thead className="thead-grey">
 //               <tr>
-//                 <th>Material</th>
-//                 <th>Plant</th>
-//                 <th>SLoc</th>
-//                 <th>Batch</th>
-//                 <th>BUn</th>
-//                 <th>Unrestricted</th>
-//                 <th>Quality Inspection</th>
-//                 <th>Value Unrestricted</th>
-//                 <th>Transit</th>
+//                  <th style={{ fontWeight: '500' }}>Material</th>
+//                  <th style={{ fontWeight: '500' }}>Plant</th>
+//                  <th style={{ fontWeight: '500' }}>SLoc</th>
+//                  <th style={{ fontWeight: '500' }}>Batch</th>
+//                  <th style={{ fontWeight: '500' }}>BUn</th>
+//                  <th style={{ fontWeight: '500' }}>Unrestricted</th>
+//                  <th style={{ fontWeight: '500' }}>Quality Inspection</th>
+//                  <th style={{ fontWeight: '500' }}>Value Unrestricted</th>
+//                  <th style={{ fontWeight: '500' }}>Transit</th>
 //               </tr>
 //             </thead>
 //             <tbody className="thead-white">

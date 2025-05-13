@@ -26,8 +26,8 @@
 }
 
 .login-form p {
-  margin-bottom: 20px;
-  padding-top: 20px;
+  /* margin-bottom: 20px;
+  padding-top: 20px; */
   font-size: 16px;
   font-family: "Inter", sans-serif;
 }
@@ -104,7 +104,7 @@
   margin-bottom: 10px;
 }
 .login-form {
-  padding-top: 15%;
+  margin-top: 15%;
   padding-left: 15%;
   padding-right: 15%;
   /* height: 100%; */
@@ -115,7 +115,7 @@
 }
 .left,
 .right {
-  height: 100vh;
+  /* height: 100vh; */
 }
 /* .login-form h5 {
   padding-top: 50px;

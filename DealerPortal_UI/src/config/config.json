@@ -5,12 +5,12 @@
   "deploymentMode": "staging",
   "PoweredBy": "Powered by ITEOS", 
 
- "file_URL": "https://localhost:7243/api",
-  "API_URL": "https://localhost:7243/api/",
-  "apiEndPoint": "https://localhost:7243/api",
-  "File_URL": "https://localhost:7243/ProfileUploads/",
-  "Attachment_URL": "https://localhost:7243/Uploads/",  
-  "Profile_URL": "https://localhost:7243/ProfileUploads/", 
+ "file_URL": "https://localhost:44319/api",
+  "API_URL": "https://localhost:44319/api/",
+  "apiEndPoint": "https://localhost:44319/api",
+  "File_URL": "https://localhost:44319/ProfileUploads/",
+  "Attachment_URL": "https://localhost:44319/Uploads/",  
+  "Profile_URL": "https://localhost:44319/ProfileUploads/", 
  
   "ClientId": "pmoAuthApp",
   "AdminRole": "fbf53f62-7ead-4ade-b4c6-578d739cbdc1",

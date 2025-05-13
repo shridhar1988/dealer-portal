@@ -3,18 +3,18 @@ import React, { useState } from "react";
 // import { FaArrowLeft } from "react-icons/fa";
 import "./Chat.css"; // Custom CSS for additional styling
 // import { registerLocale } from "react-datepicker";
-
+import profile from "../../assets/images/profilepic.png";
 const Chat = () => {
-  const voice =(e) => {
+  const voice = (e) => {
     const file = e.target.files[0];
     if (file) {
-        // Example: Upload file to a server
-        const formData = new FormData();
-        formData.append("voiceFile", file);
-        // fetch("/upload", { method: "POST", body: formData });
-        console.log("Uploading file:", file.name);
+      // Example: Upload file to a server
+      const formData = new FormData();
+      formData.append("voiceFile", file);
+      // fetch("/upload", { method: "POST", body: formData });
+      console.log("Uploading file:", file.name);
     }
-}
+  };
   // Sample contacts data
   const contacts = [
     {
@@ -126,21 +126,21 @@ const Chat = () => {
 
   return (
     <section className="content">
+     
       <div className="container-fluid">
         {/* Header */}
-        <div className="row mb-4 pt-2">
+        <div className="row mb-1 pt-2">
           <div className="col-12">
             <h5 className="m-0 p-2">
-              <strong>Chat</strong>
+            Chat
             </h5>
           </div>
         </div>
-
+       
         <div className="row">
-          {/* Sidebar: Contact List */}
-          <div className="col-md-4 col-lg-3 mb-0">
+          <div className="col-md-4 col-lg-5 mb-0">
             <div className="card">
-              <div className="d-flex align-items-center m-0 pt-2 px-2 py-2">
+              <div className="d-flex align-items-center m-0 pt-2 px-2">
                 <div
                   className="input-group"
                   style={{
@@ -165,9 +165,13 @@ const Chat = () => {
                   />
                 </div>
               </div>
+              <hr
+                className="color-lightgray"
+                style={{ marginBottom: "10px" }}
+              />
               <div
                 className="card-body1 p-0"
-                style={{ height: "450px", overflowY: "auto" }}
+                style={{ height: "360px", overflowY: "auto" }}
               >
                 <ul className="list-group list-group-flush">
                   {contacts.map((contact) => (
@@ -180,11 +184,13 @@ const Chat = () => {
                       style={{ cursor: "pointer" }}
                     >
                       <div className="d-flex align-items-center">
-                        <div
-                          className="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center mr-3"
-                          style={{ width: "40px", height: "40px" }}
-                        >
-                          {contact.name.charAt(0)}
+                        <div className="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center mr-3">
+                          {/* {contact.name.charAt(0)} */}
+                          <img
+                            className="rounded-circle"
+                            src={profile}
+                            style={{ width: "40px", height: "40px" }}
+                          />
                         </div>
                         <div>
                           <h6 className="mb-0">{contact.name}</h6>
@@ -196,7 +202,7 @@ const Chat = () => {
                       <div className="text-right">
                         <small className="text-muted">{contact.time}</small>
                         {contact.unread > 0 && (
-                          <span className="badge bg-danger rounded-pill ml-2">
+                          <span className="badge bg-primary rounded-pill ml-2">
                             {contact.unread}
                           </span>
                         )}
@@ -209,16 +215,26 @@ const Chat = () => {
           </div>
 
           {/* Main Chat Area */}
-          <div className="col-md-8 col-lg-9">
+          <div className="col-md-8 col-lg-7">
             <div className="card">
-              <div className="card-header border-0 d-flex  align-items-left pl-2">
+              <div className="card-header border-0 d-flex  align-items-center pl-2">
                 {/* <FaArrowLeft
                   className="mt-1 cursor-pointer"
                   style={{ cursor: "pointer" }}
                   onClick={chatback}
                 /> */}
-
-                <h6 className="card-title pl-2">{selectedContact.name}</h6>
+                <div className="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center mr-3">
+                  {/* {contact.name.charAt(0)} */}
+                  <img
+                    className="rounded-circle"
+                    src={profile}
+                    style={{ width: "40px", height: "40px" }}
+                  />
+                </div>
+                <div></div>
+                <h6 className="card-title pl-2 fw-bold">
+                  {selectedContact.name}
+                </h6>
                 <div>
                   <span className="text-muted mr-3">
                     {/* {selectedContact.time} */}
@@ -233,7 +249,7 @@ const Chat = () => {
               <div
                 className="card-body1"
                 style={{
-                  height: "400px",
+                  height: "310px",
                   overflowY: "auto",
                   borderRadius: "12px",
                 }}
@@ -261,65 +277,74 @@ const Chat = () => {
                         }`}
                         style={{ fontSize: "0.75rem", borderRadius: "12px" }}
                       >
-                        {message.time}
+                        {/* {message.time} */}
                       </small>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="card-footer border-0">
-    <div className="input-group">
-        <div className="input-group-prepend">
-            <span className="input-group-text bg-white">
-                <button
-                    className="border-0 bg-white"
-                    style={{ borderRadius: "0 0 0 0" }}
-                    onClick={() => document.getElementById("voiceInput").click()}
-                >
-                    <i className="fas fa-microphone fa-lg text-muted"></i>
-                </button>
-                <input
-                    type="file"
-                    id="voiceInput"
-                    accept="audio/*"
-                    style={{ display: "none" }}
-                    onChange={(e) => console.log("File selected:", e.target.files[0])}
-                />
-            </span>
-        </div>
-        <input
-            type="text"
-            className="form-control"
-            placeholder="Type a message..."
-        />
-        <div className="input-group-append">
-            <span className="input-group-text bg-white">
-                <button
-                    className="border-0 bg-white"
-                    style={{ borderRadius: "0 0 0 0" }}
-                    onClick={() => document.getElementById("fileInput").click()}
-                >
-                    <i className="fas fa-paperclip fa-lg text-muted"></i>
-                </button>
-                <input
-                    type="file"
-                    id="fileInput"
-                    style={{ display: "none" }}
-                    onChange={(e) => console.log("File selected:", e.target.files[0])}
-                />
-            </span>
-            <button className="btn btn-primary">
-                <i className="fas fa-paper-plane fa-lg"></i>
-            </button>
-        </div>
-    </div>
-</div>
+                <div className="input-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text bg-white">
+                      <button
+                        className="border-0 bg-white"
+                        style={{ borderRadius: "0 0 0 0" }}
+                        onClick={() =>
+                          document.getElementById("voiceInput").click()
+                        }
+                      >
+                        <i className="fas fa-microphone fa-lg text-muted"></i>
+                      </button>
+                      <input
+                        type="file"
+                        id="voiceInput"
+                        accept="audio/*"
+                        style={{ display: "none" }}
+                        onChange={(e) =>
+                          console.log("File selected:", e.target.files[0])
+                        }
+                      />
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Type a message..."
+                  />
+                  <div className="input-group-append">
+                    <span className="input-group-text bg-white">
+                      <button
+                        className="border-0 bg-white"
+                        style={{ borderRadius: "0 0 0 0" }}
+                        onClick={() =>
+                          document.getElementById("fileInput").click()
+                        }
+                      >
+                        <i className="fas fa-paperclip fa-lg text-muted"></i>
+                      </button>
+                      <input
+                        type="file"
+                        id="fileInput"
+                        style={{ display: "none" }}
+                        onChange={(e) =>
+                          console.log("File selected:", e.target.files[0])
+                        }
+                      />
+                    </span>
+                    <button className="btn btn-primary">
+                      <i className="fas fa-paper-plane fa-lg"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
+      
         {/* Zoom Controls */}
       </div>
+      
     </section>
   );
 };

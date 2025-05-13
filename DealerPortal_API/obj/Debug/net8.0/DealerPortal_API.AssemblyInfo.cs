@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DealerPortal_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96122d885300363c43d3fe577b315fa2f96519aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("DealerPortal_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DealerPortal_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

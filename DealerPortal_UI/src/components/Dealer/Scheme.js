@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import $ from "jquery";
 
-import "./filter-style.css";
+import "../Masters/filter-style.css";
 import "../../App.css";
 
-function SchemeList() {
+function Scheme() {
   const navigate = useNavigate();
 
   const personalInfo = useSelector((state) => state.personalInformationReducer);
@@ -60,14 +60,14 @@ function SchemeList() {
       <div>
         <div className="content-header">
           <div className="container-fluid">
-            <div className="row mb-2">
+            <div className="row">
               <div className="col-sm-6">
-                <h1 className="m-0">Scheme Creation</h1>
+                <h1 className="m-0">List Of Scheme</h1>
                 <ol className="breadcrumb float-sm-left mt-1">
                   <li className="breadcrumb-item">
                     <Link to="/manage-employee">Home</Link>
                   </li>
-                  <li className="breadcrumb-item active">Scheme Creation</li>
+                  <li className="breadcrumb-item active">Scheme</li>
                 </ol>
               </div>
               <div className="col-sm-6 d-flex justify-content-end">
@@ -107,76 +107,48 @@ function SchemeList() {
             <div className="row">
               <div className="col-md-12">
                 <div className="card collapsed-card">
-                  <div className="fileterdiv p-4">
-                    <div className="">
-                      <div className="filter-bar d-flex align-items-center">
-                        <div className="filter-bar d-flex align-items-center">
-                          <div className="filter-dropdown   px-3 py-2">
-                            <i className="fa fa-filter" aria-hidden="true"></i>
-                          </div>
-
-                          {/* Filter By */}
-                          <div className="filter-label text-nowrap d-flex align-items-center px-3 py-2 font-weight-bold">
-                            Filter By
-                          </div>
-
-                          {/* Reference ID Dropdown */}
-                          <div className="filter-dropdown d-flex align-items-center px-3 py-2">
-                            <select className="form-select  text-nowrap border-0 p-0 no-border-input font-weight-bold">
-                              <option>Reference ID</option>
-                              <option>REF001</option>
-                              <option>REF002</option>
-                            </select>
-                          </div>
-
-                          {/* Creation Date Dropdown */}
-                          <div className="filter-dropdown d-flex align-items-center px-3 py-2">
-                            <select className="form-select  text-nowrap border-0 p-0 no-border-input font-weight-bold">
-                              <option>Creation Date</option>
-                              <option>Today</option>
-                              <option>Last 7 Days</option>
-                            </select>
-                          </div>
-
-                          {/* Reset Filter */}
-                          <div className="filter-reset  text-nowrap d-flex align-items-center px-3 py-2 text-danger font-weight-bold">
-                            <i className="fas fa-redo mr-2"></i> Reset Filter
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+               
                 </div>
               </div>
             </div>
             <div className="row">
               <div className="col-md-12">
                 <div className="card  ">
-                  <div className="card-header">
-                    <div className="row">
-                      <div className="col-md-7">
-                        <h4 className="m-0">
-                          Scheme ( {allSchemeList.length} )
-                        </h4>
-                      </div>
-                      <div className="col-md-3">
-                        <input
-                          type="text"
-                          className="form-control form-control-sm "
-                          placeholder="Search Scheme..."
-                          style={{ borderRadius: "9rem" }}
-                          onChange={(e) => {}}
-                        />
-                      </div>
-                      <div className="col-md-2 justify-content-end d-flex ">
-                        <div>
-                          <button
-                            className="btn  btn-sm btn-primary mr-2"
-                            onClick={handleCreateClick}
-                          >
-                            Create
-                          </button>
-                          <button
+                <div className="d-flex justify-content-between align-items-center mb-1">
+            <h5 className="ml-3 mb-0">
+            Scheme (1)
+            </h5>
+
+            <div className="d-flex align-items-center gap-2 mt-0 mr-2">
+              <button className="btn mt-1" type="button ">
+       
+       
+              {/* <i className="bi bi-x-circle"
+               style={{border :"none",outline: "none"}}></i> */}
+              
+               <svg className ="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle mr-1 mb-1" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+</svg>
+                {/* <IoIosCloseCircleOutline className="mr-1"/> */}
+                Clear
+              </button>
+
+              <div className="d-flex align-items-center gap-2 mt-1 mr-2 filter-box">
+                <span className="mr-2">Filter :</span>
+                <div
+                  className="input-group input-group-sm"
+                  style={{ width: "70px" }}
+                >
+                  <select className="form-control font-weight-bold">
+                    <option>
+                      <strong>ALL</strong>
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div >
+              <button style={{border :"1px solid gray",borderTopRightRadius:"0px",borderBottomRightRadius:"0px"}}
                             type="button"
                             className="btn btn-tool"
                             id="listOfProjectsHeaderExpandButtion"
@@ -187,17 +159,16 @@ function SchemeList() {
                           >
                             <i className="fas fa-minus"></i>
                           </button>
-                          <button
+                          <button style={{border :"1px solid gray",borderBottomLeftRadius :"0px",borderTopLeftRadius:"0px",borderBottomleftRadius:"0px"}}
                             type="button"
                             className="btn btn-tool"
                             data-card-widget="maximize"
                           >
                             <i className="fas fa-expand"></i>
                           </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                          </div>
+            </div>
+          </div>
                   <div className="card-body text-sm position-relative">
                     {isLoaderActive && (
                       <div
@@ -240,7 +211,7 @@ function SchemeList() {
                           <th style={{ fontWeight: "500" }}>Type</th>
                           <th style={{ fontWeight: "500" }}>Created By</th>
                           <th style={{ fontWeight: "500" }}>File</th>
-                          <th style={{ fontWeight: "500" }}></th>
+                          <th style={{ fontWeight: "500" }}>Action</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -297,9 +268,13 @@ function SchemeList() {
                             {/* <button type="button" class="btn btn-xs" onClick={handleNaviagte} style={{ padding: '5px', fontSize: '.75rem', lineHeight: '0', borderRadius: '.15rem' }}>
                         <i class="fas fa-ellipsis-v" style={{ fontSize: 'smaller' }}></i>
                       </button> */}
-                            <button class="btn btn-light p-1">
-                              <i class="fas fa-ellipsis-v"></i>
+                          <button
+                            //   onClick={() => handleReturn(order.sno)}
+                              className="requisition btn btn-sm btn-primary mr-2"
+                            >
+                              Place Order
                             </button>
+                           
                           </td>
                         </tr>
                       </tbody>
@@ -447,4 +422,4 @@ function SchemeList() {
   );
 }
 
-export default SchemeList;
+export default Scheme;

@@ -454,7 +454,7 @@ const navigate = useNavigate();
                       </div>
                       <div className='col-md-2 justify-content-end d-flex'>   
                             <button  type="button" className="btn btn-warning btn-sm pl-3 pr-3 ml-" onClick={exportToExcel} style={{
-                                color: '#007BFF',              // Bootstrap blue
+                                color: '#007BFF',             
                                 backgroundColor: 'white',
                                 borderRadius: '8px',
                                 padding: '1px 1px',

@@ -38,7 +38,7 @@ const Rewards = () => {
     return (
         <section className="content rewards-container">
             <div className="container-fluid">
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-6 mb-1">
                     <h5 className="m-0 pt-3">Rewards</h5>
                 </div>
 
