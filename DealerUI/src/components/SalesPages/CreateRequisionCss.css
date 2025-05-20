@@ -1,0 +1,263 @@
+.bg-info-card1 {
+  background-color: rgb(190 192 142 / 42%) !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.bg-info-card2 {
+  background-color: rgb(12 167 164 / 40%) !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.bg-info-card3 {
+  background-color: rgb(99 112 164 / 26%) !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.bg-info-card4 {
+  background-color: rgb(182 195 201 / 54%) !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.bg-info-card5 {
+  background-color: rgb(220 193 106 / 45%) !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+table.table-bordered.dataTable th {
+  border-left-width: 0;
+  font-weight: 600;
+}
+
+
+.card1 .go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #959976;
+  border-radius: 0 4px 0 32px;
+}
+
+.card1 .go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card1 {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -14px;
+  right: -14px;
+  background: #959976;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card1:hover:before {
+  transform: scale(21);
+}
+
+.card1:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card1:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+}
+
+
+.card2 .go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  border-radius: 0 4px 0 32px;
+}
+
+.card2 .go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card2 {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -14px;
+  right: -14px;
+  background: rgb(120 145 156 / 54%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card2:hover:before {
+  transform: scale(21);
+}
+
+.card2:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card2:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+}
+
+
+.card3 .go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  border-radius: 0 4px 0 32px;
+}
+
+.card3 .go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card3 {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -14px;
+  right: -14px;
+  background: rgb(99 112 164 / 61%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card3:hover:before {
+  transform: scale(21);
+}
+
+.card3:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card3:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+}
+
+
+.card4 .go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  /* background-color: rgb(246 188 9 / 44%); */
+  border-radius: 0 4px 0 32px;
+}
+
+.card4 .go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card4 {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -14px;
+  right: -14px;
+  background: rgb(246 188 9 / 44%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card4:hover:before {
+  transform: scale(21);
+}
+
+.card4:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card4:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+}
+
+.tilesCardActive{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* rgb(246 188 9 / 44%) !important */
+
+.table-row-strikethrough td {
+  text-decoration: line-through;
+  color: gray;
+  /* Optional: Dim the text color */
+}

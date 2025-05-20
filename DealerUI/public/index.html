@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/fvg.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/fvg.svg" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Inter Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet"
+    href="%PUBLIC_URL%/https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/fontawesome-free/css/all.min.css" />
+
+  <!-- Select2 -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/select2/css/select2.min.css" />
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
+  <!-- iCheck -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/icheck-bootstrap/icheck-bootstrap.min.css" />
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/jqvmap/jqvmap.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/dist/css/adminlte.min.css" />
+  <!-- summernote -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/summernote/summernote-bs4.min.css" />
+
+  <link rel="stylesheet" href="%PUBLIC_URL%/dist/css/custom.css" />
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/daterangepicker/daterangepicker.css" />
+  <!-- summernote -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/summernote/summernote-bs4.min.css" />
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+
+  <!-- fullCalendar -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/fullcalendar/main.css" />
+
+  <!-- for Organization chart -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/orgchart/3.1.0/css/jquery.orgchart.min.css">
+
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Iteos : Dealer Portal</title>
+</head>
+
+<body class="sidebar-mini layout-fixed accent-teal text-sm">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <!-- jQuery -->
+  <script src="%PUBLIC_URL%/plugins/jquery/jquery.min.js"></script>
+
+  <!-- jQuery UI 1.11.4 -->
+  <script src="%PUBLIC_URL%/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge("uibutton", $.ui.button);
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="%PUBLIC_URL%/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Select2 -->
+  <script src="%PUBLIC_URL%/plugins/select2/js/select2.full.min.js"></script>
+  <!-- DataTables  & Plugins -->
+  <script src="%PUBLIC_URL%/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/jszip/jszip.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="%PUBLIC_URL%/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/json-digger@latest"></script>
+  <!-- ChartJS -->
+  <script src="%PUBLIC_URL%/plugins/chart.js/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+  <!-- Sparkline -->
+  <!-- <script src="%PUBLIC_URL%/plugins/sparklines/sparkline.js"></script>
+ 
+  <script src="%PUBLIC_URL%/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+ 
+  <script src="%PUBLIC_URL%/plugins/jquery-knob/jquery.knob.min.js"></script> -->
+  <!-- daterangepicker -->
+  <script src="%PUBLIC_URL%/plugins/moment/moment.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/inputmask/jquery.inputmask.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempus Dominus Bootstrap 4 -->
+  <script src="%PUBLIC_URL%/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.js"></script>
+
+  <!-- fullCalendar 2.2.5 -->
+  <script src="%PUBLIC_URL%/plugins/fullcalendar/main.js"></script>
+
+  <!-- FLOT CHARTS -->
+  <script src="%PUBLIC_URL%/plugins/flot/jquery.flot.js"></script>
+  <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+  <script src="%PUBLIC_URL%/plugins/flot/plugins/jquery.flot.resize.js"></script>
+  <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+  <script src="%PUBLIC_URL%/plugins/flot/plugins/jquery.flot.pie.js"></script>
+
+  <!-- Summernote -->
+  <script src="%PUBLIC_URL%/plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlay Scrollbars -->
+  <script src="%PUBLIC_URL%/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="%PUBLIC_URL%/dist/js/adminlte.js"></script>
+  <!-- Summernote -->
+  <script src="%PUBLIC_URL%/plugins/summernote/summernote-bs4.min.js"></script>
+
+  <!-- form builder -->
+  <script src="https://formbuilder.online/assets/js/form-builder.min.js"></script>
+  <script src="https://formbuilder.online/assets/js/form-render.min.js"></script>
+
+  <style>
+
+.card-primary.card-outline-tabs>.card-header a.active, .card-primary.card-outline-tabs>.card-header a.active:hover {
+    border-bottom: 3px solid #007bff;
+    border-left:0px !important;
+    border-right: 0px !important;
+    border-top: 0px !important;
+}
+.text-purple {
+  color: #8e44ad;
+}
+.badge {
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-semibold {
+  font-weight: 600;
+}
+.fw-bold {
+  font-weight: 700;
+}
+table th:first-child{
+      border-radius:5px 0 0 0px;
+    }
+   
+    table th:last-child{
+      border-radius:0 5px 0px 0;
+    }
+
+/* added */
+    .header-div-cust {
+      margin: 25px 0px 15px 0px;
+      border-bottom: 2px solid goldenrod;
+      text-align: center;
+      padding: 5px;
+      /* background: rgb(191 193 221 / 23%); */
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: 600;
+      color: #a47e1e;
+      margin-bottom: 20px;
+    }
+
+    .field-icon-password {
+      float: right;
+      margin-right: 5px;
+      margin-top: -22px;
+      position: relative;
+      z-index: 2;
+    }
+
+    #summernote {
+      height: 200px !important;
+    }
+
+    .file-upload {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    .file-upload .file-select {
+      display: block;
+      border: 2px solid #dce4ec;
+      color: #34495e;
+      cursor: pointer;
+      height: 40px;
+      line-height: 40px;
+      text-align: left;
+      background: #ffffff;
+      overflow: hidden;
+      position: relative;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .file-upload .file-select .file-select-button {
+      background: #dce4ec;
+      padding: 0 10px;
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .file-upload .file-select .remove-file-select-button {
+      background: #ffc5c5;
+      color: black;
+      padding: 0 10px;
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      z-index: 100;
+      z-index: 101;
+      display: block;
+      position: relative;
+    }
+
+    .file-upload .file-select .file-select-name {
+      line-height: 40px;
+      display: inline-block;
+      padding: 0 10px;
+    }
+
+    .file-upload .file-select:hover {
+      border-color: #34495e;
+      transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+    }
+
+    .file-upload .file-select:hover .file-select-button {
+      background: #34495e;
+      color: #ffffff;
+      transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+    }
+
+    .file-upload.active .file-select {
+      border-color: #3fa46a;
+      transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+    }
+
+    .file-upload .active {
+      background: #3fa46a !important;
+      color: #ffffff;
+    }
+
+    .activeB {
+      border: 2px solid #3fa46a !important;
+    }
+
+    .file-upload.active .file-select .file-select-button {
+      background: #3fa46a;
+      color: #ffffff;
+      transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+    }
+
+    .file-upload .file-select input[type="file"] {
+      z-index: 100;
+      cursor: pointer;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      filter: alpha(opacity=0);
+    }
+
+    .file-upload .file-select.file-select-disabled {
+      opacity: 0.65;
+    }
+
+    .file-upload .file-select.file-select-disabled:hover {
+      cursor: default;
+      display: block;
+      border: 2px solid #dce4ec;
+      color: #34495e;
+      cursor: pointer;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 5px;
+      text-align: left;
+      background: #ffffff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .file-upload .file-select.file-select-disabled:hover .file-select-button {
+      background: #dce4ec;
+      color: #666666;
+      padding: 0 10px;
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .file-upload .file-select.file-select-disabled:hover .file-select-name {
+      line-height: 40px;
+      display: inline-block;
+      padding: 0 10px;
+    }
+
+    .cross {
+      width: 25px;
+      height: 25px;
+      border: 2px solid #f44336;
+      /* Red border for the cross */
+      border-radius: 50%;
+      position: relative;
+      display: inline-block;
+      top: 6px;
+      right: 4px;
+      float: inline-end;
+      z-index: 123;
+    }
+
+    .cross::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      /* Length of the line */
+      height: 2px;
+      /* Thickness of the line */
+      background-color: #f44336;
+      /* Red color for the cross */
+      transform-origin: center;
+      opacity: 0;
+      animation: crossAnimation 0.5s ease-in-out forwards;
+    }
+
+    .cross::before {
+      transform: translate(-50%, -50%) rotate(0deg);
+      /* First line at 45 degrees */
+    }
+
+    @keyframes crossAnimation {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+    }
+
+    .tick {
+      width: 25px;
+      height: 25px;
+      border: 2px solid #238ddb;
+      border-radius: 50%;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      top: 6px;
+      right: 9px;
+      float: inline-end;
+      z-index: 123;
+    }
+
+    .tick i {
+      /* content: ''; */
+      position: absolute;
+      left: 4px;
+      top: 6px;
+      width: 13px;
+      height: 6px;
+      color: #0a5890;
+      /* border-left: 3px solid #4CAF50;
+      border-bottom: 3px solid #4CAF50; */
+      /* transform: rotate(-45deg); */
+      /* opacity: 0; */
+      /* animation: tickAnimation 0.5s ease-in-out forwards; */
+    }
+
+    @keyframes tickAnimation {
+      0% {
+        opacity: 0;
+        transform: rotate(-45deg) scale(0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: rotate(-45deg) scale(1);
+      }
+    }
+
+    /* ........................... */
+
+    .add-more {
+      background-color: #1793db;
+      /* Vibrant coral color */
+      color: white;
+      /* White text */
+      font-size: 18px;
+      /* Larger font size */
+      /* margin-top: 30px; */
+    }
+
+    .add-more:hover {
+      background-color: #6fc7fa;
+      /* Darker coral */
+    }
+
+    .myCustomClass {
+      border-bottom: 1.5px solid #2b57c8;
+      padding: 4px;
+      background: #2b57c812;
+    }
+
+    .remove-more {
+      font-size: 14px;
+      /* Larger font size */
+      margin-top: 30px;
+    }
+
+    .fa-camera {
+      color: white;
+    }
+  </style>
+
+  <style>
+    /* .dataTables_wrapper{
+      width: 100%;
+    } */
+    .btn-primary {
+      color: #fff;
+     background-color: #4880FF !important;
+      /*  border-color: #8f1f1b !important; */
+      /* background: linear-gradient(to left,
+          rgb(43, 83, 198),
+          rgb(35, 147, 222)); */
+      box-shadow: none;
+    }
+
+    .btn-primary:hover {
+      color: #fff;
+       background-color: #4880FF !important;
+      /*border-color: #6b1a17 !important; */
+      /* background: linear-gradient(to left,
+          rgb(35, 147, 222),
+          rgb(43, 83, 198)); */
+      box-shadow: none;
+    }
+
+    .btn-info {
+      color: #fff;
+      background-color: #007bff !important;
+      border-color: #007bff !important;
+      box-shadow: none;
+    }
+
+    .btn-info:hover {
+      color: #fff;
+      background-color: #2222cd !important;
+      border-color: #2222cd !important;
+      box-shadow: none;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $(document).on(
+        "keyup change paste",
+        ".numberAndFloatInput",
+        function () {
+          var inputValue = $(this).val();
+          var numericValue = inputValue.replace(/[^0-9.]/g, "");
+          numericValue = numericValue.replace(/(\..*)\./g, "$1");
+          $(this).val(numericValue);
+        }
+      );
+
+      $(document).on("click", ".nav-link", function () {
+        if ($("body").hasClass("sidebar-collapse")) {
+          $("#largeSidebarIcon").css("display", "none");
+          $("#smallSidebarIcon").css("display", "inline-block");
+        } else {
+          $("#largeSidebarIcon").css("display", "block");
+          $("#smallSidebarIcon").css("display", "none");
+        }
+      });
+    });
+    function panCardInputUpperCase() {
+      var field = $(".pan-card");
+      let value = field.val();
+      $(".pan-card").val(value.toUpperCase());
+    }
+    $(document).ready(function () {
+      $(".pan-card").on("input", function () {
+        panCardInputUpperCase();
+      });
+    });
+
+    function scroller() {
+      var scroll = $("div.scroll"); // Sets the div with a class of scroll as a variable
+
+      var height = scroll.height(); // Gets the height of the scroll div
+
+      var topAdj = -height - 30;
+      /* '-height' turns the height                   of the UL into a negative #,
+       * '- 50' subtracts an extra 50 pixels from the height of
+       * the div so that it moves the trail of the UL higher to
+       * the top of the div before the animation                ends
+       */
+
+      scroll.animate(
+        {
+          top: [topAdj, "linear"],
+        },
+        33000,
+        function () {
+          scroll.css("top", 80); //resets the top position of the Ul for the next cycle
+          scroller(); // Recalls the animation cycle to begin.
+        }
+      );
+    }
+
+    function initDataTable() {
+      $(document).ready(function () {
+        if ($.fn.dataTable.isDataTable("#example1")) {
+          // $("#example1").DataTable().clear().destroy();
+        } else {
+          setTimeout(() => {
+            $("#example1")
+              .DataTable({
+                responsive: true,
+                lengthChange: false,
+                autoWidth: false,
+                buttons: ["copy", "csv", "excel", "pdf", "print"],
+                aaSorting: [],
+                columnDefs: [
+                  {
+                    orderable: false,
+                    targets: [2],
+                  },
+                ],
+              })
+              .buttons()
+              .container()
+              .appendTo("#example1_wrapper .col-md-6:eq(0)");
+          }, 1000);
+        }
+      });
+    }
+    function initSummernoteFuncation() {
+      $(document).ready(function () {
+        setTimeout(() => {
+          $("#summernote").summernote({ height: 200, focus: true });
+        }, 1000);
+      });
+    }
+
+    function getSummerNoteValueFuncation() {
+      return $("#summernote").summernote("code");
+    }
+
+    function getClearSummerNoteValueFuncation() {
+      $("#summernote").summernote("reset");
+    }
+
+    function setSummerNoteValueFuncation(getTest) {
+      $("#summernote").summernote("code", getTest);
+    }
+
+    function initScroller() {
+      scroller();
+    }
+
+    // })();
+
+    // ............................
+
+    var loadFile = function (event) {
+      var image = document.getElementsByClassName("image-preview");
+      image.src = URL.createObjectURL(event.target.files[0]);
+    };
+
+    $(document).ready(function () {
+      setTimeout(function () {
+        $(".profile-upload-field-label")
+          .find("input")
+          .attr("onchange", "loadFile(event)");
+      }, 2000);
+    });
+
+    $(document).ready(function () {
+      setTimeout(function () {
+        $(".profile-upload-field-label label").each(function () {
+          var labelContent = $(this).html();
+          $(this).html("");
+
+          $(this).append(`
+        <i class="fas fa-camera"> ${labelContent} </i>
+      `);
+        });
+      }, 2000);
+    });
+
+    $(document).ready(function () {
+      setTimeout(function () {
+        let imgElement = $(".profile-upload-field-label img");
+
+        if (!imgElement.attr("src") || imgElement.attr("src").trim() === "") {
+          $(".profile-upload-field-label").append(
+            '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtuphMb4mq-EcVWhMVT8FCkv5dqZGgvn_QiA&s" class="image-preview"  alt="Image Preview" />'
+          );
+        }
+      }, 2000);
+    });
+
+    // ----------------------------------------Image Upload
+
+    let getSelectedProfileImage = "";
+    let getSelectedDocument = "";
+
+    const readURL = function (input) {
+      // console.log("into assign img div");
+      if (input.files && input.files[0]) {
+        getSelectedProfileImage = input.files[0];
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const container = $(input).closest(".formbuilder-file");
+          container.find(".image-preview").remove();
+          container.append(
+            '<img src="' +
+            e.target.result +
+            '" class="image-preview" alt="Image Preview" />'
+          );
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    };
+    $(document).on("change", ".profile-upload-field", function () {
+     // console.log("into assign img div");
+      readURL(this);
+    });
+
+    function returnFileObject() {
+      return getSelectedProfileImage;
+    }
+
+    // ----------------------document upload---------------------------------------------------
+
+    let documentObject = [];
+    let documentName = [];
+
+    $(document).ready(function () {
+      $(".Aadhar-Number").on("keyup", function () {
+
+        const field = $(this);
+        let value = field.val();
+
+        if (value.length > 12) {
+          value = value.slice(0, 12);
+        }
+        field.data("original-value", value);
+        setAdharValue(value);
+        if (value.length > 4) {
+          const maskedValue =
+            "XXXXXXXX".slice(0, value.length - 4) + value.slice(-4);
+          field.val(maskedValue);
+        } else {
+          field.val(value);
+        }
+      });
+    });
+
+    function initDateTimePickerFuncation() {
+      $(document).ready(function () {
+        $("#projectStartDate, #projectEndDate").on("blur", function (e) {
+          $(this).datetimepicker("hide");
+        });
+
+        setTimeout(() => {
+          $("#projectStartDate").datetimepicker({
+            icons: { time: "far fa-clock" },
+            format: "DD/MM/YYYY hh:mm A",
+            autoclose: true,
+            keepOpen: false,
+          });
+          $("#projectEndDate").datetimepicker({
+            icons: { time: "far fa-clock" },
+            format: "DD/MM/YYYY hh:mm A",
+            autoclose: true,
+          });
+
+          if ($.fn.dataTable.isDataTable("#example1")) {
+            // variable "table" is a valid initialized DataTable ... do datatable stuff
+          } else {
+            $("#example1")
+              .DataTable({
+                responsive: {
+                  details: {
+                    renderer: DataTable.Responsive.renderer.listHiddenNodes(),
+                  },
+                },
+                lengthChange: false,
+                autoWidth: false,
+                buttons: ["copy", "csv", "excel", "pdf", "print", "colvis"],
+              })
+              .buttons()
+              .container()
+              .appendTo("#example1_wrapper .col-md-6:eq(0)");
+          }
+        }, 1500);
+      });
+    }
+
+    // function initDestroyDataTableFuncation() {
+    //   $(document).ready(function () {
+    //     if ($.fn.dataTable.isDataTable("#example1")) {
+    //       var table = $("#example1").DataTable();
+    //       table.destroy();
+    //     }
+    //   });
+    // }
+    function initDestroyDataTableFuncation() {
+      $(document).ready(function () {
+        if ($.fn.dataTable.isDataTable("#example1")) {
+          var table = $("#example1").DataTable();
+          table.destroy();
+          // table.clear();
+        }
+      });
+    }
+
+    function initAgainDestroyDataTableFuncation() {
+      $(document).ready(function () {
+        var table = $("#example1")
+          .DataTable({
+            responsive: {
+              details: {
+                renderer: DataTable.Responsive.renderer.listHiddenNodes(),
+              },
+            },
+            lengthChange: false,
+            autoWidth: false,
+            buttons: ["copy", "csv", "excel", "pdf", "print", "colvis"],
+          })
+          .draw()
+          .buttons()
+          .container()
+          .appendTo("#example1_wrapper .col-md-6:eq(0)");
+      });
+    }
+
+    function initDataTableFuncation() {
+      // $(document).ready(function () {
+      if ($.fn.dataTable.isDataTable("#example1")) {
+        var table = $("#example1").DataTable();
+        //  table.clear().draw();
+        // table.destroy();
+      } else {
+        $("#example1")
+          .DataTable({
+            responsive: {
+              details: {
+                renderer: DataTable.Responsive.renderer.listHiddenNodes(),
+              },
+            },
+            lengthChange: false,
+            autoWidth: false,
+            buttons: ["copy", "csv", "excel", "pdf", "print", "colvis"],
+          })
+          .buttons()
+          .container()
+          .appendTo("#example1_wrapper .col-md-6:eq(0)");
+      }
+      // })
+    }
+
+    function confirmModalShow() {
+      $("#confirmCommonModal").modal("show");
+    }
+    function confirmModalHide() {
+      $("#confirmCommonModal").modal("hide");
+    }
+ function MaterialconfirmModalShow() {
+      $("#MaterialconfirmCommonModal").modal("show");
+    }
+     function MaterialconfirmModalHide() {
+      $("#MaterialconfirmCommonModal").modal("hide");
+    }
+    function initDatePickerAttandanceFuncation() {
+      var dateNow = new Date();
+      $("#attandanceDateV").datetimepicker({
+        format: "DD-MM-YYYY",
+        defaultDate: dateNow,
+      });
+
+    }
+
+    function initDatePickerFuncation() {
+      $(document).ready(function () {
+        setTimeout(() => {
+          $("#inputDateOfBirthV").datetimepicker({
+            format: "DD-MM-YYYY",
+          });
+          $("#joiningDateV").datetimepicker({
+            format: "DD-MM-YYYY",
+          });
+          $("#joiningDate").datetimepicker({
+            format: "DD-MM-YYYY",
+          });
+          $("#projectStartDateV").datetimepicker({
+            format: "DD-MM-YYYY",
+          });
+          $("#fromDateV").datetimepicker({
+            format: "YYYY",
+          });
+          $("#dateV").datetimepicker({
+            format: "MM-YYYY",
+            minDate: new Date(2016, 0),
+            viewMode: 'months',
+            maxDate: new Date(),
+          });
+
+          // $('#monthYearV').datetimepicker({
+          //   format: 'MM-YYYY',
+          // })
+
+          if ($.fn.dataTable.isDataTable("#example1")) {
+            // variable "table" is a valid initialized DataTable ... do datatable stuff
+          } else {
+            $("#example1")
+              .DataTable({
+                responsive: true,
+                lengthChange: false,
+                autoWidth: false,
+                buttons: ["copy", "csv", "excel", "pdf", "print", "colvis"],
+              })
+              .buttons()
+              .container()
+              .appendTo("#example1_wrapper .col-md-6:eq(0)");
+          }
+        }, 2000);
+      });
+    }
+
+    $(document).on("click", ".toggle-password", function () {
+      $(this).toggleClass("fa-eye fa-eye-slash");
+      var input = $($(this).attr("toggle"));
+      if (input.attr("type") == "password") {
+        input.attr("type", "text");
+      } else {
+        input.attr("type", "password");
+      }
+    });
+
+    function initMultiSelectFuncation() {
+      $(document).ready(function () {
+        setTimeout(() => {
+          $(".select2").select2();
+        }, 1000);
+      });
+    }
+
+    function assignValueToSelect2(getArrayValues) {
+      $(".select2").val(getArrayValues).change();
+      select2Values = getArrayValues;
+    }
+
+    function returnReadDocumentURL() {
+      return readDocumentURL(this);
+    }
+
+    function returnReadDocumentURL() {
+      return readDocumentURL(this);
+    }
+
+    function returnDocumentFileObject() {
+      return getSelectedDocument;
+    }
+
+    function getDocumentObject() {
+      return documentObject;
+    }
+    function getDocumentName() {
+      return documentName;
+    }
+
+    function calendarEmp() {
+      var date = new Date()
+      var d = date.getDate(),
+        m = date.getMonth(),
+        y = date.getFullYear()
+
+      var style = document.createElement('style');
+      style.innerHTML = `
+        .fc-daygrid-day-frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+        }
+
+        .fc .fc-daygrid-day-number {
+            position: relative;
+            z-index: 4;
+            padding: 0px;
+        }
+
+        .week-day {
+            background-color: #FFFFFF;
+        }
+
+        .weekend-day {
+            background-color: rgb(255 0 0 / 13%);
+        }  `;
+      document.head.appendChild(style);
+
+      var Calendar = FullCalendar.Calendar;
+      var calendarEl = document.getElementById('calendar');
+
+      var calendar = new Calendar(calendarEl, {
+        headerToolbar: {
+          left: 'title',
+          center: '',
+          right: 'prev,today,next'
+        },
+        themeSystem: 'bootstrap',
+        height: 280,
+        datesSet: function (info) {
+          const newMonth = info.start.getMonth() + 1;
+          const newYear = info.start.getFullYear();
+        },
+        dayCellClassNames: function (info) {
+          if (info.date.getDay() === 0 || info.date.getDay() === 6) {
+            return ["weekend-day"];
+          } else {
+            return ["week-day"];
+          }
+          return [];
+        },
+      });
+
+      calendar.render();
+    }
+
+    function donutChart(a, b) {
+      const dynamicData = [
+        { count: a, gender: 'Male' },
+        { count: b, gender: 'Female' }
+      ];
+
+      const chartData = dynamicData.map(item => {
+        const colors = item.gender === 'Male'
+          ? {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 1,
+            y2: 0,
+            colorStops: [
+              { offset: 0, color: '#FF8A00' },
+              { offset: 1, color: '#FAC17E' }
+            ]
+          }
+          : '#2393DE';
+
+        return {
+          value: item.count,
+          name: item.gender,
+          itemStyle: {
+            color: colors
+          }
+        };
+      });
+
+      var chart = echarts.init(document.querySelector("#donutChart"));
+      chart.setOption({
+        tooltip: {
+          trigger: 'item'
+        },
+        legend: {
+          top: '5%',
+          left: 'center'
+        },
+        series: [{
+          name: '',
+          type: 'pie',
+          radius: ['40%', '70%'],
+          avoidLabelOverlap: false,
+          label: {
+            show: false,
+            position: 'center'
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: '18',
+              fontWeight: 'bold'
+            }
+          },
+          data: chartData
+        }]
+      });
+    }
+
+    function getBarChart(chartData) {
+  if (!Array.isArray(chartData)) {
+    console.error("Invalid chartData passed to getBarChart");
+    return;
+  }
+
+  const presentData = chartData.map(item => [item.month, item.totalWorkHours]);
+  // const absentData = chartData.map(item => [item.month + 0.2, 100 - item.totalWorkHours]);
+  const absentData = chartData.map(item => [
+    item.month + 0.2, 
+    item.totalWorkHours > 0 ? 100 - item.totalWorkHours : 0
+  ]);
+
+  const monthLabels = [
+    [0, "Jan"], [1, "Feb"], [2, "Mar"], [3, "Apr"], [4, "May"], [5, "Jun"],
+    [6, "Jul"], [7, "Aug"], [8, "Sep"], [9, "Oct"], [10, "Nov"], [11, "Dec"]
+  ];
+
+  const bar_data = [
+    {
+      data: presentData,
+      bars: { show: true, barWidth: 0.2, align: "center" },
+      label: "Work Hours",
+      color: "#3c8dbc",
+    },
+    {
+      data: absentData,
+      bars: { show: true, barWidth: 0.2, align: "center" },
+      label: "Remaining",
+      color: "#ff580791",
+    },
+  ];
+
+  $.plot("#bar-chart", bar_data, {
+    grid: {
+      borderWidth: 1,
+      borderColor: "#f3f3f3",
+      tickColor: "#f3f3f3",
+    },
+    xaxis: {
+      ticks: monthLabels,
+      min: -0.5,
+      max: 11.5,
+    },
+    yaxis: { min: 0, max: 100, ticks: [0, 50, 100] },
+  });
+}
+  
+    function serviceChart() {
+    var chartData = [
+        [0, 0],
+        [1, 7],
+        [2, 10],
+        [3, 20],
+        [4, 22],
+      ];
+
+      $.plot("#line-chart", [
+        {
+          data: chartData,
+          lines: { show: true, fill: false, lineWidth: 2 },
+          points: { show: true, radius: 3, fill: true },
+          color: "#4CAF50", // Green color for the line
+        },
+      ], {
+        grid: {
+          borderWidth: 1,
+          borderColor: "#ddd",
+          hoverable: true,
+          clickable: true,
+        },
+        xaxis: {
+          ticks: [
+            [0, "<1"],
+            [1, "1-2"],
+            [2, "2-3"],
+            [3, "7-8"],
+            [4, ">8"],
+          ],
+        },
+        yaxis: {
+          min: 0,
+          max: 26, // Based on the chart in the image
+          tickSize: 5,
+        },
+      });
+    }
+
+    function salaryChart() {
+      var chartData = [
+        [0, 0],   // Point for "<6" on X-axis
+        [1, 3],   // Point for "6-12" on X-axis
+        [2, 10],  // Point for ">30" on X-axis
+      ];
+
+      $.plot("#area-chart", [
+        {
+          data: chartData,
+          lines: { show: true, fill: false, lineWidth: 2 },
+          points: { show: true, radius: 3, fill: true, fillColor: "#FFF" },
+          color: "#FF9800", // Orange color for the line
+        },
+      ], {
+        grid: {
+          borderWidth: 1,
+          borderColor: "#ddd",
+          hoverable: true,
+          clickable: true,
+        },
+        xaxis: {
+          ticks: [
+            [0, "<6"],
+            [1, "6-12"],
+            [2, ">30"],
+          ],
+          tickColor: "transparent", // Removes extra tick lines
+        },
+        yaxis: {
+          min: 0,
+          max: 12, // Matches the image
+          tickSize: 3,
+        },
+      });
+    }
+
+    // function calendar() {
+    //   var date = new Date()
+    //   var d = date.getDate(),
+    //     m = date.getMonth(),
+    //     y = date.getFullYear()
+
+    //   var style = document.createElement('style');
+    //   style.innerHTML = `
+    //     .fc-daygrid-day-frame {
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         padding: 0px;
+    //     }
+
+    //     .fc .fc-daygrid-day-number {
+    //         position: relative;
+    //         z-index: 4;
+    //         padding: 0px;
+    //     }
+
+    //     .week-day {
+    //         background-color: #FFFFFF;
+    //     }
+
+    //     .weekend-day {
+    //         background-color: rgb(255 0 0 / 13%);
+    //     }  `;
+    //   document.head.appendChild(style);
+
+    //   var Calendar = FullCalendar.Calendar;
+    //   var calendarEl = document.getElementById('calendar');
+
+    //   var calendar = new Calendar(calendarEl, {
+    //     headerToolbar: {
+    //       left: 'title',
+    //       center: '',
+    //       right: 'prev,today,next'
+    //     },
+    //     themeSystem: 'bootstrap',
+    //     height: 280,
+    //     datesSet: function (info) {
+    //       const newMonth = info.start.getMonth() + 1;
+    //       const newYear = info.start.getFullYear();
+    //     },
+    //     dayCellClassNames: function (info) {
+    //       if (info.date.getDay() === 0 || info.date.getDay() === 6) {
+    //         return ["weekend-day"];
+    //       } else {
+    //         return ["week-day"];
+    //       }
+    //       return [];
+    //     },
+    //   });
+
+    //   calendar.render();
+    // }
+
+    function calendar() {
+  var calendarEl = document.getElementById('calendar');
+  if (!calendarEl) {
+    console.warn('Calendar element not found!');
+    return;
+  }
+
+  // continue with the rest
+  var date = new Date();
+  var d = date.getDate(),
+    m = date.getMonth(),
+    y = date.getFullYear();
+
+  var style = document.createElement('style');
+  style.innerHTML = `
+    .fc-daygrid-day-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .fc .fc-daygrid-day-number {
+        position: relative;
+        z-index: 4;
+        padding: 0px;
+    }
+
+    .week-day {
+        background-color: #FFFFFF;
+    }
+
+    .weekend-day {
+        background-color: rgb(255 0 0 / 13%);
+    }
+  `;
+  document.head.appendChild(style);
+
+  var Calendar = FullCalendar.Calendar;
+
+  var calendar = new Calendar(calendarEl, {
+    headerToolbar: {
+      left: 'title',
+      center: '',
+      right: 'prev,today,next'
+    },
+    themeSystem: 'bootstrap',
+    height: 280,
+    datesSet: function (info) {
+      const newMonth = info.start.getMonth() + 1;
+      const newYear = info.start.getFullYear();
+    },
+    dayCellClassNames: function (info) {
+      if (info.date.getDay() === 0 || info.date.getDay() === 6) {
+        return ["weekend-day"];
+      } else {
+        return ["week-day"];
+      }
+    },
+  });
+
+  calendar.render();
+}
+
+  function barChart(presentData, absentData) {
+  const chartContainer = document.getElementById("bar-chart");
+  // console.log(presentData, "Present");
+  // console.log(absentData, "Absent");
+  
+  
+
+
+  if (!chartContainer) {
+    console.warn("#bar-chart does not exist yet in the DOM.");
+    return;
+  }
+
+  if (!presentData || !absentData) {
+    $("#bar-chart").html("<p>No attendance data found</p>");
+    return;
+  }
+
+  const months = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+  ];
+  const ticks = months.map((month, i) => [i + 1 + 0.1, month]);
+
+  const barData = [
+    {
+      label: "Present",
+      data: presentData.map((val, i) => [i + 1, val]),
+      bars: { show: true, barWidth: 0.2, align: "center" },
+    },
+    {
+      label: "Absent",
+      data: absentData.map((val, i) => [i + 1 + 0.2, val]),
+      bars: { show: true, barWidth: 0.2, align: "center" },
+    },
+  ];
+
+  $.plot("#bar-chart", barData, {
+    grid: {
+      borderWidth: 1,
+      borderColor: "#f3f3f3",
+      tickColor: "#f3f3f3",
+    },
+    xaxis: { ticks },
+    yaxis: { min: 0, max: 100, ticks: [0, 20, 40, 60, 80, 100] },
+    legend: { show: false, position: "ne" },
+    colors: ["#3c8dbc", "#f56954"],
+  });
+}
+
+  // Helper function to map month names to their index
+    function getMonthIndex(month) {
+      const monthMap = {
+        January: 1,
+        February: 2,
+        March: 3,
+        April: 4,
+        May: 5,
+        June: 6,
+        July: 7,
+        August: 8,
+        September: 9,
+        October: 10,
+        November: 11,
+        December: 12,
+      };
+      return monthMap[month] || 0; // Return the corresponding index, or 0 if not found
+    }
+
+    function initCalendar() {
+      $("#calendarEvent").datetimepicker({
+        format: "L",
+        inline: true,
+      });
+
+      const calendarWidget = $(".bootstrap-datetimepicker-widget");
+      calendarWidget.css({
+        maxHeight: "230px",
+      });
+
+      calendarWidget.find(".datepicker-days").css({
+        transform: "scale(0.9)",
+        transformOrigin: "top",
+      });
+    }
+
+    function initAttendanceCalender() {
+      var Calendar = FullCalendar.Calendar;
+      const calendarEl = document.getElementById("calendar");
+
+      var calendar = new Calendar(calendarEl, {
+        headerToolbar: {
+          left: "prev",
+          center: "title",
+          right: "next",
+        },
+        height: 550,
+        themeSystem: "bootstrap",
+        datesSet: function (info) {
+          const newMonth = info.start.getMonth() + 1;
+          const newYear = info.start.getFullYear();
+          window.onCalendarDateChange(newMonth, newYear);
+        },
+        dayCellClassNames: function (info) {
+          if (info.date.getDay() === 0 || info.date.getDay() === 6) {
+            return ["weekend-day"];
+          }
+          return [];
+        },
+      });
+      calendar.render();
+
+      const style = document.createElement("style");
+      style.innerHTML = `
+        .weekend-day {
+            background-color: #f4f6f9;
+        }
+    `;
+      document.head.appendChild(style);
+    }
+
+    // ----------------------document upload End---------------------------------------------------
+
+
+    $(document).ready(function () {
+      $(document).on("change", ".filePickerInput", function () {
+      
+        const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
+        const filePath = $(this).val();
+ 
+        if (!allowedExtensions.exec(filePath)) {
+            alert('Invalid file type. Only JPG, JPEG, PNG, and PDF files are allowed.');
+            $(this).val(''); 
+            return false;
+        }
+    });
+});
+
+
+  </script>
+</body>
+
+</html>

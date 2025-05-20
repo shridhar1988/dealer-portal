@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "BmGNQme4wj0fyIJODtjonKM2pqenlmRcTzwPFSmF4rI=",
+  "Source": "DealerPortal_API",
+  "BasePath": "_content/DealerPortal_API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

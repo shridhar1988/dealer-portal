@@ -1,0 +1,226 @@
+
+
+
+/* Target both buttons and label‑buttons in your header */
+.content-header .btn {
+  display: inline-flex;       /* use flex so icon+text align consistently */
+  align-items: center;        /* vertically center icon and text */
+  justify-content: center;    /* horizontal center (optional) */
+  line-height: 1.2;           /* ensure consistent line‑height */
+  padding-top: 0.35rem;       /* match Bootstrap btn‑sm vertical padding */
+  padding-bottom: 0.35rem;    /* match Bootstrap btn‑sm vertical padding */
+}
+
+/* ensure icon never shifts baseline */
+.content-header .btn i {
+  vertical-align: middle;
+}
+.filter-box  {
+  border: 1px solid #dee2e6;    /* light gray border */
+  border-radius: 4px;           /* rounded corners */
+  padding: 0.25rem 0.5rem;      /* space inside */
+  background-color: #fafafa;    /* optional: subtle background */
+}
+.filter-box .input-group {
+  margin-left: 0.5rem;          /* space between label and dropdown */
+}
+.filter-box .btn {
+  margin-left: 0.5rem;          /* space before Clear button */
+}
+/* Remove the select’s border and focus outline */
+.filter-box .form-control {
+  border: none !important;
+  box-shadow: none !important;
+  
+}
+.Orders
+{
+  overflow-y: auto;
+  min-height: 400px;
+}
+.fileterdiv
+{
+  background-color: white;
+  border-radius: 9px;
+  margin-left: 13px;
+  margin-right: 10px;
+}
+.Exposure
+{
+  color: #9236b9;
+}.Utilization
+{
+  color: #e45430;
+}
+.Creditxposure
+{
+  color: #2a25b8;
+}.salesorder{color: #8c8c8f;}
+
+/* .button{
+  margin-left: 530px;
+} */
+.place{
+  padding: 0.5rem;
+  margin-top: -25px;
+}
+.Search{
+  border-radius: 10px;
+}
+.requisition{border-radius: 8px;}
+
+.thead-light
+{
+  text-wrap: nowrap;
+}
+
+
+
+/* .custom-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-right: 8px;
+}
+
+.custom-btn i {
+  margin-right: 8px; 
+  font-size: 16px;
+  
+}
+
+
+.custom-download-btn {
+  background-color: lightgray;
+  color: #007bff;
+  width: 130px;
+  height: 35px;
+}
+
+.custom-download-btn i {
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 8px;
+  width: 8px;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-download-btn:hover {
+  background-color: #f0f0f0;
+
+}
+
+
+.custom-upload-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  margin-top: 10px;
+  width: 110px;
+  height: 35px;
+}
+
+.custom-upload-btn i {
+  background-color: #ffffff;
+  color: #007bff;
+  border-radius: 50%;
+  padding: 8px;
+  width: 8px;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.custom-upload-btn:hover {
+  background-color: #0056b3;
+} */
+
+.custom-btn {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px 16px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+border: 1px solid white;
+  font-size: 15px;
+  font-weight: 500;
+  color: #007bff; 
+background-color:#ffffff;  
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* For label acting as button */
+
+}
+
+/* Hover effect */
+
+
+/* Download button specific styling */
+.custom-download-btn {
+  padding-left: 30px; /* Extra space for icon */
+  position: relative;
+  margin-right: 30px;
+  /* background-color: white; */
+  
+}
+
+/* Upload button (label) specific styling */
+.custom-upload-btn {
+  padding-left: 40px; /* Extra space for icon */
+  position: relative;
+  margin-top: 18px;
+  background-color: blue;
+  color: white;
+
+}
+
+/* Icon styling */
+.custom-btn i {
+  position: absolute;
+  left: -20px; 
+
+  top: 10;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Fixed width for icon area */
+  
+  font-size: 14px;
+  border-radius: 50%;
+  height: 35px;
+ 
+}
+.custom-download-btn i {
+  background-color: blue;  /* Darker blue for icon background */
+  color: white;
+}
+
+.custom-upload-btn i {
+ 
+  background-color: white;  /* Darker blue for icon background */
+  color: blue;
+
+}
+
+/* Ensure hidden file input remains hidden */
+#fileUpload {
+  display: none;
+}
+

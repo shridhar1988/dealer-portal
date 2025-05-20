@@ -1,0 +1,6 @@
+{Date: 2025-05-20 07:30:42 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: While updating the company id 1 following error occured Company with specified name already exist!},
+{Date: 2025-05-20 07:30:54 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: While updating the company id 1 following error occured Company with specified name already exist!},
+{Date: 2025-05-20 07:31:00 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: While updating the company id 1 following error occured Company with specified name already exist!},
+{Date: 2025-05-20 07:31:04 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: While updating the company id 1 following error occured Company with specified name already exist!},
+{Date: 2025-05-20 07:32:41 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: While updating the company id 1 following error occured Company with specified name already exist!},
+{Date: 2025-05-20 10:25:39 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: While creating the Comapny 1234 following error occured Company with specified name already exist..! },

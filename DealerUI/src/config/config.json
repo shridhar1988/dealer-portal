@@ -1,0 +1,61 @@
+{
+  "logoUrl": "",
+  "host": "localhost",
+  "version": 1.1,
+  "deploymentMode": "staging",
+  "PoweredBy": "Powered by ITEOS", 
+
+ "file_URL": "https://localhost:44319/api",
+  "API_URL": "https://localhost:44319/api/",
+  "apiEndPoint": "https://localhost:44319/api",
+  "File_URL": "https://localhost:44319/ProfileUploads/",
+  "Attachment_URL": "https://localhost:44319/Uploads/",  
+  "Profile_URL": "https://localhost:44319/ProfileUploads/", 
+ 
+  "ClientId": "pmoAuthApp",
+  "AdminRole": "fbf53f62-7ead-4ade-b4c6-578d739cbdc1",
+  "RetailerRole": "f4833211-01dd-4f2f-bab4-9317108b1a94",
+  "EmployeeRole": "06c45c63-dcaa-444b-8402-c99e3043e28d",
+  "HRRole": "f4833211-01dd-4f2f-bab4-9317108b1a91",
+  "headers1": {
+    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+  },
+  "headers2": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "headers3": {
+    "Content-Type": "multipart/form-data"
+  },
+  "EncryptKey": "01234567890123456789012345678901",
+  "EncryptVector": "1234567890123412",
+  "_validFileExtensions": [
+    "doc",
+    "docx",
+    "pdf",
+    "eml",
+    "jpeg",
+    "jpg",
+    "png",
+    "xls",
+    "xlsx",
+    "txt",
+    "ppt",
+    "pptx",
+    "xps"
+  ],
+  "_validImageFileExtensions": [
+    "jpeg",
+    "jpg",
+    "png"
+  ],
+  "tostar_config": {
+    "position": "top-center",
+    "autoClose": 2000,
+    "hideProgressBar": true,
+    "closeOnClick": true,
+    "pauseOnHover": true,
+    "draggable": true,
+    "progress": false,
+    "theme": "light"
+  }
+}

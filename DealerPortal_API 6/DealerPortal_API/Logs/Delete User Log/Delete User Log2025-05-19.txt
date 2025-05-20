@@ -1,0 +1,3 @@
+{Date: 2025-05-19 15:13:13 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: User id bd7129aa-d942-4b58-bf41-ed7dedbf4c61 data deleted successfully by the Userid : c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-19 15:26:15 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: User id 1a38d996-7ffc-4203-876d-76ba75a37eae data deleted successfully by the Userid : c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-19 15:29:11 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: User id c9178ed2-0663-4fe6-866d-0d4128ccebfe data deleted successfully by the Userid : c165560e-4055-401b-88b9-5e8ca9372f54},

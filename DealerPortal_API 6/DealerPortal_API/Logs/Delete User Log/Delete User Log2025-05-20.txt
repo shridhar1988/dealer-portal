@@ -1,0 +1,2 @@
+{Date: 2025-05-20 10:38:18 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: User id 3193113a-2580-4278-95b9-98d0c55464bb data deleted successfully by the Userid : c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-20 10:43:12 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: User id dcee63ee-53ee-49ba-89ab-bdea9bf4c036 data deleted successfully by the Userid : c165560e-4055-401b-88b9-5e8ca9372f54},

@@ -1,0 +1,6 @@
+{Date: 2025-05-19 14:43:58 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company Name a added with description abcd by the userid c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-19 14:44:04 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company Name b added with description bcd by the userid c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-19 14:44:10 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company Name c added with description cds by the userid c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-19 15:52:54 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company Name szdv 234@%^&&*(()d added with description &*(GGGG   ( by the userid c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-19 15:52:57 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Existing Company Name szdv 234@%^&&*(()d Was made Inactive by the User id c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-19 16:52:15 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company Name d added with description dd s by the userid c165560e-4055-401b-88b9-5e8ca9372f54},

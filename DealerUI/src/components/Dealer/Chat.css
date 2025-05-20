@@ -1,0 +1,80 @@
+/* Custom styles for the Chat component */
+
+/* Contact list styling */
+.list-group-item {
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.list-group-item.active {
+    background-color: #e9ecef;
+    border-left: 4px solid #007bff;
+}
+
+/* Avatar styling */
+.rounded-circle {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Message area styling */
+.card-body1 {
+    background-color: #f5f6fa;
+}
+
+/* Message bubble styling */
+.bg-primary.text-white {
+    border-radius: 15px 15px 0 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bg-light {
+    border-radius: 15px 15px 15px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Input area styling */
+.input-group .form-control {
+    border-right: none;
+}
+
+.input-group .btn-primary {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+
+/* Scrollbar styling for the chat message area */
+.card-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card-body::-webkit-scrollbar-track {
+    background: #e9ecef;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+    background: #adb5bd;
+    border-radius: 4px;
+}
+
+.card-body::-webkit-scrollbar-thumb:hover {
+    background: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        height: 300px !important;
+    }
+
+    .rounded-circle {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 1rem !important;
+    }
+}

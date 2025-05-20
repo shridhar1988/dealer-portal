@@ -1,0 +1,6 @@
+{Date: 2025-05-19 14:45:21 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company id 2 mapped to plant id 4},
+{Date: 2025-05-19 14:45:29 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company id 3 mapped to plant id 5},
+{Date: 2025-05-19 14:45:35 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company id 4 mapped to plant id 6},
+{Date: 2025-05-19 14:47:32 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: While mapping Company id 2  to plant id 4 following error occured : Company & Plant mapping already exist..!},
+{Date: 2025-05-19 16:52:00 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: While mapping Company id 3  to plant id 5 following error occured : Company & Plant mapping already exist..!},
+{Date: 2025-05-19 16:54:49 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company id 6 mapped to plant id 9},

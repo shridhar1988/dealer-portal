@@ -1,0 +1,6 @@
+{Date: 2025-05-20 10:21:22 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: For the Role : GUIDE App id 5001 was added by the user c165560e-4055-401b-88b9-5e8ca9372f54 by removing all existing apps},
+{Date: 2025-05-20 10:21:43 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: For the Role : Distributer App id 4001 was added by the user c165560e-4055-401b-88b9-5e8ca9372f54 by removing all existing apps},
+{Date: 2025-05-20 10:21:43 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: For the Role : Distributer App id 4003 was added by the user c165560e-4055-401b-88b9-5e8ca9372f54 by removing all existing apps},
+{Date: 2025-05-20 10:41:51 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: For the Role : Admin App id 3001 was added by the user c165560e-4055-401b-88b9-5e8ca9372f54 by removing all existing apps},
+{Date: 2025-05-20 10:47:30 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: For the Role : Sales App id 10001 was added by the user c165560e-4055-401b-88b9-5e8ca9372f54 by removing all existing apps},
+{Date: 2025-05-20 10:47:30 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: For the Role : Sales App id 8006 was added by the user c165560e-4055-401b-88b9-5e8ca9372f54 by removing all existing apps},
