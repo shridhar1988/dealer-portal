@@ -9,3 +9,6 @@
 {Date: 2025-05-20 10:25:30 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company Name 1234 added with description ITEOS by the userid c165560e-4055-401b-88b9-5e8ca9372f54},
 {Date: 2025-05-20 10:26:05 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company Name 12345 added with description VC HDSJ $$%^&*() by the userid c165560e-4055-401b-88b9-5e8ca9372f54},
 {Date: 2025-05-20 10:26:21 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Existing Company Name 12345 changed to 12345 and existing description VC HDSJ $$%^&*()changed to VC HDSJ $$%^&*()1234567 by the userid c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-20 11:30:20 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Existing Company Name 1234 Was made Inactive by the User id c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-20 11:30:23 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Existing Company Name 12345 Was made Inactive by the User id c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-20 12:21:23 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Existing Company Name 1000 Was made Inactive by the User id c165560e-4055-401b-88b9-5e8ca9372f54},

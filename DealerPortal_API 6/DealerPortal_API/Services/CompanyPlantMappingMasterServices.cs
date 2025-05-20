@@ -25,10 +25,10 @@ namespace DealerPortal_API.Services
             try
             {
                 var res = await _context.CompanyPlantMapping.Where(a => a.IsActive == true).ToListAsync();
-                if (res.Count == 0)
-                {
-                    throw new Exception("Company Plant mapping not found");
-                }
+                //if (res.Count == 0)
+                //{
+                //    throw new Exception("Company Plant mapping not found");
+                //}
                 return res;
             }
             catch (Exception ex)

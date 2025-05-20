@@ -25,10 +25,10 @@ namespace DealerPortal_API.Services
             try
             {
                 var res = await _context.Plant.OrderBy(X=>X.PlantCode).Where(a => a.IsActive == true).ToListAsync();
-                if (res.Count == 0)
-                {
-                    throw new Exception("Plant not found");
-                }
+                //if (res.Count == 0)
+                //{
+                //    throw new Exception("Plant not found");
+                //}
                 return res;
             }
             catch (Exception ex)
@@ -137,10 +137,10 @@ modifiedBy, $"While making the inactive to Plant id {id} following error occured
             try
             {
                 var res = await _context.Plant.Where(a => a.Id == id && a.IsActive == true).FirstOrDefaultAsync();
-                if (res == null)
-                {
-                    throw new Exception("Plant not found");
-                }
+                //if (res == null)
+                //{
+                //    throw new Exception("Plant not found");
+                //}
                 return res;
             }
             catch (Exception ex)

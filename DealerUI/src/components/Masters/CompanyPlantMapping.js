@@ -422,7 +422,7 @@ const CompanyPlantMapping = () => {
                 <div className="card-body text-sm ">
                   
                   <div className='row'>
-                    <div className="form-group col-md-3">
+                    <div className="form-group col-md-4">
                       <label className='labelStyle' for="usercompanyNameInput" >Select Comany<sup style={{ color: "red" }}>*</sup></label>
                       <select
                         className="form-control form-control-sm"
@@ -440,7 +440,7 @@ const CompanyPlantMapping = () => {
                         ))}
                       </select>
                     </div>
-                    <div className="form-group col-md-6">
+                    <div className="form-group col-md-4">
                       <label className='labelStyle' >Select Plant <sup style={{ color: "red" }}>*</sup></label>
                       
                       <select
@@ -531,8 +531,59 @@ const CompanyPlantMapping = () => {
                       }}
                     />
                   </div>
- 
-                  <table class="table table-bordered table-sm table-striped">
+ <table className="table table-bordered table-sm table-striped">
+  <thead>
+    <tr>
+      <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }} className="text-center">Sr. No.</th>
+      <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Company</th>
+      <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Plant</th>
+      <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }}>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {allCompanyPlantList && allCompanyPlantList.length > 0 ? (
+      allCompanyPlantList.map((roleObj, index) => (
+        <tr key={`${roleObj.companyId}-${roleObj.plantId}`}>
+          <td className="text-center text-sm">{index + 1}</td>
+          <td>
+            {
+              allCompanyList.find(c => c.id.toString() === roleObj.companyId.toString())?.companyCode ||
+              roleObj.companyId
+            }
+          </td>
+          <td>
+            {
+              allPlantList.find(c => c.id.toString() === roleObj.plantId.toString())?.plantCode ||
+              roleObj.plantId
+            }
+          </td>
+          <td className="text-center text-sm">
+            <button
+              type="button"
+              className="btn btn-outline-primary btn-xs"
+              onClick={() => handleEditRoleDetails(roleObj)}
+            >
+              <i className="fas fa-pen"></i>
+            </button>
+            <button
+              type="button"
+              className="btn btn-outline-danger btn-xs ml-2"
+              onClick={() => handleRemoveRole(roleObj)}
+            >
+              <i className="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      ))
+    ) : (
+      <tr>
+        <td colSpan="4" className="text-center text-muted">No data found</td>
+      </tr>
+    )}
+  </tbody>
+</table>
+
+                  {/* <table class="table table-bordered table-sm table-striped">
                     <thead>
                       <tr>
                         <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }} className='text-center'>Sr. No.</th>
@@ -546,7 +597,7 @@ const CompanyPlantMapping = () => {
                         allCompanyPlantList.map((roleObj, index) => (                         
                           <tr>      
                             <td>{index+1}</td>                     
-                            {/* <td>{roleObj.companyId}</td> */}
+                          
                             <td>
                               {
                                 allCompanyList.find(c => c.id.toString() === roleObj.companyId.toString())?.companyCode || roleObj.companyId
@@ -571,7 +622,7 @@ const CompanyPlantMapping = () => {
                         <tr><td colSpan="4" className="text-center">No Company & Plant found</td></tr>
                       )}
                     </tbody>
-                  </table>
+                  </table> */}
                   <div className="d-flex justify-content-between mt-2">
                     <div>
                       Showing {startEntry} to {endEntry} of {filteredRoles.length} entries

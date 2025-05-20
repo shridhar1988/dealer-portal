@@ -24,10 +24,10 @@ namespace DealerPortal_API.Services
             try
             {
                 var res = await _context.Company.OrderBy(X=>X.CompanyCode).Where(a => a.IsActive == true).ToListAsync();
-                if (res.Count == 0)
-                {
-                    throw new Exception("Company not found");
-                }
+                //if (res.Count == 0)
+                //{
+                //    throw new Exception("Company not found");
+                //}
                 return res;
             }
             catch (Exception ex)
@@ -134,10 +134,10 @@ namespace DealerPortal_API.Services
             try
             {
                 var res = await _context.Company.Where(a => a.Id == id && a.IsActive == true).FirstOrDefaultAsync();
-                if (res == null)
-                {
-                    throw new Exception("Company not found");
-                }
+                //if (res == null)
+                //{
+                //    throw new Exception("Company not found");
+                //}
                 return res;
             }
             catch (Exception ex)

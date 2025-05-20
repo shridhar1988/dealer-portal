@@ -79,7 +79,7 @@ const Plant = () => {
   };
 
   const handleAppRouteChange = (e) => {
-    const value = e.target.value.trim();
+    const value = e.target.value;
     setAppRoute(value);
     setIsAppRouteValid(value !== '');
   };
@@ -380,8 +380,77 @@ const Plant = () => {
                       }}
                     />
                   </div>
+<div style={{ position: "relative" }}>
+  {isLoaderActive && (
+    <div
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        backgroundColor: "rgb(233 236 239 / 81%)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 10,
+      }}
+    >
+      <i
+        className="fas fa-sync-alt fa-spin"
+        style={{ fontSize: "2rem", color: "#333" }}
+      ></i>
+    </div>
+  )}
 
-                  <table class="table table-bordered table-sm table-striped">
+  <table className="table table-bordered table-sm table-striped">
+    <thead>
+      <tr>
+        <th className="text-center" style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }}>Sr. No.</th>
+        <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Plant Code</th>
+        <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Plant Description</th>
+        <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }}>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {currentRows && currentRows.length > 0 ? (
+        currentRows.map((roleObj, index) => (
+          <tr key={roleObj.appID}>
+            <td className="text-center text-sm" style={{ fontWeight: '400', fontSize: 'smaller' }}>
+              {indexOfFirstRow + index + 1}
+            </td>
+            <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{roleObj.plantCode}</td>
+            <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{roleObj.plantDescription}</td>
+            <td className="text-center text-sm" style={{ fontWeight: '400', fontSize: 'smaller' }}>
+              <button
+                type="button"
+                className="btn btn-outline-primary btn-xs"
+                onClick={() => handleEdit(roleObj)}
+                style={{ padding: '5px', fontSize: '.75rem', lineHeight: '0', borderRadius: '.15rem' }}
+              >
+                <i className="fas fa-pen" style={{ fontSize: 'smaller' }}></i>
+              </button>
+              <button
+                type="button"
+                className="btn btn-outline-danger btn-xs ml-2"
+                onClick={() => handleDelete(roleObj)}
+                style={{ padding: '5px', fontSize: '.75rem', lineHeight: '0', borderRadius: '.15rem' }}
+              >
+                <i className="fas fa-trash" style={{ fontSize: 'smaller' }}></i>
+              </button>
+            </td>
+          </tr>
+        ))
+      ) : (
+        <tr>
+          <td colSpan="4" className="text-center text-muted">No data found</td>
+        </tr>
+      )}
+    </tbody>
+  </table>
+</div>
+
+                  {/* <table class="table table-bordered table-sm table-striped">
                     {isLoaderActive && (
                       <div
                         style={{
@@ -428,7 +497,7 @@ const Plant = () => {
                         </tr>
                       ))}
                     </tbody>
-                  </table>
+                  </table> */}
                   <div className="d-flex justify-content-between mt-2">
                     <div>
                       Showing {startEntry} to {endEntry} of {filteredApps.length} entries

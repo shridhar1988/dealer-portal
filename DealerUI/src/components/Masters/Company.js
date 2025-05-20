@@ -79,7 +79,7 @@ const Company = () => {
   };
 
   const handleAppRouteChange = (e) => {
-    const value = e.target.value.trim();
+    const value = e.target.value;
     setAppRoute(value);
     setIsAppRouteValid(value !== '');
   };
@@ -411,7 +411,7 @@ debugger;
                         <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }}>Action</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    {/* <tbody>
                       {currentRows.map((roleObj, index) => (
                         <tr key={roleObj.appID}>
                           <td style={{ fontWeight: '400', fontSize: 'smaller' }} className='text-center text-sm'>{indexOfFirstRow + index + 1}</td>
@@ -427,7 +427,33 @@ debugger;
                           </td>
                         </tr>
                       ))}
-                    </tbody>
+                    </tbody> */}
+                    <tbody>
+  {(!currentRows || currentRows.length === 0) ? (
+    <tr>
+      <td colSpan="4" className="text-center text-muted">
+        No data found
+      </td>
+    </tr>
+  ) : (
+    currentRows.map((roleObj, index) => (
+      <tr key={roleObj.appID}>
+        <td style={{ fontWeight: '400', fontSize: 'smaller' }} className='text-center text-sm'>{indexOfFirstRow + index + 1}</td>
+        <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{roleObj.companyCode}</td>
+        <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{roleObj.companyDescription}</td>
+        <td style={{ fontWeight: '400', fontSize: 'smaller' }} className='text-center text-sm'>
+          <button type="button" className="btn btn-outline-primary btn-xs" onClick={() => { handleEdit(roleObj) }} style={{ padding: '5px', fontSize: '.75rem', lineHeight: '0', borderRadius: '.15rem' }}>
+            <i className="fas fa-pen" style={{ fontSize: 'smaller' }}></i>
+          </button>
+          <button type="button" className="btn btn-outline-danger btn-xs ml-2" onClick={() => { handleDelete(roleObj) }} style={{ padding: '5px', fontSize: '.75rem', lineHeight: '0', borderRadius: '.15rem' }}>
+            <i className="fas fa-trash" style={{ fontSize: 'smaller' }}></i>
+          </button>
+        </td>
+      </tr>
+    ))
+  )}
+</tbody>
+
                   </table>
                   <div className="d-flex justify-content-between mt-2">
                     <div>

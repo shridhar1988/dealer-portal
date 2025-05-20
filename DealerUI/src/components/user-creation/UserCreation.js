@@ -513,47 +513,47 @@ const UserCreation = () => {
                         <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }}>Action</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      {allUsersList.length > 0 ?
-                        allUsersList.map((userObj, index) => {
-                          // const departmentName = department.find(x => x.departmentID == userObj.accountGroup);
-                          return (
-                            <tr style={{ textDecoration: userObj.isActive == true ? 'none' : 'line-through' }}>
-                              <td style={{ fontWeight: '400', fontSize: 'smaller' }} className='text-center text-sm'>{index + 1}</td>
-                              <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.userName || "N/A"}</td>
-                              <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.firstName || "N/A"}</td>
-                              <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.lastName || "N/A"}</td>
-                              <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.dateOfBirth || "N/A"}</td>
-                              {/* <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.joiningDate || "N/A"}</td> */}
-                              <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.email || "N/A"}</td>
-                              <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.contactNumber || "N/A"}</td>
-                              {/* <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{departmentName ? departmentName.departmentName : "N/A"}</td> */}
-                              <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.roleName || "N/A"}</td>
-                              {/* <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.isActive == true ? "Active" : "In-active"}</td> */}
-                              <td style={{ fontWeight: '400', fontSize: 'smaller' }} className='text-center text-sm'>
-              <button
-                type="button"
-                className="btn bg-gradient-primary btn-xs"
-                onClick={() => handleEditTaskDetails(userObj.userID)}
-                style={{ padding: '5px', fontSize: '.75rem', lineHeight: '0', borderRadius: '50%' }}
-              >
-                <i className="fas fa-pen" style={{ fontSize: 'smaller' }}></i>
-              </button>
-              <button
-                type="button"
-                className="btn bg-gradient-danger btn-xs ml-2"
-                onClick={() => handleRemoveUser(userObj)}
-                style={{ padding: '5px', fontSize: '.75rem', lineHeight: '0', borderRadius: '50%' }}
-              >
-                <i className="fas fa-trash" style={{ fontSize: 'smaller' }}></i>
-              </button>
-            </td>
-                            </tr>
-                          )
-                        })
-                        : ""
-                      }
-                    </tbody>
+                   <tbody>
+  {allUsersList && allUsersList.length > 0 ? (
+    allUsersList.map((userObj, index) => {
+      return (
+        <tr key={userObj.userID} style={{ textDecoration: userObj.isActive === true ? 'none' : 'line-through' }}>
+          <td style={{ fontWeight: '400', fontSize: 'smaller' }} className='text-center text-sm'>{index + 1}</td>
+          <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.userName || "N/A"}</td>
+          <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.firstName || "N/A"}</td>
+          <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.lastName || "N/A"}</td>
+          <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.dateOfBirth || "N/A"}</td>
+          <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.email || "N/A"}</td>
+          <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.contactNumber || "N/A"}</td>
+          <td style={{ fontWeight: '400', fontSize: 'smaller' }}>{userObj.roleName || "N/A"}</td>
+          <td style={{ fontWeight: '400', fontSize: 'smaller' }} className='text-center text-sm'>
+            <button
+              type="button"
+              className="btn bg-gradient-primary btn-xs"
+              onClick={() => handleEditTaskDetails(userObj.userID)}
+              style={{ padding: '5px', fontSize: '.75rem', lineHeight: '0', borderRadius: '50%' }}
+            >
+              <i className="fas fa-pen" style={{ fontSize: 'smaller' }}></i>
+            </button>
+            <button
+              type="button"
+              className="btn bg-gradient-danger btn-xs ml-2"
+              onClick={() => handleRemoveUser(userObj)}
+              style={{ padding: '5px', fontSize: '.75rem', lineHeight: '0', borderRadius: '50%' }}
+            >
+              <i className="fas fa-trash" style={{ fontSize: 'smaller' }}></i>
+            </button>
+          </td>
+        </tr>
+      );
+    })
+  ) : (
+    <tr>
+      <td colSpan="9" className="text-center text-muted">No data found</td>
+    </tr>
+  )}
+</tbody>
+
                   </table>
                 </div>
               </div>
