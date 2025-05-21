@@ -54,7 +54,7 @@ const UserCreation = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
   const [showActiveUsers, setShowActiveUsers] = useState(true); // New state for toggling active/inactive users
-
+const [showRetailerUsers, setShowRetailerUsers] = useState(false);
   useEffect(() => {
     getAllRolesList();
     getUsersList();
@@ -75,45 +75,78 @@ const UserCreation = () => {
     clearAllFields();
     addProjectCardHeaderButtonClick();
   };
-  const getUsersList = () => {
-    // window.initDestroyDataTableFuncation();
+  const getUsersList = (filterRetailers = showRetailerUsers) => {
+  setIsLoaderActive(true);
+  window.initDestroyDataTableFuncation();
 
-    setIsLoaderActive(true);
+  axios
+    .get(`${config.API_URL}AuthMaster/GetAllUsers?ClientId=${config.ClientId}`, {
+      headers: config.headers2,
+    })
+    .then((response) => {
+      if (response.status === 200 && response.data.success === "success") {
+        let users = response.data.data;
+        if (filterRetailers) {
+          users = users.filter(user => user.roleName === "Retailer");
+        }
+        setAllUsersList(users);
+      } else {
+        toast.error(response.data.message || "Something went wrong");
+      }
+    })
+    .catch(() => {
+      toast.error("Please try again later.");
+    })
+    .finally(() => {
+      setIsLoaderActive(false);
+    });
+};
 
-    window.initDestroyDataTableFuncation();
-    axios
-      .get(
-        config.API_URL + "AuthMaster/GetAllUsers?ClientId=" + config.ClientId,
-        {
-          headers: config.headers2,
-        }
-      )
-      .then((response) => {
-        if (response.status == 200) {
-          if (response.data.success == "success") {
-            if (response.data.data.length > 0) {
-              setAllUsersList(response.data.data);
-              // setTimeout(() => {
-              //   window.initDataTableFuncation();
-              // }, 1000)
-            }
-          } else {
-            toast.error(response.data.message);
-            // setTimeout(() => {
-            //   window.initDataTableFuncation();
-            // }, 1000)
-          }
-        } else if (response.data.status.status == 500) {
-          toast.error("Invalid username or password");
-        }
-      })
-      .catch((error) => {
-        toast.error("Please try again later.");
-      })
-      .finally(() => {
-        setIsLoaderActive(false);
-      });
-  };
+  // const getUsersList = () => {
+  //   // window.initDestroyDataTableFuncation();
+
+  //   setIsLoaderActive(true);
+
+  //   window.initDestroyDataTableFuncation();
+  //   axios
+  //     .get(
+  //       config.API_URL + "AuthMaster/GetAllUsers?ClientId=" + config.ClientId,
+  //       {
+  //         headers: config.headers2,
+  //       }
+  //     )
+  //     .then((response) => {
+  //       if (response.status == 200) {
+  //         if (response.data.success == "success") {
+  //           if (response.data.data.length > 0) {
+
+  //             setAllUsersList(response.data.data);
+  //             if(!showRetailerUsers)
+  //             {
+          
+  //               setAllUsersList(response.data.data.filter(x=>x.roleName == "Retailer"))
+  //             }
+  //             // setTimeout(() => {
+  //             //   window.initDataTableFuncation();
+  //             // }, 1000)
+  //           }
+  //         } else {
+  //           toast.error(response.data.message);
+  //           // setTimeout(() => {
+  //           //   window.initDataTableFuncation();
+  //           // }, 1000)
+  //         }
+  //       } else if (response.data.status.status == 500) {
+  //         toast.error("Invalid username or password");
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       // toast.error("Please try again later.");
+  //     })
+  //     .finally(() => {
+  //       setIsLoaderActive(false);
+  //     });
+  // };
   const getAllRolesList = () => {
     setIsLoaderActive(true);
 
@@ -506,6 +539,10 @@ const UserCreation = () => {
   const handleToggleUsers = (showActive) => {
     setShowActiveUsers(showActive);
   };
+const handleRetailerUsers = (isRetailer) => {
+  setShowRetailerUsers(isRetailer);
+  getUsersList(isRetailer); // Pass flag to filter in getUsersList
+};
 
   const filteredUsers = allUsersList.filter(
     (user) => user.isActive === showActiveUsers
@@ -547,6 +584,40 @@ const UserCreation = () => {
               >
                 Inactive
               </button>
+              {showRetailerUsers ? (
+  <button
+    type="button"
+    className="btn btn-sm btn-outline-primary mr-2"
+    onClick={() => handleRetailerUsers(false)}
+  >
+    All Users
+  </button>
+) : (
+  <button
+    type="button"
+    className="btn btn-sm btn-outline-primary mr-2"
+    onClick={() => handleRetailerUsers(true)}
+  >
+    Retailers
+  </button>
+)}
+
+                {/* <button
+                type="button"
+                className={`btn btn-sm  btn-outline-primary mr-2`}
+                onClick={() => handleRetailerUsers()}
+                 style={{ display: !showActiveUsers ? "none" : "inline-block" }}
+              >
+                Retailers
+              </button>
+              <button
+                type="button"
+                className={`btn btn-sm  btn-outline-primary mr-2`}
+                onClick={() => handleAllUsers()}
+                 style={{ display: !showRetailerUsers ? "none" : "inline-block" }}
+              >
+                All Users
+              </button> */}
             </div>
           </div>
         </div>

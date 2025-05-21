@@ -1,0 +1,2 @@
+{Date: 2025-05-21 11:09:24 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: For the Role : Sales App id 10002 was added by the user c165560e-4055-401b-88b9-5e8ca9372f54 by removing all existing apps},
+{Date: 2025-05-21 12:14:23 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: For the Role : Admin App id 3001 was added by the user c165560e-4055-401b-88b9-5e8ca9372f54 by removing all existing apps},

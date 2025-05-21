@@ -999,7 +999,8 @@ const RequisitionsTable = () => {
               }, 1000);
             }
           } else {
-            toast.error(response.data.message);
+            // toast.error(response.data.message);
+            // console.log('rewq',response.data.message)
             setTimeout(() => {
               window.initDataTableFuncation?.();
             }, 1000);
@@ -1420,7 +1421,7 @@ const RequisitionsTable = () => {
                                 </td>
                                 <td>
                                   <input
-                                    type="text"
+                                    type="number"
                                     name="orderQuantityInput"
                                     placeholder="Enter Quantity"
                                     value={data.OrderQuantiy || ""}

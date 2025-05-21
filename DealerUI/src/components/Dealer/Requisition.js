@@ -241,9 +241,30 @@ const downloadExcel = () => {
 
                         <td>{order.ExpectedBy}</td>
 
-                       
+                       {/* <td>
+  <div className="d-flex gap-2">
+    <button className="requisition  btn btn-sm btn-primary w-70 mr-2">Submit</button>
+    <button className="requisition  btn btn-sm btn-outline-primary w-90">Edit</button>
+  </div>
+</td> */}
+<td>
+  <button
+    className="requisition btn btn-sm btn-primary mr-2"
+    style={{ width: "62px" }}
+  >
+    Submit
+  </button>
+  <button
+    className="requisition btn btn-sm btn-outline-primary"
+    style={{ width: "65px" }}
+  >
+    Edit
+  </button>
+</td>
 
-                        <td>
+
+
+                        {/* <td>
                             <button
                             //   onClick={() => handleReturn(order.sno)}
                               className="requisition btn btn-sm btn-primary mr-2"
@@ -251,12 +272,13 @@ const downloadExcel = () => {
                               Submit
                             </button>
                             <button
-                    className="requisition col-md-5 btn btn-sm btn-outline-primary"
+                    className="requisition col-md-3 btn btn-sm btn-outline-primary"
                     // onClick={downloadExcel}
+                    
                   >
                     Edit
                   </button>
-                          </td>
+                          </td> */}
                       </tr>
                     ))}
                   </tbody>

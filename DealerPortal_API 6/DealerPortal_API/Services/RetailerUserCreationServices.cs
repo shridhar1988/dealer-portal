@@ -19,11 +19,14 @@ namespace DealerPortal_API.Services
     {
         private readonly IConfiguration _configuration;
         private readonly DealerContext _dbContext;
-        public RetailerUserCreationServices(DealerContext dbContext, IConfiguration configuration)
+        private readonly EmailService _emailService;
+        public RetailerUserCreationServices(DealerContext dbContext, IConfiguration configuration, EmailService emailService)
         {
             _dbContext = dbContext;
             _configuration = configuration;
+            _emailService = emailService;
         }
+      
         public async Task<RetailerUsers> CreateUser(RetailerUsers userWithRole)
         {
             var strategy = _dbContext.Database.CreateExecutionStrategy();
@@ -137,7 +140,7 @@ namespace DealerPortal_API.Services
                         };
 
                         // Send initialization email
-                        //var emailResult = await _emailService.SendInitializationMail(userResult.UserName, userResult.Email, Decrypt(userResult.Password, true), portalAddress);
+                        var emailResult = await _emailService.SendInitializationMail(userResult.UserName, userResult.Email, Decrypt(userResult.Password, true), portalAddress);
                         //if (!emailResult)
                         //{
                         //    throw new Exception("Failed to send email");
