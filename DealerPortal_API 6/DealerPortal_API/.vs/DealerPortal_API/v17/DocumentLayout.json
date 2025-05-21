@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\retailerusercreationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\retailerusercreationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\authmasterserices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,7 +73,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -103,13 +103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RetailerUserCreationServices.cs",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\RetailerUserCreationServices.cs",
               "RelativeDocumentMoniker": "Services\\RetailerUserCreationServices.cs",
               "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\RetailerUserCreationServices.cs",
               "RelativeToolTip": "Services\\RetailerUserCreationServices.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAwwI4AAABUAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAADwvxoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T07:58:10.815Z",
               "IsPinned": true,
@@ -144,13 +144,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "Services\\EmailService.cs",
               "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\EmailService.cs",
               "RelativeToolTip": "Services\\EmailService.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAYwI4AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T08:37:25.642Z",
               "EditorCaption": ""

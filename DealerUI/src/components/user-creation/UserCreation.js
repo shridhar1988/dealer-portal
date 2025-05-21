@@ -829,7 +829,7 @@ const handleRetailerUsers = (isRetailer) => {
                         })
                       ) : (
                         <tr>
-                          <td colSpan="9" className="text-center text-muted">
+                          <td colSpan="10" className="text-center text-muted">
                             No data found
                           </td>
                         </tr>

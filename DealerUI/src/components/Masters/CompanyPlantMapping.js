@@ -635,9 +635,9 @@ const printTable = () => {
     <tr>
       <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }} className="text-center">Sr. No.</th>
       <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Company</th>
-      <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Company Description</th>
+      {/* <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Company Description</th> */}
       <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Plant</th>
-       <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Plant Description</th>
+       {/* <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Plant Description</th> */}
       <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }}>Action</th>
     </tr>
   </thead>
@@ -646,30 +646,37 @@ const printTable = () => {
       allCompanyPlantList.map((roleObj, index) => (
         <tr key={`${roleObj.companyId}-${roleObj.plantId}`}>
           <td className="text-center text-sm">{index + 1}</td>
-          <td>
+          {/* <td>
             {
-              allCompanyList.find(c => c.id.toString() === roleObj.companyId.toString())?.companyCode ||
+              allCompanyList.find(c => c.id.toString() === roleObj.companyId.toString())?.companyCode({companyDescription}) ||
               roleObj.companyId
             }
-          </td>
-            <td>
+          </td> */}
+          <td >
+  {
+    allCompanyList.find(c => c.id.toString() === roleObj.companyId.toString())
+      ? `${allCompanyList.find(c => c.id.toString() === roleObj.companyId.toString()).companyCode} (${allCompanyList.find(c => c.id.toString() === roleObj.companyId.toString()).companyDescription})`
+      : roleObj.companyId
+  }
+</td>
+
+            {/* <td>
             {
               allCompanyList.find(c => c.id.toString() === roleObj.companyId.toString())?.companyDescription ||
               roleObj.companyId
             }
-          </td>
-          <td>
-            {
-              allPlantList.find(c => c.id.toString() === roleObj.plantId.toString())?.plantCode ||
-              roleObj.plantId
-            }
-          </td>
-          <td>
+          </td> */}
+       <td >   {
+    allPlantList.find(c => c.id.toString() === roleObj.plantId.toString())
+      ? `${allPlantList.find(c => c.id.toString() === roleObj.plantId.toString()).plantCode} (${allPlantList.find(c => c.id.toString() === roleObj.plantId.toString()).plantDescription})`
+      : roleObj.plantId
+  }</td> 
+          {/* <td>
             {
               allPlantList.find(c => c.id.toString() === roleObj.plantId.toString())?.plantDescription ||
               roleObj.plantId
             }
-          </td>
+          </td> */}
           <td className="text-center text-sm">
             <button
               type="button"

@@ -870,6 +870,7 @@ const getUsersList = async (userID) => {
                       type="submit"
                       className="btn btn-primary float-right btn-xs ml-2 pr-4 pl-4"
                       onClick={handleUserSubmit}
+                      style={{height:"26px"}}
                     >
                       {userID ? "Update" : "Create"}
                     </button>

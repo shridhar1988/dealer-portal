@@ -940,7 +940,7 @@ const RequisitionsTable = () => {
         if (response.status === 200) {
           if (response.data.success === "success") {
             if (response.data.data.length > 0) {
-              setAllUsersList(response.data.data);
+             setAllUsersList(response.data.data.filter(x=>x.createdBy == localStorage.getItem("loggedUserId")));
               setTimeout(() => {
                 window.initDataTableFuncation?.();
               }, 1000);
@@ -1281,7 +1281,7 @@ const RequisitionsTable = () => {
                     }}
                   >
                     <option value="">--Select--</option>
-                    {allUsersList.map((user) => (
+                    {allUsersList.filter(x=>x.isActive===true).map((user) => (
                       <option key={user.userID} value={user.userID}>
                         {user.userName}
                       </option>

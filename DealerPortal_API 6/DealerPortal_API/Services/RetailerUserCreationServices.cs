@@ -402,6 +402,7 @@ namespace DealerPortal_API.Services
                                   tb.IsActive,
                                   tb.CreatedOn,
                                   tb.ModifiedOn,
+                                  tb.CreatedBy,
                                   tb1.RoleID,
                                   tb2.RoleName,
                                   tb.GSTNumber,
@@ -431,7 +432,8 @@ namespace DealerPortal_API.Services
                     LastName = record.LastName,
                     Address = record.Address,
                     DateOfBirth = record.DateOfBirth,
-                    JoiningDate = record.JoiningDate
+                    JoiningDate = record.JoiningDate,
+                    CreatedBy=record.CreatedBy,
                 }).ToList();
 
                 return userWithRoleList;

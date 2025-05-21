@@ -88,7 +88,7 @@ const RetailerUserCreation = () => {
         if (response.status == 200) {
           if (response.data.success == "success") {
             if (response.data.data.length > 0) {
-              setAllUsersList(response.data.data);
+              setAllUsersList(response.data.data.filter(x=>x.createdBy == localStorage.getItem("loggedUserId")));
               setTimeout(() => {
                 window.initDataTableFuncation();
               }, 1000);
@@ -104,7 +104,7 @@ const RetailerUserCreation = () => {
         }
       })
       .catch((error) => {
-        toast.error("Please try again later.");
+        // toast.error("Please try again later.");
       })
       .finally(() => {
         setIsLoaderActive(false);
