@@ -768,7 +768,7 @@ const getUsersList = async (userID) => {
                             key={`company_${company.id}`}
                             value={company.id}
                           >
-                            {company.companyCode}
+                            {company.companyCode} ({company.companyDescription})
                           </option>
                         ))}
                       </select>
@@ -792,7 +792,7 @@ const getUsersList = async (userID) => {
                         <option value="">--Select--</option>
                         {filteredPlantList.map((plant) => (
                           <option key={`plant_${plant.id}`} value={plant.id}>
-                            {plant.plantCode}
+                            {plant.plantCode} ({plant.plantCode})
                           </option>
                         ))}
                       </select>

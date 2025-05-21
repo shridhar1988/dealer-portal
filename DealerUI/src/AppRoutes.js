@@ -39,7 +39,7 @@ const Rewards = lazy(() => import("./components/Dealer/Rewards.js"));
 const DealerScheme = lazy(() => import("./components/Dealer/Scheme.js"));
 const RetailerUserCreation= lazy(() => import('./components/user-creation/RetailerUserCreation.js'));
 const CreateRequision= lazy(() => import('./components/SalesPages/CreateRequision.js'));
-
+const CreateReailer= lazy(() => import('./components/user-creation/CreateRetailerUser.js'));
 const AppRoutes = () => {
     return (
         <Suspense fallback={<Spinner />}>
@@ -159,6 +159,7 @@ const AppRoutes = () => {
                 <Route element={<ProtectedRoute allowedRoles="Sales" />}>
                     <Route path="/retailer-user-management" element={<RetailerUserCreation />} />
                     <Route path="/create-requision" element={<CreateRequision />} />
+                     <Route path="/create-retailer" element={<CreateReailer />} />
                    
 
                 </Route>

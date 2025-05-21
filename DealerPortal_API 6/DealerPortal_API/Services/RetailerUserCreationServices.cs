@@ -370,7 +370,7 @@ namespace DealerPortal_API.Services
                     userResult.PANNumber=user.PANNumber;
                     userResult.GSTNumber = user.GSTNumber;
                 }
-                WriteLog.WriteToFile($"Retailer Deleted Successfully - UserId-{user.UserID} ");
+                //WriteLog.WriteToFile($"Retailer Deleted Successfully - UserId-{user.UserID} ");
                 return userResult;
             }
             catch (Exception ex)

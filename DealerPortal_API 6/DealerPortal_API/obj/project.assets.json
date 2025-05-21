@@ -4799,11 +4799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\DealerPortal_API.csproj",
+      "projectUniqueName": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\DealerPortal_API.csproj",
       "projectName": "DealerPortal_API",
-      "projectPath": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\DealerPortal_API.csproj",
+      "projectPath": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\DealerPortal_API.csproj",
       "packagesPath": "C:\\Users\\ITeos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\obj\\",
+      "outputPath": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

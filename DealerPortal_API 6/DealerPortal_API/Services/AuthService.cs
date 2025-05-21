@@ -57,7 +57,7 @@ namespace DealerPortal_API.Services
                 {
                     if (!user.IsActive)
                     {
-                        throw new Exception("Account is Disabled");
+                        throw new Exception("This has been inactive. Please contact admin");
                     }
                     bool isValidUser = false;
                     var loginResult = new LoginResult();
@@ -115,6 +115,10 @@ namespace DealerPortal_API.Services
                             loginResult.UserRole = userRole != null ? userRole.RoleName : "";
                             loginResult.IsChangePasswordRequired = isChangePasswordRequired;
                             loginResult.menuItemNames = MenuItemList;
+                            if(MenuItemList.Count == 0)
+                            {
+                                throw new Exception("For your role there is no access .Please contact your admin.");
+                            }
                             await _dbContext.SaveChangesAsync();
                             await AddLoginHistory(user.UserID, user.UserName);
                             return loginResult;

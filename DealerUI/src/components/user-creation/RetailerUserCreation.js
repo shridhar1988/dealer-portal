@@ -4,14 +4,16 @@ import { removeExtraSpaces } from "../../common/textOperations";
 import { isValidEmail, isValidContact } from "../../common/validations";
 import { ToastContainer, toast } from "react-toastify";
 import PleaseWaitButton from "../../shared/PleaseWaitButton";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
 import $ from "jquery";
+
 // import { set } from 'react-datepicker/dist/date_utils';
 
 const config = require("../../config/config.json");
 
 const RetailerUserCreation = () => {
+    const navigate = useNavigate();
   const inputFirstNameReference = useRef(null);
   const inputLastNameReference = useRef(null);
   const inputAddressReference = useRef(null);
@@ -51,6 +53,8 @@ const RetailerUserCreation = () => {
   const [panNumber, setPANNumber] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
+  const [showActiveUsers, setShowActiveUsers] = useState(true); // New state for toggling active/inactive users
+  
 
   useEffect(() => {
     getUsersList();
@@ -151,25 +155,28 @@ const RetailerUserCreation = () => {
   const listOfProjectsHeaderExpandButtionClick = () => {
     $("#AddNewHeaderButton").click();
   };
-
-  const handleEditTaskDetails = (userObj) => {
-    setIsEdit(true);
-    setUserName(userObj.userName);
-    setUserEmail(userObj.email);
-    setRoleId(userObj.roleID);
-    setPassword(userObj.password);
-    setContactNumber(userObj.contactNumber);
-    setPANNumber(userObj.accountGroup);
-    setUpdateOrDeleteId(userObj.userID);
-    setFirstName(userObj.firstName);
-    setLastName(userObj.lastName);
-    setAddress(userObj.address);
-    setGstNumber(userObj.clientId);
-    // setJoiningDate(userObj.joiningDate);
-    setIsActiveUser(userObj.isActive);
-    listOfProjectsHeaderExpandButtionClick();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+const handleEditTaskDetails = (userObj) => {
+   navigate(`/create-retailer?userID=${userObj.userID}`);
+    // navigate(`/create-user?userID=${userID}`);
   };
+  // const handleEditTaskDetails = (userObj) => {
+  //   setIsEdit(true);
+  //   setUserName(userObj.userName);
+  //   setUserEmail(userObj.email);
+  //   setRoleId(userObj.roleID);
+  //   setPassword(userObj.password);
+  //   setContactNumber(userObj.contactNumber);
+  //   setPANNumber(userObj.accountGroup);
+  //   setUpdateOrDeleteId(userObj.userID);
+  //   setFirstName(userObj.firstName);
+  //   setLastName(userObj.lastName);
+  //   setAddress(userObj.address);
+  //   setGstNumber(userObj.clientId);
+  //   // setJoiningDate(userObj.joiningDate);
+  //   setIsActiveUser(userObj.isActive);
+  //   listOfProjectsHeaderExpandButtionClick();
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
 
   const handleRemoveUser = (userObj) => {
     setUpdateOrDeleteId(userObj.userID);
@@ -229,7 +236,7 @@ const RetailerUserCreation = () => {
         setIsLoaderActive(false);
         getUsersList();
         toast.error(response.data.message);
-      }
+      } getUsersList();
     }).catch((error) => {
       // if (!error.response.data.success) {
       //   toast.error(error.response.data.message);
@@ -267,150 +274,16 @@ const RetailerUserCreation = () => {
   const changeActiveUser = (event) => {
     setIsActiveUser(event.target.checked);
   };
+const handleToggleUsers = (showActive) => {
+    setShowActiveUsers(showActive);
+  };
 
-  // const handleUserSubmit = (e) => {
-  //   if (removeExtraSpaces(firstName)) {
-  //     if (removeExtraSpaces(lastName)) {
-  //       if (removeExtraSpaces(userName)) {
-  //         if (removeExtraSpaces(userEmail)) {
-  //           if (isValidEmail(userEmail)) {
-  //             if (contactNumber){
-              
-  //               if (contactNumber.length < 10) {
-  //                 if (gstNumber) {
-  //                   if (panNumber) {
-  //                     if (address) {
-  //                       if (password) {
-  //                         setIsLoaderActive(true);
-  //                         let APIMethodName = "";
-  //                         if (updateOrDeleteId != "") {
-  //                           APIMethodName =
-  //                             "RetailerUserCreation/UpdateRetailer";
-  //                         } else {
-  //                           APIMethodName =
-  //                             "RetailerUserCreation/CreateRetailer";
-  //                         }
-  //                         // let getRoleName = allRolesList.find(x => x.roleID == roleId);
-  //                         axios
-  //                           .post(
-  //                             config.API_URL + APIMethodName,
-  //                             {
-  //                               createdBy: personalInfo.userID,
-  //                               clientId: config.ClientId,
-  //                               modifiedBy: personalInfo.userID,
-  //                               userID:
-  //                                 updateOrDeleteId == ""
-  //                                   ? personalInfo.userID
-  //                                   : updateOrDeleteId,
-  //                               roleID: config.RetailerRole,
-  //                               userName: userName,
-  //                               email: userEmail,
-  //                               password: password,
-  //                               contactNumber: contactNumber,
-  //                               firstName: firstName,
-  //                               lastName: lastName,
-  //                               address: address,
-  //                               gstNumber: gstNumber,
-  //                               panNumber: panNumber,
-  //                               isActive: isActiveUser,
-  //                               roleName: "Retailer",
-  //                             },
-  //                             {
-  //                               headers: config.header2,
-  //                             }
-  //                           )
-  //                           .then((response) => {
-  //                             // console.log(response);
-  //                             if (response.data.success == "success") {
-  //                               toast.success(
-  //                                 isEdit == true
-  //                                   ? "Retailer Updated Successfully..."
-  //                                   : "Retailer Created Successfully..."
-  //                               );
-  //                               clearAllFields();
-  //                               addProjectCardHeaderButtonClick();
-  //                               getUsersList();
-  //                               setIsLoaderActive(false);
-  //                             } else {
-  //                               setIsLoaderActive(false);
-  //                               toast.error(response.data.message);
-  //                             }
-  //                           })
-  //                           .catch((error) => {
-  //                             if (!error.response.data.success) {
-  //                               toast.error(error.response.data.message);
-  //                             } else {
-  //                               toast.error(
-  //                                 "oops something went wrong. please try again later."
-  //                               );
-  //                             }
-  //                             setIsLoaderActive(false);
-  //                           });
-  //                       } else {
-  //                         toast.error("Please enter password.");
-  //                         inputPasswordReference.current.focus();
-  //                         inputPasswordReference.current.classList.add(
-  //                           "is-invalid"
-  //                         );
-  //                       }
-  //                     } else {
-  //                       toast.error("Please enter address.");
-  //                       inputAddressReference.current.focus();
-  //                       inputAddressReference.current.classList.add(
-  //                         "is-invalid"
-  //                       );
-  //                     }
-  //                   } else {
-  //                     toast.error("Please enter PAN number.");
-  //                     inputPANNumberReference.current.focus();
-  //                     inputPANNumberReference.current.classList.add(
-  //                       "is-invalid"
-  //                     );
-  //                   }
-  //                 } else {
-  //                   toast.error("Please enter GST number.");
-  //                   inputGSTNumberReference.current.focus();
-  //                   inputGSTNumberReference.current.classList.add("is-invalid");
-  //                 }
-  //               } else {
-  //                 toast.error("Please enter 10 digit contact number.");
-  //                 inputContactNumberReference.current.focus();
-  //                 inputContactNumberReference.current.classList.add(
-  //                   "is-invalid"
-  //                 );
-  //               }
-  //             }
-  //             else {
-  //               toast.error("Please  contact number.");
-  //               inputContactNumberReference.current.focus();
-  //               inputContactNumberReference.current.classList.add("is-invalid");
-  //             }
-  //           } else {
-  //             toast.error("Please enter valid email.");
-  //             inputEmailReference.current.focus();
-  //             inputEmailReference.current.classList.add("is-invalid");
-  //           }
-  //         } else {
-  //           toast.error("Please enter email.");
-  //           inputEmailReference.current.focus();
-  //           inputEmailReference.current.classList.add("is-invalid");
-  //         }
-  //       } else {
-  //         toast.error("Please enter user name.");
-  //         inputUserNameReference.current.focus();
-  //         inputUserNameReference.current.classList.add("is-invalid");
-  //       }
-  //     } else {
-  //       toast.error("Please enter last name.");
-  //       inputLastNameReference.current.focus();
-  //       inputLastNameReference.current.classList.add("is-invalid");
-  //     }
-  //   } else {
-  //     toast.error("Please enter first name.");
-  //     inputFirstNameReference.current.focus();
-  //     inputFirstNameReference.current.classList.add("is-invalid");
-  //   }
-  // };
+  const filteredUsers = allUsersList.filter(
+    (user) => user.isActive === showActiveUsers
+  );
+   const addNewUser = () => {
+    navigate("/create-retailer");
+  };
 const handleUserSubmit = (e) => {
   // Trim and validate first name
   if (!removeExtraSpaces(firstName)) {
@@ -556,11 +429,41 @@ const handleUserSubmit = (e) => {
         <div className="container-fluid">
           <div className="row mb-2">
             <div className="col-sm-6">
-              <h1 className="m-0">Manage Retailer</h1>
+              <h1 className="m-0">List Of Retailers</h1>
               {/* <ol className="breadcrumb float-sm-left mt-1">
                 <li className="breadcrumb-item"><Link to="/manage-employee">Home</Link></li>
                 <li className="breadcrumb-item active">Manage Users</li>
               </ol> */}
+            </div>
+             <div className="col-sm-6 justify-content-end d-flex">
+              <button
+                type="button"
+                className="btn  btn-sm btn-primary mr-2"
+                id="AddNewHeaderButton"
+                onClick={addNewUser}
+              >
+                Add Retailer
+              </button>
+              <button
+                type="button"
+                className={`btn btn-sm ${
+                  showActiveUsers ? "btn-primary" : "btn-outline-primary"
+                } mr-2`}
+                onClick={() => handleToggleUsers(true)}
+                style={{ display: showActiveUsers ? "none" : "inline-block" }}
+              >
+                Active
+              </button>
+              <button
+                type="button"
+                className={`btn btn-sm ${
+                  !showActiveUsers ? "btn-primary" : "btn-outline-primary"
+                } mr-2`}
+                onClick={() => handleToggleUsers(false)}
+                style={{ display: !showActiveUsers ? "none" : "inline-block" }}
+              >
+                Inactive
+              </button>
             </div>
             <div className="col-sm-6"></div>
           </div>
@@ -570,320 +473,7 @@ const handleUserSubmit = (e) => {
       <section className="content">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-12">
-              <div className="card ">
-                <div className="card-header">
-                  <h4 className="card-title ">
-                    {" "}
-                    {isEdit ? "Update" : "Create"} Retailer User
-                  </h4>
-                  <div className="card-tools">
-                    {/* <button type="button" className="btn btn-danger btn-xs" id='AddNewHeaderButton' onClick={(e) => { addProjectCardHeaderButtonClick(e) }} data-card-widget="collapse">
-                      <i className="fas fa-plus"></i> Add Retailer
-                    </button> */}
-                    <button
-                      type="button"
-                      className="btn btn-tool"
-                      data-card-widget="maximize"
-                    >
-                      <i className="fas fa-expand"></i>
-                    </button>
-                  </div>
-                </div>
-                <div className="card-body text-sm">
-                  <div className="row">
-                    {/* <div className="form-group col-md-4">
-                      <label style={{ color: "#000" }}>Select Role<sup style={{ color: "red" }}>*</sup></label>
-                      <select className="form-control form-control-sm" ref={inputRoleReference} value={roleId} onChange={(e) => { setRoleId(e.target.value); inputRoleReference.current.classList.remove('is-invalid'); }}>
-                        <option value="">--Select--</option>
-                        {allRolesList.map((role) => {
-                          return (
-                            <option key={"Mana_" + role.roleID} value={role.roleID}>{role.roleName}</option>
-                          )
-                        })}
-                      </select>
-                    </div> */}
-                    <div className="form-group col-md-4">
-                      <label
-                        className="labelStyle"
-                        for="firstNameInput"
-                        style={{ color: "#000" }}
-                      >
-                        First Name<sup style={{ color: "red" }}>*</sup>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control form-control-sm"
-                        id="firstNameInput"
-                        ref={inputFirstNameReference}
-                        value={firstName}
-                        onChange={(e) => {
-                          setFirstName(e.target.value);
-                          inputFirstNameReference.current.classList.remove(
-                            "is-invalid"
-                          );
-                        }}
-                        placeholder="Retailer First Name"
-                      />
-                    </div>
-                    <div className="form-group col-md-4">
-                      <label
-                        className="labelStyle"
-                        for="lastNameInput"
-                        style={{ color: "#000" }}
-                      >
-                        Last Name<sup style={{ color: "red" }}>*</sup>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control form-control-sm"
-                        id="lastNameInput"
-                        ref={inputLastNameReference}
-                        value={lastName}
-                        onChange={(e) => {
-                          setLastName(e.target.value);
-                          inputLastNameReference.current.classList.remove(
-                            "is-invalid"
-                          );
-                        }}
-                        placeholder="Retailer Last Name"
-                      />
-                    </div>
-                    <div className="form-group col-md-4">
-                      <label
-                        className="labelStyle"
-                        for="userNameInput"
-                        style={{ color: "#000" }}
-                      >
-                        User Name<sup style={{ color: "red" }}>*</sup>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control form-control-sm"
-                        id="userNameInput"
-                        ref={inputUserNameReference}
-                        value={userName}
-                        onChange={(e) => {
-                          setUserName(e.target.value);
-                          inputUserNameReference.current.classList.remove(
-                            "is-invalid"
-                          );
-                        }}
-                        placeholder="Retailer User Name"
-                      />
-                    </div>
-                    <div className="form-group  col-md-4">
-                      <label
-                        className="labelStyle"
-                        for="userEmailInput"
-                        style={{ color: "#000" }}
-                      >
-                        Email<sup style={{ color: "red" }}>*</sup>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control form-control-sm"
-                        id="userEmailInput"
-                        ref={inputEmailReference}
-                        value={userEmail}
-                        onChange={(e) => {
-                          setUserEmail(e.target.value);
-                          inputEmailReference.current.classList.remove(
-                            "is-invalid"
-                          );
-                        }}
-                        placeholder="Retailer Email"
-                      />
-                    </div>
-                    {/* <div className="form-group col-md-4">
-                      <label for="passwordInput" style={{ color: "#000" }}>Password<sup style={{ color: "red" }}>*</sup></label>
-                      <input type="password" className="form-control form-control-sm" id="passwordInput" ref={inputPasswordReference} value={password} onChange={(e) => { setPassword(e.target.value); inputPasswordReference.current.classList.remove('is-invalid'); }} placeholder="Password" />
-                      <span toggle="#passwordInput" class="fa fa-fw fa-eye-slash field-icon-password toggle-password" style={{ position: 'absolute', top: '70%', right: '15px', transform: 'translateY(-50%)', cursor: 'pointer', }}></span>
-                    </div> */}
-
-                    <div className="form-group  col-md-4">
-                      <label
-                        className="labelStyle"
-                        for="contactNumberInput"
-                        style={{ color: "#000" }}
-                      >
-                        Contact Number<sup style={{ color: "red" }}>*</sup>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control form-control-sm"
-                        id="contactNumberInput"
-                        ref={inputContactNumberReference}
-                        value={contactNumber}
-                        onChange={(e) => {
-                          const value = e.target.value;
-                          if (/^\d{0,10}$/.test(value)) {
-                            setContactNumber(value);
-                            inputContactNumberReference.current.classList.remove(
-                              "is-invalid"
-                            );
-                          }
-                        }}
-                        placeholder="Contact Number"
-                      />
-                    </div>
-                    {/* <div className="form-group col-md-4">
-                      <label style={{ color: "#000" }}>Select Department<sup style={{ color: "red" }}>*</sup></label>
-                      <select className="form-control form-control-sm" ref={inputAccountGroupReference} value={accountGroup} onChange={(e) => { setAccountGroup(e.target.value); inputAccountGroupReference.current.classList.remove('is-invalid'); }}>
-                        <option value="">--Select--</option>
-                        {department.map((role, index) => (
-                          <option key={role.departmentID} value={role.departmentID}>
-                            {role.departmentName}
-                          </option>
-                        ))}
-                      </select>
-                    </div> */}
-                    <div className="form-group col-md-4">
-                      <label className="labelStyle" style={{ color: "#000" }}>
-                        GST Number
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control form-control-sm"
-                        ref={inputGSTNumberReference}
-                        value={gstNumber}
-                        onChange={(e) => {
-                          setGstNumber(e.target.value);
-                          inputGSTNumberReference.current.classList.remove(
-                            "is-invalid"
-                          );
-                        }}
-                        placeholder="GST Number"
-                      />
-                    </div>
-                    <div className="form-group col-md-4">
-                      <label className="labelStyle" style={{ color: "#000" }}>
-                        PAN Number
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control form-control-sm"
-                        ref={inputPANNumberReference}
-                        value={panNumber}
-                        onChange={(e) => {
-                          setPANNumber(e.target.value);
-                          inputPANNumberReference.current.classList.remove(
-                            "is-invalid"
-                          );
-                        }}
-                        placeholder="PAN Number"
-                      />
-                    </div>
-                    <div className="form-group  col-md-4">
-                      <label
-                        className="labelStyle"
-                        for="addressInput"
-                        style={{ color: "#000" }}
-                      >
-                        Address
-                      </label>
-                      <textarea
-                        className="form-control form-control-sm"
-                        style={{ resize: "none" }}
-                        id="addressInput"
-                        ref={inputAddressReference}
-                        value={address}
-                        onChange={(e) => {
-                          setAddress(e.target.value);
-                          inputAddressReference.current.classList.remove(
-                            "is-invalid"
-                          );
-                        }}
-                        placeholder="Enter Address"
-                      ></textarea>
-                    </div>
-                    <div className="form-group col-md-4 position-relative">
-                      <label
-                        className="labelStyle"
-                        htmlFor="passwordInput"
-                        style={{ color: "#6C757D" }}
-                      >
-                        Password<sup style={{ color: "red" }}>*</sup>
-                      </label>
-                      <input
-                        type={showPassword ? "text" : "password"}
-                        className="form-control form-control-sm"
-                        id="passwordInput"
-                        ref={inputPasswordReference}
-                        value={password}
-                        onChange={(e) => {
-                          setPassword(e.target.value);
-                          inputPasswordReference.current.classList.remove(
-                            "is-invalid"
-                          );
-                        }}
-                        onBlur={() => {
-                          if (!validatePasswordPolicy(password)) {
-                            toast.error(
-                              "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character."
-                            );
-                            inputPasswordReference.current.classList.add(
-                              "is-invalid"
-                            );
-                          }
-                        }}
-                        placeholder="Password"
-                      />
-                      <span
-                        className={`fa fa-fw field-icon-password toggle-password ${
-                          showPassword ? "fa-eye" : "fa-eye-slash"
-                        }`}
-                        onClick={() => setShowPassword(!showPassword)}
-                      ></span>
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-switch">
-                        <input
-                          type="checkbox"
-                          class="custom-control-input"
-                          id="customSwitch1"
-                          onChange={(e) => changeActiveUser(e)}
-                          value={isActiveUser}
-                          checked={isActiveUser}
-                        />
-                        <label
-                          class="custom-control-label labelStyle"
-                          for="customSwitch1"
-                          style={{ color: "#000" }}
-                        >
-                          User Can Access This Account?
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-footer text-sm">
-                  {isLoaderActive ? (
-                    <PleaseWaitButton className="float-right btn-xs ml-2 font-weight-medium auth-form-btn" />
-                  ) : (
-                    <button
-                      type="submit"
-                      className="btn btn-primary float-right btn-xs ml-2 pl-5 pr-5"
-                      onClick={(e) => {
-                        handleUserSubmit(e);
-                      }}
-                    >
-                      {" "}
-                      {isEdit ? "Update" : "Create"}
-                    </button>
-                  )}
-                  <button
-                    type="submit"
-                    className="btn btn-default float-right btn-xs pl-5 pr-5"
-                    onClick={(e) => {
-                      handleCancelClick(e);
-                    }}
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            </div>
+          
           </div>
 
           <div className="row">
@@ -891,7 +481,7 @@ const handleUserSubmit = (e) => {
               <div className="card">
                 <div className="card-header">
                   <h3 className="card-title text-sm">
-                    Users List ( {allUsersList.length} )
+                    Retailer List ( {allUsersList.length} )
                   </h3>
                   <div className="card-tools">
                     <button
@@ -984,19 +574,19 @@ const handleUserSubmit = (e) => {
                       </tr>
                     </thead>
                     <tbody>
-                      {allUsersList.length > 0
-                        ? allUsersList.map((userObj, index) => {
+                      {filteredUsers.length > 0
+                        ? filteredUsers.map((userObj, index) => {
                             const departmentName = department.find(
                               (x) => x.departmentID == userObj.accountGroup
                             );
                             return (
                               <tr
-                                style={{
-                                  textDecoration:
-                                    userObj.isActive == true
-                                      ? "none"
-                                      : "line-through",
-                                }}
+                                // style={{
+                                //   textDecoration:
+                                //     userObj.isActive == true
+                                //       ? "none"
+                                //       : "line-through",
+                                // }}
                               >
                                 <td
                                   style={{
@@ -1079,7 +669,7 @@ const handleUserSubmit = (e) => {
                                 >
                                   {userObj.isActive == true
                                     ? "Active"
-                                    : "In-active"}
+                                    : "InActive"}
                                 </td>
                                 <td
                                   style={{
@@ -1121,8 +711,11 @@ const handleUserSubmit = (e) => {
                                 </td>
                               </tr>
                             );
-                          })
-                        : ""}
+                          }):(
+        <tr>
+          <td colSpan="11" className="text-center text-muted">No  data found</td>
+        </tr>
+      )}
                     </tbody>
                   </table>
                 </div>

@@ -6,3 +6,7 @@
 {Date: 2025-05-20 10:30:38 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: While mapping Company id 7  to plant id 11 following error occured : Company & Plant mapping already exist..!},
 {Date: 2025-05-20 10:36:58 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Existing Company Id 7 changed to 7 and existing mapped plantid 10changed to 10 by the userid c165560e-4055-401b-88b9-5e8ca9372f54},
 {Date: 2025-05-20 12:21:46 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Existing Company Plant Mapping id 1 Was Inactive by the User id c165560e-4055-401b-88b9-5e8ca9372f54},
+{Date: 2025-05-20 13:43:39 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company id 2 mapped to plant id 4},
+{Date: 2025-05-20 13:43:43 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company id 3 mapped to plant id 5},
+{Date: 2025-05-20 13:43:48 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Company id 4 mapped to plant id 6},
+{Date: 2025-05-20 13:43:51 ~|~  User Id: c165560e-4055-401b-88b9-5e8ca9372f54  ~|~ Message: Existing Company Plant Mapping id 2 Was Inactive by the User id c165560e-4055-401b-88b9-5e8ca9372f54},

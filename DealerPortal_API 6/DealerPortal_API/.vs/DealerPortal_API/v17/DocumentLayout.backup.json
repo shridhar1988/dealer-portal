@@ -1,62 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\",
+  "WorkspaceRootPath": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\services\\companyplantmappingmasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\companyplantmappingmasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\services\\plantmasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\plantmasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\services\\companymasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\companymasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\services\\authmasterserices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\authmasterserices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\controllers\\authmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\authmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\controllers\\companyplantmappingmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\companyplantmappingmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\controllers\\plantmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\plantmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\controllers\\requisitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\requisitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\controllers\\companymastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\companymastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\services\\requisitionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\requisitionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\services\\retailerusercreationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\retailerusercreationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\retailerusercreationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\downloads\\dealerportal_api 6\\dealerportal_api\\controllers\\retailerusercreationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\authmasterserices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\authmasterserices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\plantmasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\plantmasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\controllers\\plantmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\plantmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\controllers\\authmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\authmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\companymasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\companymasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\companyplantmappingmasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\companyplantmappingmasterservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\controllers\\companyplantmappingmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\companyplantmappingmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\controllers\\requisitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\requisitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\controllers\\companymastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\companymastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\services\\requisitionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:services\\requisitionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|c:\\users\\iteos\\desktop\\my projects\\git\\dealer portal\\dealer-portal\\dealerportal_api 6\\dealerportal_api\\controllers\\retailerusercreationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88F37469-F954-44EA-8EF5-DC880A1C4E94}|DealerPortal_API.csproj|solutionrelative:controllers\\retailerusercreationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Logs\\Update Requisition Log\\Update Requisition Log2025-05-19.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Logs\\Update Requisition Log\\Update Requisition Log2025-05-19.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Logs\\Update Requisition Log\\Update Requisition Log2025-05-19.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,13 +77,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AuthMasterSerices.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\AuthMasterSerices.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\AuthMasterSerices.cs",
               "RelativeDocumentMoniker": "Services\\AuthMasterSerices.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\AuthMasterSerices.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\AuthMasterSerices.cs",
               "RelativeToolTip": "Services\\AuthMasterSerices.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAhwK0AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T05:39:03.431Z",
               "IsPinned": true,
@@ -84,13 +91,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "RetailerUserCreationServices.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\RetailerUserCreationServices.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\RetailerUserCreationServices.cs",
               "RelativeDocumentMoniker": "Services\\RetailerUserCreationServices.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\RetailerUserCreationServices.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\RetailerUserCreationServices.cs",
               "RelativeToolTip": "Services\\RetailerUserCreationServices.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAkwEoBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAF4BAAAAAAAAAAAmwEgBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T07:58:10.815Z",
               "IsPinned": true,
@@ -98,11 +105,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "RequisitionController.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\RequisitionController.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\RequisitionController.cs",
               "RelativeDocumentMoniker": "Controllers\\RequisitionController.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\RequisitionController.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\RequisitionController.cs",
               "RelativeToolTip": "Controllers\\RequisitionController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAIA4wBcAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -111,11 +118,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "RequisitionServices.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\RequisitionServices.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\RequisitionServices.cs",
               "RelativeDocumentMoniker": "Services\\RequisitionServices.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\RequisitionServices.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\RequisitionServices.cs",
               "RelativeToolTip": "Services\\RequisitionServices.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAA0wC4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -134,14 +141,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CompanyPlantMappingMasterServices.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\CompanyPlantMappingMasterServices.cs",
-              "RelativeDocumentMoniker": "Services\\CompanyPlantMappingMasterServices.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\CompanyPlantMappingMasterServices.cs",
-              "RelativeToolTip": "Services\\CompanyPlantMappingMasterServices.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwBwAAAATAAAAAAAAAA==",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T13:00:35.679Z",
+              "WhenOpened": "2025-05-20T10:42:05.377Z",
               "EditorCaption": ""
             },
             {
@@ -151,62 +158,10 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AuthMasterController.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\AuthMasterController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthMasterController.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\AuthMasterController.cs",
-              "RelativeToolTip": "Controllers\\AuthMasterController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T08:37:25.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CompanyMasterServices.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\CompanyMasterServices.cs",
-              "RelativeDocumentMoniker": "Services\\CompanyMasterServices.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\CompanyMasterServices.cs",
-              "RelativeToolTip": "Services\\CompanyMasterServices.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAhwIkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T02:01:20.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlantMasterServices.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\PlantMasterServices.cs",
-              "RelativeDocumentMoniker": "Services\\PlantMasterServices.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\PlantMasterServices.cs",
-              "RelativeToolTip": "Services\\PlantMasterServices.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAUwJAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T10:36:33.7Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CompanyPlantMappingMasterController.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\CompanyPlantMappingMasterController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CompanyPlantMappingMasterController.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\CompanyPlantMappingMasterController.cs",
-              "RelativeToolTip": "Controllers\\CompanyPlantMappingMasterController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAlwGAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T01:21:35.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "PlantMasterController.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\PlantMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\PlantMasterController.cs",
               "RelativeDocumentMoniker": "Controllers\\PlantMasterController.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\PlantMasterController.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\PlantMasterController.cs",
               "RelativeToolTip": "Controllers\\PlantMasterController.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAAwEEAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -215,11 +170,89 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T10:42:00.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\AuthMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthMasterController.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\AuthMasterController.cs",
+              "RelativeToolTip": "Controllers\\AuthMasterController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T08:37:25.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlantMasterServices.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\PlantMasterServices.cs",
+              "RelativeDocumentMoniker": "Services\\PlantMasterServices.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\PlantMasterServices.cs",
+              "RelativeToolTip": "Services\\PlantMasterServices.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAhwC0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T10:36:33.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "CompanyPlantMappingMasterServices.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\CompanyPlantMappingMasterServices.cs",
+              "RelativeDocumentMoniker": "Services\\CompanyPlantMappingMasterServices.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\CompanyPlantMappingMasterServices.cs",
+              "RelativeToolTip": "Services\\CompanyPlantMappingMasterServices.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T13:00:35.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CompanyMasterServices.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\CompanyMasterServices.cs",
+              "RelativeDocumentMoniker": "Services\\CompanyMasterServices.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\CompanyMasterServices.cs",
+              "RelativeToolTip": "Services\\CompanyMasterServices.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAASwFAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T02:01:20.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CompanyPlantMappingMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\CompanyPlantMappingMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CompanyPlantMappingMasterController.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\CompanyPlantMappingMasterController.cs",
+              "RelativeToolTip": "Controllers\\CompanyPlantMappingMasterController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAlwGAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T01:21:35.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CompanyMasterController.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\CompanyMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\CompanyMasterController.cs",
               "RelativeDocumentMoniker": "Controllers\\CompanyMasterController.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\CompanyMasterController.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\CompanyMasterController.cs",
               "RelativeToolTip": "Controllers\\CompanyMasterController.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAgwEAAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -228,11 +261,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Services\\EmailService.cs",
               "RelativeToolTip": "Services\\EmailService.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAiwFQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -241,11 +274,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "RetailerUserCreationController.cs",
-              "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\RetailerUserCreationController.cs",
+              "DocumentMoniker": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\RetailerUserCreationController.cs",
               "RelativeDocumentMoniker": "Controllers\\RetailerUserCreationController.cs",
-              "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\RetailerUserCreationController.cs",
+              "ToolTip": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\Controllers\\RetailerUserCreationController.cs",
               "RelativeToolTip": "Controllers\\RetailerUserCreationController.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -254,12 +287,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Update Requisition Log2025-05-19.txt",
               "DocumentMoniker": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Logs\\Update Requisition Log\\Update Requisition Log2025-05-19.txt",
-              "RelativeDocumentMoniker": "Logs\\Update Requisition Log\\Update Requisition Log2025-05-19.txt",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Logs\\Update Requisition Log\\Update Requisition Log2025-05-19.txt",
               "ToolTip": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Logs\\Update Requisition Log\\Update Requisition Log2025-05-19.txt",
-              "RelativeToolTip": "Logs\\Update Requisition Log\\Update Requisition Log2025-05-19.txt",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\Logs\\Update Requisition Log\\Update Requisition Log2025-05-19.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-05-19T04:42:49.024Z"

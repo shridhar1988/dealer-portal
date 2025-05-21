@@ -21,3 +21,31 @@
 20-05-2025 12:20:20 : Auth/GetToken:- Get Token Called
 20-05-2025 12:22:57 : Auth/GetToken:- Get Token Called
 20-05-2025 12:28:14 : Auth/GetToken:- Get Token Called
+20-05-2025 15:11:17 : Auth/GetToken:- Get Token Called
+20-05-2025 16:37:44 : Auth/GetToken:- Get Token Called
+20-05-2025 16:39:54 : AuthorizationServerProvider/GrantResourceOwnerCredentials :-  :- For your role there is no apps please contact the admin
+20-05-2025 16:39:55 : Auth/GetToken :- For your role there is no apps please contact the admin
+20-05-2025 16:40:28 : Auth/GetToken:- Get Token Called
+20-05-2025 16:40:33 : AuthorizationServerProvider/GrantResourceOwnerCredentials :-  :- For your role there is no apps please contact the admin
+20-05-2025 16:40:33 : Auth/GetToken :- For your role there is no apps please contact the admin
+20-05-2025 16:42:01 : Auth/GetToken:- Get Token Called
+20-05-2025 16:44:58 : Auth/GetToken:- Get Token Called
+20-05-2025 16:45:35 : AuthorizationServerProvider/GrantResourceOwnerCredentials :-  :- For your role there is no apps please contact the admin
+20-05-2025 16:45:36 : Auth/GetToken :- For your role there is no apps please contact the admin
+20-05-2025 16:46:53 : Auth/GetToken:- Get Token Called
+20-05-2025 16:48:10 : Auth/GetToken:- Get Token Called
+20-05-2025 16:49:03 : Auth/GetToken:- Get Token Called
+20-05-2025 16:50:04 : Auth/GetToken:- Get Token Called
+20-05-2025 17:08:07 : Auth/GetToken:- Get Token Called
+20-05-2025 17:11:13 : Auth/GetToken:- Get Token Called
+20-05-2025 17:11:13 : AuthorizationServerProvider/GrantResourceOwnerCredentials :-  :- The user name or password is incorrect.
+20-05-2025 17:11:13 : Auth/GetToken :- The user name or password is incorrect.
+20-05-2025 17:11:25 : Auth/GetToken:- Get Token Called
+20-05-2025 17:11:26 : AuthorizationServerProvider/GrantResourceOwnerCredentials :-  :- The user name or password is incorrect.
+20-05-2025 17:11:26 : Auth/GetToken :- The user name or password is incorrect.
+20-05-2025 17:12:07 : Auth/GetToken:- Get Token Called
+20-05-2025 18:36:15 : Auth/GetToken:- Get Token Called
+20-05-2025 18:39:39 : Auth/GetToken:- Get Token Called
+20-05-2025 18:39:40 : AuthorizationServerProvider/GrantResourceOwnerCredentials :-  :- For your role there is no apps please contact the admin
+20-05-2025 18:39:40 : Auth/GetToken :- For your role there is no apps please contact the admin
+20-05-2025 18:40:19 : Auth/GetToken:- Get Token Called

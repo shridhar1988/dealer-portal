@@ -42,7 +42,7 @@ namespace DealerPortal_API.Services
                 var existingCompany = await _context.Company.Where(a => a.CompanyCode == companyDtos.CompanyCode && a.IsActive == true).ToListAsync();
                 if (existingCompany.Count > 0)
                 {
-                    throw new Exception("Company with specified name already exist..!");
+                    throw new Exception("Company name already exist");
                 }
                 var ress = new Company
                 {
@@ -78,7 +78,7 @@ namespace DealerPortal_API.Services
                       .ToListAsync();
                 if (checkExisting.Count()>0)
                 {
-                    throw new Exception("Company with specified name already exist!");
+                    throw new Exception("Company name exist");
                 }
                 Log.DataLog(
             companyDtos.CreatedBy, $"Existing Company Name {CompanyToUpdate.CompanyCode} changed to {companyDtos.CompanyCode} and existing description {CompanyToUpdate.CompanyDescription}" +

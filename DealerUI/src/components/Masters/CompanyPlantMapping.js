@@ -65,73 +65,172 @@ const CompanyPlantMapping = () => {
     window.initMultiSelectFuncation();
   }, []);
  
-  const exportToCSV = () => {
-    let csvContent = "Company Name,Plant Names\n";
-      allCompanyPlantList.forEach((row) => {
-      const company = allCompanyList.find(c => c.id == row.companyId);
-      const plant = allPlantList.find(p => p.id == row.plantId);  
-      const companyCode = company ? company.companyCode : row.companyId;
-      const plantCode = plant ? plant.plantCode : row.plantId;  
-      csvContent += `"${companyCode}","${plantCode}"\n`;
-    });
+  // const exportToCSV = () => {
+  //   let csvContent = "Company Name,Plant Names\n";
+  //     allCompanyPlantList.forEach((row) => {
+  //     const company = allCompanyList.find(c => c.id == row.companyId);
+      
+  //     const plant = allPlantList.find(p => p.id == row.plantId);  
+  //     const companyCode = company ? company.companyCode : row.companyId;
+  //        const companyDescritpion = company ? company.companyDescription : row.companyId;
+  //     const plantCode = plant ? plant.plantCode : row.plantId;  
+  //      const plantDescription = plant ? plant.plantDescription : row.plantId;  
+  //     csvContent += `"${companyCode}","${plantCode}"\n`;
+  //   });
   
-    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-    saveAs(blob, "CompanyPlantList.csv");
-  };
+  //   const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  //   saveAs(blob, "CompanyPlantList.csv");
+  // };
  
-  const exportToExcel = () => {
-    const worksheet = XLSX.utils.json_to_sheet(
-      allCompanyPlantList.map((row) => {
-        const company = allCompanyList.find(c => c.id == row.companyId);
-        const plant = allPlantList.find(p => p.id == row.plantId);  
-        return {
-          "Company Name": company ? company.companyCode : row.companyId,
-          "Plant Name": plant ? plant.plantCode : row.plantId,
-        };
-      })
-    );
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "CompanyPlant");
-    const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
-    const data = new Blob([excelBuffer], {
-      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    });
-    saveAs(data, "CompanyPlantList.xlsx");
-  };
+  // const exportToExcel = () => {
+  //   const worksheet = XLSX.utils.json_to_sheet(
+  //     allCompanyPlantList.map((row) => {
+  //       const company = allCompanyList.find(c => c.id === row.companyId);
+  //       console.log('cm',allCompanyList)
+  //       const plant = allPlantList.find(p => p.id === row.plantId); 
+  //               console.log('pt',allPlantList) 
+  //       return {
+  //         "Company Name": company ? company.companyCode : row.companyId,
+  //         // "Company Description": company ? company.companyDescription : row.companyId,
+  //         "Plant Name": plant ? plant.plantCode : row.plantId,
+  //         // "Plant Description": plant ? plant.plantDescription : row.plantId,
+  //       };
+  //     })
+  //   );
+  //   const workbook = XLSX.utils.book_new();
+  //   XLSX.utils.book_append_sheet(workbook, worksheet, "CompanyPlant");
+  //   const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
+  //   const data = new Blob([excelBuffer], {
+  //     type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  //   });
+  //   saveAs(data, "CompanyPlantList.xlsx");
+  // };
+ const exportToExcel = () => {
+  const worksheet = XLSX.utils.json_to_sheet(
+    allCompanyPlantList.map((row) => {
+      const company = allCompanyList.find(c => Number(c.id) === Number(row.companyId));
+      const plant = allPlantList.find(p => Number(p.id) === Number(row.plantId)); 
+
+      return {
+        "Company Name": company ? company.companyCode : row.companyId,
+        "Company Description": company ? company.companyDescription : row.companyId,
+        "Plant Name": plant ? plant.plantCode : row.plantId,
+        "Plant Description": plant ? plant.plantDescription : row.plantId
+      };
+    })
+  );
+
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "CompanyPlant");
+  const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
+  const data = new Blob([excelBuffer], {
+    type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  });
+  saveAs(data, "CompanyPlantList.xlsx");
+};
+const exportToPDF = () => {
+  const doc = new jsPDF();
+  doc.text("Company Plant List", 14, 10);
+
+  autoTable(doc, {
+    head: [["Company Name", "Company Description", "Plant Name", "Plant Description"]],
+    body: allCompanyPlantList.map((row) => {
+      const company = allCompanyList.find(c => c.id == row.companyId);
+      const plant = allPlantList.find(p => p.id == row.plantId);
+      return [
+        company ? company.companyCode : row.companyId,
+        company ? company.companyDescription : "",
+        plant ? plant.plantCode : row.plantId,
+        plant ? plant.plantDescription : ""
+      ];
+    }),
+    startY: 20,
+  });
+
+  doc.save("CompanyPlantList.pdf");
+};
+const printTable = () => {
+  const printWindow = window.open("", "", "width=800,height=600");
+  printWindow.document.write("<html><head><title>Print Company Plant</title></head><body>");
+  printWindow.document.write("<h3>Company Plant List</h3>");
+  printWindow.document.write("<table border='1' cellspacing='0' cellpadding='5'>");
+  printWindow.document.write("<thead><tr><th>Company Name</th><th>Company Description</th><th>Plant Name</th><th>Plant Description</th></tr></thead><tbody>");
+
+  allCompanyPlantList.forEach((role) => {
+    const company = allCompanyList.find(c => c.id == role.companyId);
+    const plant = allPlantList.find(p => p.id == role.plantId);
+
+    const companyName = company ? company.companyCode : role.companyId;
+    const companyDesc = company ? company.companyDescription : "";
+    const plantName = plant ? plant.plantCode : role.plantId;
+    const plantDesc = plant ? plant.plantDescription : "";
+
+    printWindow.document.write(`<tr>
+      <td>${companyName}</td>
+      <td>${companyDesc}</td>
+      <td>${plantName}</td>
+      <td>${plantDesc}</td>
+    </tr>`);
+  });
+
+  printWindow.document.write("</tbody></table></body></html>");
+  printWindow.document.close();
+  printWindow.print();
+};const exportToCSV = () => {
+  let csvContent = "Company Code,Company Description,Plant Code,Plant Description\n";
+
+  allCompanyPlantList.forEach((row) => {
+    const company = allCompanyList.find(c => c.id == row.companyId);
+    const plant = allPlantList.find(p => p.id == row.plantId);
+
+    const companyCode = company ? company.companyCode : row.companyId;
+    const companyDescription = company ? company.companyDescription : "";
+    const plantCode = plant ? plant.plantCode : row.plantId;
+    const plantDescription = plant ? plant.plantDescription : "";
+
+    // Properly format and escape fields
+    const line = `"${companyCode}","${companyDescription}","${plantCode}","${plantDescription}"\n`;
+    csvContent += line;
+  });
+
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  saveAs(blob, "CompanyPlantList.csv");
+};
+
+
+  // const exportToPDF = () => {
+  //   const doc = new jsPDF();
+  //   doc.text("Company Plant List", 14, 10);
+  //   autoTable(doc, {
+  //     head: [["Company Name", "Plant Names"]],
+  //     body:  allCompanyPlantList.map((row) => {
+  //       const company = allCompanyList.find(c => c.id == row.companyId);
+  //       const plant = allPlantList.find(p => p.id == row.plantId);  
+  //       return [
+  //         company ? company.companyCodee : row.companyId,
+  //         plant ? plant.plantCodee : row.plantId
+  //       ];
+  //     }),
+  //   });
+  //   doc.save("CompanyPlantList.pdf");
+  // };
  
-  const exportToPDF = () => {
-    const doc = new jsPDF();
-    doc.text("Company Plant List", 14, 10);
-    autoTable(doc, {
-      head: [["Company Name", "Plant Names"]],
-      body:  allCompanyPlantList.map((row) => {
-        const company = allCompanyList.find(c => c.id == row.companyId);
-        const plant = allPlantList.find(p => p.id == row.plantId);  
-        return [
-          company ? company.companyCodee : row.companyId,
-          plant ? plant.plantCodee : row.plantId
-        ];
-      }),
-    });
-    doc.save("CompanyPlantList.pdf");
-  };
- 
-  const printTable = () => {
-    const printWindow = window.open("", "", "width=800,height=600");
-    printWindow.document.write("<html><head><title>Print Company Plant</title></head><body>");
-    printWindow.document.write("<h3>Company Plant List</h3>");
-    printWindow.document.write("<table border='1' cellspacing='0' cellpadding='5'><thead><tr><th>Company Name</th><th>Plant Names</th></tr></thead><tbody>");
-    allCompanyPlantList.forEach((role) => {
-      const apps = role.appIDList.map(id => {
-        const app = allPlantList.find(app => app.appID === id);
-        return app ? app.appName : '';
-      }).join(" | ");
-      printWindow.document.write(`<tr><td>${role.companyName}</td><td>${apps}</td></tr>`);
-    });
-    printWindow.document.write("</tbody></table></body></html>");
-    printWindow.document.close();
-    printWindow.print();
-  };
+  // const printTable = () => {
+  //   const printWindow = window.open("", "", "width=800,height=600");
+  //   printWindow.document.write("<html><head><title>Print Company Plant</title></head><body>");
+  //   printWindow.document.write("<h3>Company Plant List</h3>");
+  //   printWindow.document.write("<table border='1' cellspacing='0' cellpadding='5'><thead><tr><th>Company Name</th><th>Plant Names</th></tr></thead><tbody>");
+  //   allCompanyPlantList.forEach((role) => {
+  //     const apps = role.appIDList.map(id => {
+  //       const app = allPlantList.find(app => app.appID === id);
+  //       return app ? app.appName : '';
+  //     }).join(" | ");
+  //     printWindow.document.write(`<tr><td>${role.companyName}</td><td>${apps}</td></tr>`);
+  //   });
+  //   printWindow.document.write("</tbody></table></body></html>");
+  //   printWindow.document.close();
+  //   printWindow.print();
+  // };
  
   const getAllPlantList = () => {
     setIsLoaderActive(true); 
@@ -536,7 +635,9 @@ const CompanyPlantMapping = () => {
     <tr>
       <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }} className="text-center">Sr. No.</th>
       <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Company</th>
+      <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Company Description</th>
       <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Plant</th>
+       <th style={{ fontWeight: '500', fontSize: 'smaller' }}>Plant Description</th>
       <th style={{ fontWeight: '500', fontSize: 'smaller', width: "7%" }}>Action</th>
     </tr>
   </thead>
@@ -551,9 +652,21 @@ const CompanyPlantMapping = () => {
               roleObj.companyId
             }
           </td>
+            <td>
+            {
+              allCompanyList.find(c => c.id.toString() === roleObj.companyId.toString())?.companyDescription ||
+              roleObj.companyId
+            }
+          </td>
           <td>
             {
               allPlantList.find(c => c.id.toString() === roleObj.plantId.toString())?.plantCode ||
+              roleObj.plantId
+            }
+          </td>
+          <td>
+            {
+              allPlantList.find(c => c.id.toString() === roleObj.plantId.toString())?.plantDescription ||
               roleObj.plantId
             }
           </td>

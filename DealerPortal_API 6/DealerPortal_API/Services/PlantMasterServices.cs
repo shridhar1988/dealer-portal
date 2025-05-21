@@ -43,7 +43,7 @@ namespace DealerPortal_API.Services
                 var existingCompany = await _context.Plant.Where(a => a.PlantCode == plantDtos.PlantCode && a.IsActive == true).ToListAsync();
                 if (existingCompany.Count > 0)
                 {
-                    throw new Exception("Plant with specified name already exist..!");
+                    throw new Exception("Plant name already exist..!");
                 }
                 var ress = new Plant
                 {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2NIacP1r2Ag=",
+  "dgSpecHash": "SCh3MdBN9ZI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ITeos\\Downloads\\DealerPortal_API 6\\DealerPortal_API\\DealerPortal_API.csproj",
+  "projectFilePath": "C:\\Users\\ITeos\\Desktop\\My Projects\\Git\\Dealer Portal\\dealer-portal\\DealerPortal_API 6\\DealerPortal_API\\DealerPortal_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ITeos\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ITeos\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
